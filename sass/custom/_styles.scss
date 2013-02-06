@@ -3,6 +3,7 @@
 .sharing {
   p.meta + & {
     padding: { top: 1em; left: 0; }
+    margin-bottom: 20px;
     background: $img-border top left repeat-x;
   }
 }
@@ -24,6 +25,3 @@ article.archive-article-format { box-shadow: none; padding: 0; }
 
 // Add a little space between the top of the archive list and the page title
 #blog-archives { margin-top: 30px; }
-
-// Add a little space at the bottom of the sharing widget
-div.sharing { margin-bottom: 20px; }

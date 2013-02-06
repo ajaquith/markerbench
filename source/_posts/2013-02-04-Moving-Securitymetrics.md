@@ -10,6 +10,8 @@ comments: true
 ---
 Soon, I will be moving the securitymetrics.org website to a simpler, secure and more usable system -- the same platform that powers Markerbench. It should be done in time for Mini-Metricon (March 1st, 2013).
 
+<!-- more -->
+
 Some background. When I started [securitymetrics.org](http://www.securitymetrics.org) in 2004 with Dan Geer and Kevin Soo Hoo, I had visions of making a cool, collaborative website for it. I liked the "wiki" philosophy (simple markup, text-based) and thought it would work well as a lightweight collaboration platform. I was, at the time, the co-author/co-architect of [JSPWiki](http://incubator.apache.org/jspwiki/), an open source JEE-based wiki package. Because it contained a lot of my code, went the reasoning, I'd know just whose throat to choke when things went wrong. I could customize the server in all sorts of ways when I wanted to. And as a side benefit, I'd get to demonstrate my mad enterprise skillz by using JSPWiki's four-tier architecture (client, web server, app server, database). That was the theory.
 
 But a few things happened between 2004 and now:

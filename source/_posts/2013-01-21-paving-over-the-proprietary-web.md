@@ -1,6 +1,7 @@
 ---
 title: "Paving Over the Proprietary Web: The Java Security Bigger Picture"
 created_at: 2013-01-22 12:00:00 +0000
+author: Andrew Jaquith
 layout: post
 categories: 
 - Java
@@ -24,7 +25,7 @@ The slow-motion revolution in how the Web is made means that the _raîson-d'êtr
 
 Microsoft, for example, turned an entire generation of web developers against it with its long, and ultimately fruitless, [resistance against robust CSS support](http://web.archive.org/web/20080420044607/http://www.microsoft.com/windowsxp/expertzone/chats/transcripts/08_0320_ez_ie8.mspx) in Internet Explorer. Although modern versions of IE are highly standards-compliant, Internet Explorer did not pass the CSS Acid3 test until [September 2011](http://www.winrumors.com/internet-explorer-9-and-10-now-pass-acid3-test-with-100-thanks-to-test-changes/). Any web developer who has been working with CSS for more than 5 years, for example, can probably regale you with stories of massive hacks needed to allow older Microsoft browsers to work with standards-based websites.
 
-The roots of Adobe Flash's decline are a little different. Nothing was "broken" with Flash, functionally speaking[<sup>1</sup>](#flash). Two related events resulted in a decline in Flash usage: Steve Job's public refusal to add Flash support to the iPhone and successor iOS devices; and Google's decision to convert its vast library of YouTube clips to HTML 5-compatible WebM and H.264 formats.
+The roots of Adobe Flash's decline are a little different. Nothing was "broken" with Flash, functionally speaking[<sup>1</sup>](#flash). Two related events resulted in a decline in Flash usage: Steve Jobs' public refusal to add Flash support to the iPhone and successor iOS devices; and Google's decision to convert its vast library of YouTube clips to HTML 5-compatible WebM and H.264 formats.
 
 These actions, plus the increasing viability and efficiency of WebM and H.264, meant that you didn't need Flash video any longer. This has clear implications for customers. For customer-facing websites, you can (and should strongly consider) retiring Flash video in favor of H.264. This is a quick win; the re-encoding process is relatively quick and painless. That said, the need is not as urgent compared to Java. Adobe's security team (under the leadership my former @stake colleague Brad Arkin) has upped the tempo of bug fixes, adopted auto-update, and is taking security seriously enough that Flash has become less risky than it had been. Still, if you could remove a dependency on a third-party component that needs to be maintained and updated in addition to the base operating system, why wouldn't you?
 
@@ -38,7 +39,7 @@ It is much, _much_ easier to talk about how the slow-moving concrete machine tha
 
 But in the short term, it won't be so clean. Based on vulnerability counts — an imprecise metric at best — the "younger guys" don't score well. For example, the US National Vulnerability Database shows that the WebKit browsing engine had over 198 disclosed vulnerabilities last year. Internet Explorer? Just 61. Meanwhile, ActiveX, Java and Flash had 73,  169, and 67, respectively. I draw no other conclusions from these data, other than the simplest one — increased use of native browser capabilities is likely to increase risks in the short term, even as the decreased use of proprietary technologies decreases it over the longer term. At some point the two lines will cross and we will all be better off.
 
-In the meantime, the cement truck keep rumbling.
+In the meantime, the cement truck keeps rumbling.
 
 ---
 <small><a id="flash"><sup>1</sup></a> Functionality aside, Flash's security track record has been poor for a while.</small>

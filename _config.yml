@@ -75,6 +75,7 @@ twitter_show_replies: true
 twitter_follow_button: true
 twitter_show_follower_count: true
 twitter_tweet_button: true
+twitter_widget_id: 367738633219887104
 
 # Google +1
 google_plus_one: true

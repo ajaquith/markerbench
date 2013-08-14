@@ -70,8 +70,7 @@ github_skip_forks: true
 
 # Twitter
 twitter_user: arj
-twitter_tweet_count: 4
-twitter_show_replies: true
+twitter_show_replies: false
 twitter_follow_button: true
 twitter_show_follower_count: true
 twitter_tweet_button: true

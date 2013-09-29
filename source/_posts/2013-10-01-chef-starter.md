@@ -1,5 +1,5 @@
 ---
-title: The DevOps Security Handbook: Building Security In With Chef, Part I
+title: The DevOps Security Handbook&#58; Building Security In With Chef, Part I
 author: Andrew Jaquith
 categories:
 - security
@@ -9,6 +9,8 @@ comments: true
 ---
 # Objectives
 This is the first in a series of posts about [Chef](http://www.opscode.com/chef/), an infrastructure automation platform. The goal of this series is to describe how to build a reasonably secure Apache web server. By using Chef, we can quickly and efficiently build identical web servers with assurance that they will work the same way, every time, and have the security properties we want.
+
+<!-- more -->
 
 You will build this server in stages. The server will ultimately contain the following elements:
 

@@ -51,11 +51,11 @@ I have found the OpsCode QuickStart documentation to be quite well-written. But 
 
 Some background. Chef “converges” nodes into their desired states by applying a ”run-list” of [recipes](http://docs.opscode.com/essentials_cookbook_recipes.html) to each node. The run-list of recipes (Apache2, NTPD, user creation, etc) that apply can be specified in several ways. The quickest and most direct way is to specify the node’s run-list of recipes when the node is initially bootstrapped with Chef; that is, when the Chef agent (`chef-client`) is initially installed on the node. Bootstrapping the node configuration is done using Knife, and the syntax looks like this:
 
-    knife bootstrap tester --run-list "recipe[apt],recipe[apache2]" -E testing
+    knife bootstrap tester.local --run-list "recipe[apt],recipe[apache2]" -E testing
 
-I have omitted some of the syntax the sake of simplicity; don’t try running this. There are important concepts to understand here. The `bootstrap` command causes the `chef-client` application to be installed on the node. The `chef-client` is essentially an _agent_. It configures and installs software based on instructions (”recipes”) it receives from the Chef server. Notice the `run-list` parameter: it indicates that the APT and Apache2 recipes will be applied to node `tester`. What this means is that when `chef-client` is bootstrapped onto the node, the APT and Apache packages will be downloaded, installed and configured as well.
+I have omitted some of the syntax the sake of simplicity; don’t try running this. There are important concepts to understand here. The `bootstrap` command causes the `chef-client` application to be installed on the node. The `chef-client` is essentially an _agent_. It configures and installs software based on instructions (”recipes”) it receives from the Chef server. Notice the `run-list` parameter: it indicates that the APT and Apache2 recipes will be applied to node `tester.local`. What this means is that when `chef-client` is bootstrapped onto the node, the APT and Apache packages will be downloaded, installed and configured as well.
 
-Notice also the `-E` parameter. This means that `tester` should be assigned to an environment called `testing`, which you will define in a minute. By ”environment,” Chef means a group of nodes that typically correspond to a stage of development, for example “testing,” “staging,” or “production.” Let's create the `testing` environment now. Type:
+Notice also the `-E` parameter. This means that `tester.local` should be assigned to an environment called `testing`, which you will define in a minute. By ”environment,” Chef means a group of nodes that typically correspond to a stage of development, for example “testing,” “staging,” or “production.” Let's create the `testing` environment now. Type:
 
     knife environment create testing
 
@@ -106,7 +106,7 @@ Notice that the `run-list` attribute contains the `apache2` recipe, similar to w
 
 To bootstrap using roles instead of directly specifying recipes, you would use the following syntax (some details omitted):
 
-    knife bootstrap tester --run-list "role[webserver]" -E testing
+    knife bootstrap tester.local --run-list "role[webserver]" -E testing
 
 Again, don’t type this in, because it won’t work without some additional syntax; you will get to it soon enough. 
 
@@ -144,7 +144,7 @@ Change back to your `chef-repo` directory and issue the following command:
 You’ll see output similar to this:
 
     Backing up nodes
-    Backing up nodes tester
+    Backing up nodes tester.local
     Backing up roles
     Backing up roles webserver
     Backing up data bags
@@ -163,13 +163,13 @@ Change to your Chef repo directory. Create a new file `Vagrantfile` with these c
     Vagrant.configure("2") do |config|
       config.vm.box = "opscode-ubuntu-12.04-i386"
       config.vm.box_url = "https://opscode-vm.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04-i386_provisionerless.box"
-      config.vm.hostname = "tester"
+      config.vm.hostname = "tester.local"
       config.vm.define :tester do |t|
       end
       config.vm.network "private_network", ip: "192.168.56.2"
       config.vm.provider :virtualbox do |vb|
         vb.gui = false
-        vb.name = "tester"
+        vb.name = "tester.local"
       end
     end
 
@@ -177,14 +177,15 @@ Change to your Chef repo directory. Create a new file `Vagrantfile` with these c
 
 * Downloads an Ubuntu 12.04 base box (essentially, a virtual machine image) from OpsCode’s repository on Amazon
 * Creates a VirtualBox VM based on the machine image
-* Gives the VM the network name `tester`. This is the name that the Unix command `hostname` will return when you log into it
-* Names the VirtualBox image `tester`. This is the name used to start, stop and delete the VM when using the VirtualBox command-line tools or the VirtualBox GUI. By default, VirtualBox names the image based on the directory that contains `Vagrantfile`, plus a timestamp suffix. The `vb.name` property inside the `config.vm.provider` block overrides the default so that it matches the host name.
+* Gives the VM the network name `tester.local`. This is the name that the Unix command `hostname` will return when you log into it
+* Names the VirtualBox machine `tester`. This is the name used to start, stop and delete the VM when using the VirtualBox command-line tools or the VirtualBox GUI.
+Names the VirtualBox image directory `tester.local`. By default, VirtualBox names the image based on the directory that contains `Vagrantfile`, plus a timestamp suffix. The `vb.name` property inside the `config.vm.provider` block overrides the default so that it matches the host name.
 * Configures the VM’s networking interface to use a private network address 192.168.56.2. This will allow us to start the VM and see it on our workstation, but the VM won’t be accessible from the outside.
 * Specifies that when you boot the VM, it will be booted in headless mode; the VirtualBox GUI won’t be displayed.
 
-That is all you need to instantiate a new VM on our workstation. Next, edit your workstation’s `/etc/hosts` file and add a line that points to the VM using the private IP address and name `tester`:
+That is all you need to instantiate a new VM on our workstation. Next, edit your workstation’s `/etc/hosts` file and add a line that points to the VM using the private IP address and name `tester.local`:
 
-    192.168.56.2    tester
+    192.168.56.2    tester.local
 
 Great. Now, let’s go ahead and actually create the VM. From the command line in the same directory as `Vagrantfile`, type:
 
@@ -214,7 +215,7 @@ The entire process should take between 30 seconds to a minute if the base box is
 
 You can verify that the new test VM is up by pinging tester and verifying that it responds:
 
-    Tweety:chef-repo arj$ ping tester
+    Tweety:chef-repo arj$ ping tester.local
     PING tester (192.168.56.2): 56 data bytes
     64 bytes from 192.168.56.2: icmp_seq=0 ttl=64 time=0.582 ms
     64 bytes from 192.168.56.2: icmp_seq=1 ttl=64 time=0.638 ms
@@ -246,57 +247,59 @@ So far, so good. You have successfully created a test virtual machine, but it is
 
 It is (finally!) time to “bootstrap” the VM using Knife. This installs the `chef-client` agent on the node, and registers the new node with the Chef server. Type in the following:
 
-    knife bootstrap tester --ssh-user vagrant  --ssh-password vagrant --run-list "role[webserver]" -E testing --sudo
+    knife bootstrap tester.local --ssh-user vagrant  --ssh-password vagrant --run-list "role[webserver]" -E testing --sudo
 
 Viola! Assuming you did everything as described, Chef will SSH into the box, download and install Chef client onto it, and begin converging the node into its desired state; in this case, installing and configuring Apache.
 
 Immediately after hitting Enter, a long list of output lines should appear. These should resemble the following:
 
-    Bootstrapping Chef on tester
-    tester --2013-09-29 03:20:41--  https://www.opscode.com/chef/install.sh
-    tester 
-    tester Resolving www.opscode.com (www.opscode.com)... 
-    tester 184.106.28.82
-    tester 
-    tester Connecting to www.opscode.com (www.opscode.com)|184.106.28.82|:443... 
-    tester connected.
-    tester 
-    tester HTTP request sent, awaiting response... 
-    tester 200 OK
+    Bootstrapping Chef on tester.local
+    tester.local --2013-09-29 03:20:41--  https://www.opscode.com/chef/install.sh
+    tester.local 
+    tester.local Resolving www.opscode.com (www.opscode.com)... 
+    tester.local 184.106.28.82
+    tester.local 
+    tester.local Connecting to www.opscode.com (www.opscode.com)|184.106.28.82|:443... 
+    tester.local connected.
+    tester.local 
+    tester.local HTTP request sent, awaiting response... 
+    tester.local 200 OK
 
 followed by 	
 
-    tester Starting Chef Client, version 11.6.0
-    tester 
-    tester resolving cookbooks for run list: ["apt", "apache2"]
-    tester 
-    tester Synchronizing Cookbooks:
-    tester 
-    tester   - apt
-    tester 
-    tester   - apache2
-    tester 
-    tester Compiling Cookbooks...
+    tester.local Starting Chef Client, version 11.6.0
+    tester.local 
+    tester.local resolving cookbooks for run list: ["apt", "apache2"]
+    tester.local 
+    tester.local Synchronizing Cookbooks:
+    tester.local 
+    tester.local   - apt
+    tester.local 
+    tester.local   - apache2
+    tester.local 
+    tester.local Compiling Cookbooks...
 
 and then a series of lines that indicate that APT and Apache have been installed. The last lines indicate that Apache has been installed and restarted, and that the resources on the box have been updated:
 
-    tester Recipe: apache2::default
-    tester 
-    tester   * service[apache2] action restart
-    tester 
-    tester 
-    tester     - restart service service[apache2]
-    tester 
-    tester 
-    tester 
-    tester Chef Client finished, 28 resources updated
-    tester 
+    tester.local Recipe: apache2::default
+    tester.local 
+    tester.local   * service[apache2] action restart
+    tester.local 
+    tester.local 
+    tester.local     - restart service service[apache2]
+    tester.local 
+    tester.local 
+    tester.local 
+    tester.local Chef Client finished, 28 resources updated
+    tester.local 
 
 If you see output similar to this, and no errors, it means that you have successfully converged your first node. Congratulations! Excellent work. 
 
-You verify that the web server is up by firing up your browser to the address `http://tester`. It should return a “Forbidden” message because we have not actually provided any HTML pages for Apache to serve up. But that is evidence enough that Apache is actually working.
+You verify that the web server is up by firing up your browser to the address `http://tester.local`. It should return a “Forbidden” message because we have not actually provided any HTML pages for Apache to serve up. But that is evidence enough that Apache is actually working.
 
 # Coming soon… adding security to the box
-This post covered the basics of how to get going with Chef. You have installed the Chef workstation software and supporting components Git, Ruby and VirtualBox and Vagrant. You have created a sample role called `webserver` and assigned two sample recipes, `apache2` and `apt`, to it. You created a virtual machine called `tester` and bootstrapped Chef onto it, placing it under Chef control.
+This post covered the basics of how to get going with Chef. You have installed the Chef workstation software and supporting components Git, Ruby and VirtualBox and Vagrant. You have created a sample role called `webserver` and assigned two sample recipes, `apache2` and `apt`, to it. You created a virtual machine called `tester` with the domain name `tester.local` and bootstrapped Chef onto it, placing it under Chef control.
 
 In the next post, you will begin doing more useful work. I’ll describe how to fine-tune the Apache installation. We will also begin increasing the security of the machine.
+
+_This post was updated October 1, 2013 to change the hostname used in the examples from `tester` to `tester.local`._

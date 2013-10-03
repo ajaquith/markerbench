@@ -1,6 +1,7 @@
 ---
 title: The DevOps Security Handbook&#58; Building Security In With Chef, Part I
 author: Andrew Jaquith
+date: 2013-10-01 16:18
 categories:
 - security
 - DevOps

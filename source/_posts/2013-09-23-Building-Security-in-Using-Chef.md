@@ -1,5 +1,6 @@
 ---
 title: Building Security In Using Chef
+date: 2013-09-23 00:02
 author: Andrew Jaquith
 categories:
 - security

@@ -91,18 +91,20 @@ Let’s create a new role called `webserver`. In it you will add the components 
       "default_attributes": {
       },
       "override_attributes": {
+        "apache": {
+          "listen_ports": [ "80" ]
+        }
       },
       "chef_type": "role",
       "run_list": [
         "recipe[apt]",
         "recipe[apache2]",
-        "recipe[apache2::mod_ssl]"
       ],
       "env_run_lists": {
       }
     }
 
-Notice that the `run-list` attribute contains the `apache2` recipe, similar to what you used in the initial bootstrap command. Notice also the `apache2::mod_ssl` recipe, which adds SSL support, and the `apt` recipe.
+Notice that the `run-list` attribute contains the `apache2` cookbook, similar to what you used in the initial bootstrap command. The  `listen-ports` override attribute tells the `apache2` cookbook to configure Apache to listen just on port 80. You will learn more about override attributes in a future post. But if you are curious about how the cookbook works, and about the various attributes you can use to customize Apache’s configuration, see OpsCode’s [online decimation](http://community.opscode.com/cookbooks/apache2). Notice also the `apt` recipe; this is required because Debian’s APT package updater is how Apache is actually installed onto the node.
 
 To bootstrap using roles instead of directly specifying recipes, you would use the following syntax (some details omitted):
 
@@ -302,4 +304,4 @@ This post covered the basics of how to get going with Chef. You have installed t
 
 In the next post, you will begin doing more useful work. I’ll describe how to fine-tune the Apache installation. We will also begin increasing the security of the machine.
 
-_This post was updated October 1, 2013 to change the hostname used in the examples from `tester` to `tester.local`._
+_This post was updated October 1, 2013 to change the hostname used in the examples from `tester` to `tester.local`. It was updated on October 2, 2013 to remove references to the half-configured SSL support for Apache; I’ll cover this more fully in a future post._

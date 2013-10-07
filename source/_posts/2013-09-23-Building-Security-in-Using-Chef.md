@@ -13,6 +13,8 @@ Lately I have been spending a lot of time with a new best friend. This new frien
 
 I am not talking about a new buddy gourmand, about a pal I go out to restaurants with, or about a super-reliable project manager. My new best friend is a technology called Chef, made by [OpsCode](http://www.opscode.com/).
 
+<!-- more -->
+
 [Chef](http://www.opscode.com/chef/), along with [Puppet](http://puppetlabs.com/puppet/what-is-puppet) and [CFEngine](http://cfengine.com/), is a flexible toolset for building infrastructure. The Chef mantra is “infrastructure as code,” which means simply that you can build infrastructure — servers and workstations the same way every time. Chef has important implications for security because, by using it, you can ensure that your nodes have exactly the security properties you want by “baking it in” to what Chef calls “cookbooks,” the core component. I'll come back to the security implications in a few minutes, but in the meantime I should explain what a cookbook is.
 
 Cookbooks are packages that define how packages, applications or system functions should be built and configured. Cookbooks exist for Apache, NTP, user and group account creation, and just about every common application you can imagine. At a file level, cookbooks are basically composed of property files, templates and clever glue-code. The cookbook’s job is to declare required packages and dependencies; provide templates for configuration files that need to be modified, and provide Ruby code that sets up the packages, configures things or does whatever is needed to achieve the desired result. The process for building nodes is similar to how developers build code.

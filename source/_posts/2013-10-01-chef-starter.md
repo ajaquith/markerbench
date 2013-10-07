@@ -8,7 +8,7 @@ categories:
 layout: post
 comments: true
 ---
-# Objectives
+# Introduction
 This is the first in a series of posts about [Chef](http://www.opscode.com/chef/), an infrastructure automation platform. The goal of this series is to describe how to build a reasonably secure Apache web server. By using Chef, we can quickly and efficiently build identical web servers with assurance that they will work the same way, every time, and have the security properties we want.
 
 <!-- more -->
@@ -300,9 +300,9 @@ If you see output similar to this, and no errors, it means that you have success
 
 You verify that the web server is up by firing up your browser to the address `http://tester.local`. It should return a “Forbidden” message because we have not actually provided any HTML pages for Apache to serve up. But that is evidence enough that Apache is actually working.
 
-# Coming soon… adding security to the box
+# Next: Adding security to the box
 This post covered the basics of how to get going with Chef. You have installed the Chef workstation software and supporting components Git, Ruby and VirtualBox and Vagrant. You have created a sample role called `webserver` and assigned two sample recipes, `apache2` and `apt`, to it. You created a virtual machine called `tester` with the domain name `tester.local` and bootstrapped Chef onto it, placing it under Chef control.
 
-In the next post, you will begin doing more useful work. I’ll describe how to fine-tune the Apache installation. We will also begin increasing the security of the machine.
+In the [next post](/blog/2013/10/03/chef-2nd-course/), you will begin doing more useful work. I’ll describe how to fine-tune the Apache installation. We will also begin increasing the security of the machine.
 
 _This post was updated October 1, 2013 to change the hostname used in the examples from `tester` to `tester.local`. It was updated on October 2, 2013 to remove references to the half-configured SSL support for Apache; I’ll cover this more fully in a future post._

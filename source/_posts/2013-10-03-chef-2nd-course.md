@@ -1,5 +1,5 @@
 ---
-title: The DevOps Security Handbook: Building Security In With Chef, Part II
+title: The DevOps Security Handbook&#58; Building Security In With Chef, Part II
 author: Andrew Jaquith
 date: 2013-10-03 13:30
 categories:
@@ -8,7 +8,7 @@ categories:
 layout: post
 comments: true
 ---
-# Objectives
+# Introduction
 _This is the second in a series of occasional posts about security and DevOps. The ultimate goal of this series is to show how to build a reasonably secure Apache web server using the popular DevOps automation tool [Chef](http://www.opscode.com/chef/). The server I am describing how to build will be suitable for serving static content. Readers of this blog know that I am a fan of static blogging tools like [Octopress](http://octopress.org), which I use to generate this website._
 
 If you read the [first post in this series](/blog/2013/10/01/chef-starter/), you learned how to set up the Chef workstation and server account. You created an Apache server role and a test environment; set up a virtual machine; and built your first node. In this post, I will show you how to create a new role called `base` that includes security enhancements to OpenSSH. You will also fine-tune Apache to remove non-essential modules.
@@ -253,7 +253,7 @@ You can verify that SSH has been reconfigured correctly by trying to SSH into `t
 
 > Note: running the `openssh` recipe with the attributes as shown above can have adverse consequences on production nodes if you aren’t prepared. The recipe with the attributes as shown removes SSH `root` access. Unless you have another way of becoming `root` on the box, you might find yourself locked out! If your machine is a Vagrant machine, you can use the `vagrant ssh` command to become root. For non-Vagrant machines, you will need a non-root account that allows public-key logins and can `su` to `root`. You have been warned.
 
-# Coming soon… adding a user account and web content directory
+# Next: Managing SSL certificates and keys
 This post introduced the concept of using Chef to partially harden a web server. You reduced the number of loadable Apache modules to a minimum set, disabled unnecessary services and reduced the amount of useful information an attacker could obtain. You created a second role called `base` and assigned two recipes, `openssh` and `chef-client::delete_validation`. These recipes configure OpenSSH in a more restrictive manner by disabling password authentication, disabling root logins and preventing session forwarding. The `delete_validation` recipe removes the Chef validation key from the node after it is created, which removes a potential security risk.
 
-In the next post, you will switch back to Apache. You will use Chef to create a non-privileged user whose home directory stores static HTML. This directory will served up by Apache as the default website. In keeping with the SSH configuration introduced in this post, the user account will be configured to use SSH public keys for authentication rather than passwords.
+In the [next post](/blog/2013/10/06/chef-3rd-course/), you will switch back to Apache. You will use Chef to perform one of the most challenging aspects of any server configuration: copying SSL keying materials to server nodes.

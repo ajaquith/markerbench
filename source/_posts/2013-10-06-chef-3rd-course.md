@@ -338,7 +338,7 @@ Next, edit the default recipe file `ssl-config/recipes/default.rb` as follows:
     puts "Decrypting certificate from hash item #{cert_cert}."
     begin
       item = ChefVault::Item.load(vault,cert_cert)
-      file "/etc/ssl/certs/#{hostname}.pem" do
+      file "/etc/ssl/certs/ssl-cert-snakeoil.pem" do
         owner 'root'
         group 'root'
         mode '0444'
@@ -367,7 +367,7 @@ Next, edit the default recipe file `ssl-config/recipes/default.rb` as follows:
     puts "Decrypting key from hash item #{cert_key}."
     begin
       item = ChefVault::Item.load(vault,cert_key)
-      file "/etc/ssl/private/#{hostname}.key" do
+      file "/etc/ssl/private/ssl-cert-snakeoil.key" do
         owner 'root'
         group 'root'
         mode '0400'
@@ -376,6 +376,11 @@ Next, edit the default recipe file `ssl-config/recipes/default.rb` as follows:
     rescue ChefVault::Exceptions::KeysNotFound
       raise ChefVault::Exceptions::ItemNotFound,
         "Private key not found at #{vault}/#{cert_key}!"
+    end
+
+    # Configure the SSL default site if enabled
+    apache_site "default-ssl" do
+      enable node['apache']['default_site_enabled']
     end
 
 There might appear to be a lot going on in this recipe, but it is actually quite simple. First, the `chef_gem` and `require` lines tell the target node’s Chef client to download the `chef-vault` Gem.
@@ -388,11 +393,13 @@ The next part of the recipe assigns variables used for looking up and decrypting
 
 The next three code blocks (each beginning with the comment `# Decrypt`) actually decrypt the file contents and save them to files. Let’s look the first of these. 
 
-In the first decryption block, the line `ChefVault::Item.load(vault,cert_cert)` decrypts the certificate object and assigns the result to the variable `item`. The value of `item` will be a hash. The next 6 lines that begin with `file "/etc/ssl/certs/#{hostname}.pem" do` create the certificate file, assign ownership to root, make it world-readable, and set the contents to `item`’s hash entry named `file-content`. Note that all of this code is enclosed in a begin/rescue/end block, so that the `ChefVault::Exceptions::KeysNotFound` exception can be trapped. `ChefVault::Item.load` throws this exception if the vault does not contain the expected entry, in this case one whose key is `tester_local_pem`. If the entry is not found (for example, because you forgot to add the certificate to the vault), the recipe will throw and exception and fail — as it should.
+In the first decryption block, the line `ChefVault::Item.load(vault,cert_cert)` decrypts the certificate object and assigns the result to the variable `item`. The value of `item` will be a hash. The next 6 lines that begin with `file "/etc/ssl/certs/ssl-cert-snakeoil.pem" do` create the certificate file, assign ownership to root, make it world-readable, and set the contents to `item`’s hash entry named `file-content`. Note that all of this code is enclosed in a begin/rescue/end block, so that the `ChefVault::Exceptions::KeysNotFound` exception can be trapped. `ChefVault::Item.load` throws this exception if the vault does not contain the expected entry, in this case one whose key is `tester_local_pem`. If the entry is not found (for example, because you forgot to add the certificate to the vault), the recipe will throw and exception and fail — as it should.
 
 The second decryption block decrypts and saves the certificate chain, if one was added to the vault. Because `tester.local`’s SSL certificate was self-signed, it does not need a certificate chain. However, in production situations you might have one, and if you do, you can ensure that it is copied to the server by adding it to vault using the usual `knife encrypt create` command and specifying an item named _nodename_chain_, where _nodename_ is the escaped form of the fully-qualified domain name (periods replaced by underscores). Unlike the first decryption block, however, the recipe does not crash and burn if the certificate chain item is not found. Instead, the recipe simply warns that no chain was found.
 
 The third decryption block decrypts and saves the private key. As with the first decryption block, the recipe fails if the key’s expected entry is not found in the vault.
+
+The last block turns on the `default-ssl` site in Apache, which is preconfigured to use the various _ssl_snakeoil_ certificate files and private keys.
 
 The `ssl-config` recipe is fairly bare-bones, but sufficiently flexible that it will work with any SSL-enabled web server node. As discussed above, all you must do is (1) ensure that the node’s SSL certificate and private key are added to the vault correctly, and (2) configure the node’s run-list so that it executes the `ssl-config` recipe.
 
@@ -422,23 +429,58 @@ Many console messages will scroll past you at a dizzying pace. Look for these li
 
 These indicate that the recipe worked as expected. If there is a problem finding or decrypting the certificate or private key, the output will show an exception. Assuming the recipe ran successfully, the output will also contain lines showing that the certificate and private key files were created also. Look for lines similar to these, which shows the certificate file was created:
 
-    - create new file /etc/ssl/certs/tester.local.pem
-    - update content in file /etc/ssl/certs/tester.local.pem from none to 53f4ae
-        --- /etc/ssl/certs/tester.local.pem	2013-10-06 23:29:51.663590528 +0000
-        +++ /tmp/.tester.local.pem20131006-9127-hmw8o1	2013-10-06 23:29:51.667592528 +0000
+    - create new file /etc/ssl/certs/ssl-cert-snakeoil.pem
+    - update content in file /etc/ssl/certs/ssl-cert-snakeoil.pem from none to 53f4ae
+        --- /etc/ssl/certs/ssl-cert-snakeoil.pem	2013-10-06 23:29:51.663590528 +0000
+        +++ /tmp/.ssl-cert-snakeoil.pem20131006-9127-hmw8o1	2013-10-06 23:29:51.667592528 +0000
         @@ -0,0 +1,23 @@
         +-----BEGIN CERTIFICATE-----
 
 …and these, which shows the private key file was created:
 
-    - create new file /etc/ssl/private/tester.local.key
-    - update content in file /etc/ssl/private/tester.local.key from none to 60fcbe
-        --- /etc/ssl/private/tester.local.key	2013-10-06 23:29:51.727622527 +0000
-        +++ /tmp/.tester.local.key20131006-9127-m9p4zk	2013-10-06 23:29:51.731624527 +0000
+    - create new file /etc/ssl/private/ssl-cert-snakeoil.key
+    - update content in file /etc/ssl/private/ssl-cert-snakeoil.key from none to 60fcbe
+        --- /etc/ssl/private/ssl-cert-snakeoil.key	2013-10-06 23:29:51.727622527 +0000
+        +++ /tmp/.ssl-cert-snakeoil.key20131006-9127-m9p4zk	2013-10-06 23:29:51.731624527 +0000
         @@ -0,0 +1,27 @@
         +-----BEGIN RSA PRIVATE KEY-----
 
-After the recipe runs, you can verify the files were correctly created by `cat`-ing the files `/etc/ssl/certs/tester.local.pem` and `/etc/ssl/private/tester.local.key`. The files should be owned by `root/root`; permissions should be restricted to 444 and 400, respectively.
+After the recipe runs, you can verify the files were correctly created by `cat`-ing the files `/etc/ssl/certs/ssl-cert-snakeoil.pem` and `/etc/ssl/private/ssl-cert-snakeoil.key`. The files should be owned by `root/root`; permissions should be restricted to 444 and 400, respectively.
+
+# Testing the webserver
+To test that the webserver is working as it should, we need to do two more things: edit the `webserver` role to enable SSL and the default site. Then, we re-push the cookbook and restart the server.
+
+First, edit the role as follows using the usual command `knife role edit webserver`. As shown below, add SSL as an enabled module by adding `"ssl",` to the `default_modules` array, and turn set the `default_site_enabled` value to `true`:
+
+    "override_attributes": {
+        "apache": {
+          "allow_override": "None",
+          "contact": "nobody@example.com",
+          "default_modules": [
+            "alias",
+            "cgi",
+            "deflate",
+            "dir",
+            "log_config",
+            "logio",
+            "mime",
+            "rewrite",
+            "ssl",
+            "setenvif"
+          ],
+          "default_site_enabled": true,
+    ....
+
+Also, enable port 443 in the `listen_ports` section:
+
+          "listen_ports": [
+            "80",
+            "443"
+          ],
+
+On `tester.local`, run `chef-client` as root again and watch the node converge using these new settings.
+
+Then, open your browser to `tester.local` using regular HTTP. You should see a page that screams __It works!__. Try using HTTPS; you should see the same message (and likely after getting an SSL warning about an untrusted certificate).
 
 # Save your work
 You are done. Back up your nodes, roles, data bags and environments from the Chef server to your local workstation. Type:
@@ -475,7 +517,9 @@ You will see that a few have also been modified. Commit everything:
 
 _Remember, the keying materials (the *.key and *.pem files in the .chef directory) are not versioned in your Git repository. This is both a feature and a bug. You can safely move the `tester.local.pem` and `tester.local.key` files to offline media now, if you wish; they are safely encrypted in the data bag `certs` and no longer need to be in the local filesystem._
 
-# Next: Adding a web user and content directory
+# Next: Adding custom content
 If you have completed the instructions in this post, you learned how to do some very useful things. You created a self-signed SSL certificate and private key for `tester.local`. You installed the `chef-vault` plugin for storing the SSL certificate and private key as encrypted data bag items. You authorized the user `arj` and node `tester.local` to decrypt these items. And you created a cookbook that decrypts the certificate, private key and certificate chain and creates files in the correct locations on the server.
 
 In the next post, you will use Chef to configure Apache for serving custom content. You will create a non-privileged user whose home directory stores static HTML. This directory will be served up by Apache as the default website. In keeping with the SSH configuration introduced in this post, the user account will be configured to use SSH public keys for authentication rather than passwords.
+
+_This post was updated July 22, 2015 to change the naming convention for SSL certificate files on the target box. It also added a short section that enables the default normal and SSL sites, as well as a short section for testing the actual SSL configuration._

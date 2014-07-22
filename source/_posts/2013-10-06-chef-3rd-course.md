@@ -353,7 +353,7 @@ Next, edit the default recipe file `ssl-config/recipes/default.rb` as follows:
     puts "Decrypting certificate chain."
     begin
       item = ChefVault::Item.load(vault,cert_chain)
-      file "/etc/ssh/certs/#{hostname}.chain" do
+      file "/etc/ssl/certs/#{hostname}.chain" do
         owner 'root'
         group 'root'
         mode '0444'

@@ -17,6 +17,8 @@ Good afternoon. Thank you for coming. It is a privilege to speak with you today.
 
 But I also know that I am the last thing between you and beer, so I will keep this talk as short and sweet as I can.
 
+<!-- more -->
+
 Certainly, “cyber security” (I hate that phrase, but there we are) is a topic that can be treated lightly, and it is ambitious to try and cover the whole subject in 20 minutes. Nonetheless. I will discuss the rise of digital crime: how criminal enterprises, state-sponsored actors, and other parties are robbing the industrialized world of its secrets and personal information. I’ll discuss the impact that these activities have on businesses, citizens and governments. And I’ll discuss what can be done from our perspective as BAE Systems, one of the world’s largest defense contractors and providers of digital crime solutions.
 
 ## Introduce Self

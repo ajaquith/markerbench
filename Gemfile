@@ -1,19 +1,19 @@
 source "https://rubygems.org"
+ruby RUBY_VERSION
 
-group :development do
-  gem 'rake', '~> 0.9'
-  gem 'jekyll', '~> 0.12'
-  gem 'rdiscount', '~> 2.0.7'
-  gem 'pygments.rb', '~> 0.3.4'
-  gem 'RedCloth', '~> 4.2.9'
-  gem 'haml', '~> 3.1.7'
-  gem 'compass', '~> 0.12.2'
-  gem 'sass', '~> 3.2'
-  gem 'sass-globbing', '~> 1.0.0'
-  gem 'rubypants', '~> 0.2.0'
-  gem 'rb-fsevent', '~> 0.9'
-  gem 'stringex', '~> 1.4.0'
-  gem 'liquid', '~> 2.3.0'
+# Hello! This is where you manage which Jekyll version is used to run.
+# When you want to use a different version, change it below, save the
+# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
+#
+#     bundle exec jekyll serve
+#
+
+# If you have any plugins, put them here!
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+group :jekyll_plugins do
+    gem 'jekyll-feed'
+    gem 'jekyll-sitemap'
+    gem 'jekyll-paginate'
+    gem 'jekyll-seo-tag'
+    gem 'jekyll-picture-tag', git: 'https://github.com/robwierzbowski/jekyll-picture-tag/'
 end
-
-gem 'sinatra', '~> 1.4.2'

@@ -6,6 +6,7 @@ layout: post
 categories:
 - blog
 - applications
+image: assets/images/octopress_logo.png
 comments: true
 ---
 As part of a continuing experiment with static blogging, I have moved all of my historical blog posts from [securitymetrics.org](http://www.securitymetrics.org) to Markerbench.com. Everything is now here, including the somewhat notorious essay [Escaping the Hamster Wheel of Pain](http://www.markerbench.com/blog/2005/05/04/Escaping-the-Hamster-Wheel-of-Pain/), which introduced a certain rodent-related metaphor to the security trade and served as the introduction to my book, ["Security Metrics: Replacing Fear, Uncertainty and Doubt"](http://www.amazon.com/Security-Metrics-Replacing-Uncertainty-Doubt/dp/0321349989).
@@ -20,7 +21,7 @@ Moving everything to Octopress means that I now write in Markdown, John Gruber's
 
 * __Headings__: in Markdown, you create a new heading this way: `#` (Heading 1), `##` (Heading 2), etc whereas in wiki text you use are `!!!`, `!!`, and `!` respectively. I find the Markdown syntax a little more economical.
 * __Emphasis__: in Markdown, you emphasis text by surrounding it with `_` (for _italics_) and `__` (for __bold__). In wiki text you use `''` for italics and `_` for bold. Not a big difference, but logically, it makes sense that more emphasis means more characters to type (2 for bold versus 1 for italics).
-* __Code blocks and inline code__: In Markdown you indent text by four or more spaces to indicate a code block, and you indicate inline code by enclosing the text in back ticks (`` ` ``). In wiki text you enclose the text with triple and double curly braces: {{ "`{{{ code block }}}`" }} and {{ "`{{ inline code }}`" }}.
+* __Code blocks and inline code__: In Markdown you indent text by four or more spaces to indicate a code block, and you indicate inline code by enclosing the text in back ticks (`` ` ``). In wiki text you enclose the text with triple and double curly braces.
 * __Hyperlinks__: You create links in Markdown with the hyperlinked text enclosed in square brackets, and the link itself in parentheses, for example this snippet `[link](http://www.markerbench.com)` links to my blog. In wiki text, you use square brackets separated by a pipe _eg,_ `[link | http://www.markerbench.com]`. Both are lightweight enough for my needs; the Markdown syntax is slightly easier.
 
 I'll miss JSPWiki's neat table syntax, which allowed you to create tables simply and cleanly (`|| head 1 || head 2 || head 3` for header rows and `| cell 1 | cell 2 | cell 3` for regular rows), but you can create tables in Markdown simply by passing through HTML. That's ok with me; I haven't seen a clean way to do tables on any platform. Supposedly-"WYSIWYG" editors -- such as the one in Wordpress -- mess tables up regularly. Writing them out manually is a little more work, but not too much.

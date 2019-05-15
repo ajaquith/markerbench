@@ -7,6 +7,7 @@ categories:
 - security
 - web websites
 - applications
+image: assets/images/jekyll.svg
 comments: true
 ---
 

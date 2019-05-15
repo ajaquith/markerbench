@@ -1,10 +1,14 @@
 ---
 layout: post
 author: arj
-title: "First Look at Stephen Few&rsquo;s &ldquo;Information Dashboard Design, Second Edition&rdquo;"
+title: "Review of Stephen Few&rsquo;s &ldquo;Information Dashboard Design, Second Edition&rdquo;"
 date: 2013-08-13 23:01
 comments: true
-categories: visualization
+categories: 
+- visualization
+tags:
+- featured
+image: assets/images/few.jpg
 ---
 Twenty years ago, a polymath prophet named [Edward Tufte](http://www.edwardtufte.com) self-published an incendiary book, _[The Visual Display of Quantitative Information](http://www.amazon.com/Visual-Display-Quantitative-Information/dp/096139210X)_. It forever changed how a certain species of white-collar professional viewed the world. As a DNA-tested, confirmed member of the species _homo visualis_, I can tell you that his book, and successors such as _[Envisioning Information](http://www.amazon.com/Envisioning-Information-Edward-R-Tufte/dp/0961392118)_, taught me how to create strong, effective statistical graphics. Tufte introduced the concepts of _chart junk,_ the _data-to-ink ratio,_ _small multiples_ and _sparklines_. He argued forcefully and persuasively that designers of statistical graphics need not condescend to their audiences. And perhaps most important, he inspired a generation of authors, professionals and scientists — call them "Tuftees" — to strive for simplicity, clarity and honesty in their representations of data. 
 

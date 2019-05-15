@@ -6,6 +6,7 @@ categories:
 - security
 - DevOps
 layout: post
+image: assets/images/512px-Devops-toolchain.png
 comments: true
 ---
 # Introduction
@@ -306,3 +307,5 @@ This post covered the basics of how to get going with Chef. You have installed t
 In the [next post](/blog/2013/10/03/chef-2nd-course/), you will begin doing more useful work. I’ll describe how to fine-tune the Apache installation. We will also begin increasing the security of the machine.
 
 _This post was updated October 1, 2013 to change the hostname used in the examples from `tester` to `tester.local`. It was updated on October 2, 2013 to remove references to the half-configured SSL support for Apache; I’ll cover this more fully in a future post._
+
+_Image copyright 2016 by Kharnagy, licensed under the Creative Commons Attribution-Share Alike 4.0 International license._

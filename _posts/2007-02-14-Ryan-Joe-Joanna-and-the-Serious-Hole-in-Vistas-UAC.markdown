@@ -1,5 +1,5 @@
 ---
-title: Ryan, Joe, Joanna, and the “Serious Hole” in Vista's UAC
+title: Ryan, Joe, Joanna, and the &ldquo;Serious Hole&rdquo; in Vista&rsquo;s UAC
 author: arj
 created_at: 2007-02-14 11:21:22 -0500
 layout: post

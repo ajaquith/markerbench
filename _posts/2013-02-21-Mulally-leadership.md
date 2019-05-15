@@ -5,6 +5,10 @@ created_at: 2013-02-21 23:31:00 +0000
 layout: post
 categories: 
 - strategy
+- leadership
+tags:
+- featured
+image: assets/images/mulally.jpg
 comments: true
 ---
 I have been a fan of the Ford Motor Company ever since I was a boy. There's no rational reason for it, but then again, experts tell us that brand preferences are formed at very early ages. Somewhere around the age of 10 or so I decided I liked Ford cars. My first car after college was a 1993 Ford Taurus, which I later gave to my sister when I moved overseas. My second car was a 1998 Ford Contour. I changed to a nice little Honda Civic five years ago; at the time, the domestics weren't looking so great. But I still have a certain patriotic wistfulness about Fords, and probably always will have. For this reason, I've been watching Ford's recovery with interest.
@@ -30,3 +34,5 @@ As described in an older CNN Money story, establishing trust and a culture of op
 > There are no pre-meetings or briefing books. "They don't bring their big books anymore because I'm not going to grind them with as many questions as I can to humiliate them," Mulally says. "We'll see them next week. We don't take action - I'm going to see you next week." No BlackBerrys are allowed, and no side conversations either - Mulally is insistent about that. "If somebody starts to talk or they don't respect each other, the meeting just stops. They know I've removed vice presidents because they couldn't stop talking because they thought they were so damn important."
 
 Ford's success isn't solely due to the leadership qualities of the CEO, of course. Building better quality cars, after all, is the point of the whole exercise. That, the company has done well. But I love this story because it shows how setting the "tone at the top" matters, and that having a positive culture of problem-solving can (literally) [pay dividends](http://www.cbsnews.com/8301-34227_162-57563380/fords-souped-up-dividend-could-lure-new-investors/) all around.
+
+_Public domain photo by [Eric Draper](https://georgewbush-whitehouse.archives.gov/news/releases/2007/03/20070320-7.html)._

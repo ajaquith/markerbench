@@ -7,6 +7,7 @@ comments: true
 categories:
  - applications 
  - dev ops
+image: assets/images/512px-Devops-toolchain.png
 ---
 Many ardent followers of this blog know that among other things, one of my professional hobbies is application development. I am a "weekend programmer." I always have a side project or two going, but do not professionally program (much) as part of my day job. That's not necessarily for lack of talent (cough), but for lack of desire to make my living from it. That said, as the CTO of a cloud security software company, it's rather good to know how software is built these days. As a bonus, by staying close to dev via a hobby or two, I can relate better to my colleagues who actually do make their living from programming. 
 
@@ -31,3 +32,5 @@ From the big picture perspective, Heroku represents a complete rethink, and outs
 We can take this one step further. What Heroku and services like it means is that in the future, IT will remain relevant only if it can continue to engender respect with developers. If IT insists on being a roadblock — for example, if it can't or won't buy prototyping servers fast enough, imposes uninformed mandates about "company standard" frameworks, continues to require CVS (shudder) or SVN (wince) rather than Git, or breaks out in hives at the mention of this newfangled Hadoop thingy — it will create economic incentives for developers to look elsewhere. By "IT" I mean it as an aggregate entity — the architect rule-setters, security-gate-keepers and purse-string-holders that collectively and emergent-ly determine how applications are made and where they run.
 
 In my next post, I'll offer some perspective on some of my experiments with the [Play Framework](http://www.playframework.com), a radical re-think of Java that offers a compelling alternative to traditional JEE applications. My occasional correspondent and Twitter friend [Rob Williams](http://www.jroller.com/robwilliams/category/Java) turned me on to Play. It can be deployed quickly and simply on Heroku. I'll have some observations shortly.
+
+_Image copyright 2016 by Kharnagy, licensed under the Creative Commons Attribution-Share Alike 4.0 International license._

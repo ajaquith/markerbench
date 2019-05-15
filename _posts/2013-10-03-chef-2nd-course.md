@@ -6,6 +6,7 @@ categories:
 - security
 - DevOps
 layout: post
+image: assets/images/512px-Devops-toolchain.png
 comments: true
 ---
 # Introduction
@@ -257,3 +258,5 @@ You can verify that SSH has been reconfigured correctly by trying to SSH into `t
 This post introduced the concept of using Chef to partially harden a web server. You reduced the number of loadable Apache modules to a minimum set, disabled unnecessary services and reduced the amount of useful information an attacker could obtain. You created a second role called `base` and assigned two recipes, `openssh` and `chef-client::delete_validation`. These recipes configure OpenSSH in a more restrictive manner by disabling password authentication, disabling root logins and preventing session forwarding. The `delete_validation` recipe removes the Chef validation key from the node after it is created, which removes a potential security risk.
 
 In the [next post](/blog/2013/10/06/chef-3rd-course/), you will switch back to Apache. You will use Chef to perform one of the most challenging aspects of any server configuration: copying SSL keying materials to server nodes.
+
+_Image copyright 2016 by Kharnagy, licensed under the Creative Commons Attribution-Share Alike 4.0 International license._

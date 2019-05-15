@@ -6,6 +6,7 @@ categories:
 - security
 - DevOps
 layout: post
+image: assets/images/512px-Devops-toolchain.png
 comments: true
 ---
 
@@ -65,3 +66,5 @@ So, that’s what I like about Chef. However, Chef has some important limitation
 As Sean’s blog points out, [Chef is not the only game in town](http://blog.afistfulofservers.net/post/2011/12/30/cfengine-puppet-and-chef-part-1/). Puppet serves a similar role for many companies, and its design philosophy is close to that of Chef. Both were inspired by CFEngine. I chose to experiment with Chef because I felt it had more polish and refinement than Puppet. I have no idea whether this is actually true or not. At a certain point, it does not matter. Whether you like Chef, Puppet or CFEngine, the point is to try them out and see where it takes you. I am quite pleased so far with Chef and look forward to using it more with my own projects. I will post more details in future blog posts.
 
 If you are a security or infrastructure who is working with Chef or similar tools, I would love to hear about you experiences. Add a comment or send me an email!
+
+_Image copyright 2016 by Kharnagy, licensed under the Creative Commons Attribution-Share Alike 4.0 International license._

@@ -7,6 +7,7 @@ categories:
 - security
 - web websites
 - applications
+image: assets/images/octopress_logo.png
 comments: true
 ---
 Soon, I will be moving the securitymetrics.org website to a simpler, secure and more usable system -- the same platform that powers Markerbench. It should be done in time for Mini-Metricon (March 1st, 2013).

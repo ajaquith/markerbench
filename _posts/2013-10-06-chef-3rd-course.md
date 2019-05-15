@@ -6,6 +6,7 @@ categories:
 - security
 - DevOps
 layout: post
+image: assets/images/512px-Devops-toolchain.png
 comments: true
 ---
 # Introduction
@@ -523,3 +524,5 @@ If you have completed the instructions in this post, you learned how to do some 
 In the next post, you will use Chef to configure Apache for serving custom content. You will create a non-privileged user whose home directory stores static HTML. This directory will be served up by Apache as the default website. In keeping with the SSH configuration introduced in this post, the user account will be configured to use SSH public keys for authentication rather than passwords.
 
 _This post was updated July 22, 2015 to change the naming convention for SSL certificate files on the target box. It also added a short section that enables the default normal and SSL sites, as well as a short section for testing the actual SSL configuration._
+
+_Image copyright 2016 by Kharnagy, licensed under the Creative Commons Attribution-Share Alike 4.0 International license._

@@ -1,15 +1,17 @@
 ---
-title: Metricon X &mdash; Opening Remarks
+title: Five Things the Last Decade Taught Me About Security Metrics
 author: arj
 created_at: 2019-03-21 09:00:01 -0400
 layout: post
 categories: 
 - metricon
+tags:
+- featured
 comments: true
 image: assets/images/metricon-x-pano.jpg
 ---
 
-_This is the nominal text of Andy Jaquith&rsquo;s opening remarks for [Metricon X](/blog/2019/01/28/metricon-x-agenda/), delivered on March 21, 2019. It has been lightly edited for clarity and a few identities have been slightly disguised. The views expressed in this speech do not necessarily reflect those of my present or past employers._
+_This is the nominal text of my opening remarks for [Metricon X](https://www.securitymetrics.org/blog/2019/01/28/metricon-x-agenda/), delivered on March 21, 2019. It has been lightly edited for clarity and a few identities have been slightly disguised. The views expressed in this speech do not necessarily reflect those of my present or past employers._
 
 # Welcome
 

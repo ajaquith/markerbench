@@ -7,6 +7,8 @@ categories:
 - security
 - hamsters
 - books
+tags:
+- featured
 comments: true
 image: assets/images/hamster.png
 ---
@@ -14,7 +16,7 @@ image: assets/images/hamster.png
 ## Risk Management is Where the Confusion Is
 Lately I've been accumulating a lot of slideware from security companies advertising their wares. In just about every deck the purveyor bandies about the term "risk management," and offers their definition of what that is. In most cases, their definition does not match mine.
 
-I first encountered the term "risk management" used in the context of security in 1998, when I read Dan Geer's landmark essay [Risk Management is Where the Money Is](http://www.cs.ucsd.edu/users/goguen/courses/275f00/geer.html). At the time, I was completely gobsmacked by its thoughtfulness and rhetorical force. it was like a thunderbolt of lucidity; several days later, I could still smell the ozone. Seven years later, I've found that much of his essay stands up well. Unfortunately for Dan's employer at the time, purveyors of bonded identities did not flourish and monetize electronic commerce security as he had predicted. But he was absolutely correct in identifying digital security risk as a commodity that could be identified, rated, mitigated, traded, and above all, quantified and valued.
+I first encountered the term "risk management" used in the context of security in 1998, when I read Dan Geer's landmark essay [Risk Management is Where the Money Is](http://www.cs.ucsd.edu/users/goguen/courses/275f00/geer.html). At the time, I was completely gobsmacked by its thoughtfulness and rhetorical force. It was like a thunderbolt of lucidity; several days later, I could still smell the ozone. Seven years later, I've found that much of his essay stands up well. Unfortunately for Dan's employer at the time, purveyors of bonded identities did not flourish and monetize electronic commerce security as he had predicted. But he was absolutely correct in identifying digital security risk as a commodity that could be identified, rated, mitigated, traded, and above all, quantified and valued.
 
 <!--more-->
 

@@ -9,6 +9,8 @@ ruby RUBY_VERSION
 #
 
 # If you have any plugins, put them here!
+gem 'rake', '~> 0.9'
+gem 'stringex', '~> 1.4.0'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 group :jekyll_plugins do
     gem 'jekyll-feed'

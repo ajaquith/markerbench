@@ -138,7 +138,7 @@ layout: default
         <div class="row prevnextlinks small font-weight-bold">
           {% if page.previous.url %}
             <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="{{page.previous.url | absolute_url}}"> {{page.previous.title}}
+                <a class="text-dark" href="{{ page.previous.url }}"> {{page.previous.title}}
                 {% if page.previous.image %}
                 {% asset "{{ page.previous.image }}" class="mr-1" magick:resize=x30 @optim %}
                 {% endif %}
@@ -147,7 +147,7 @@ layout: default
           {% endif %}
           {% if page.next.url %}
             <div class="col-md-6 text-right pr-0">
-                <a class="text-dark" href="{{page.next.url | absolute_url}}"> {{page.next.title}}
+                <a class="text-dark" href="{{page.next.url }}"> {{page.next.title}}
                 {% if page.next.image %}
                 {% asset "{{ page.next.image }}" class="ml-1" magick:resize=x30 @optim %}
                 {% endif %}

@@ -8,7 +8,7 @@ categories:
 - leadership
 tags:
 - featured
-image: assets/images/mulally.jpg
+image: mulally.jpg
 comments: true
 ---
 I have been a fan of the Ford Motor Company ever since I was a boy. There's no rational reason for it, but then again, experts tell us that brand preferences are formed at very early ages. Somewhere around the age of 10 or so I decided I liked Ford cars. My first car after college was a 1993 Ford Taurus, which I later gave to my sister when I moved overseas. My second car was a 1998 Ford Contour. I changed to a nice little Honda Civic five years ago; at the time, the domestics weren't looking so great. But I still have a certain patriotic wistfulness about Fords, and probably always will have. For this reason, I've been watching Ford's recovery with interest.

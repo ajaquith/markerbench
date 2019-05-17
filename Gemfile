@@ -12,10 +12,13 @@ ruby RUBY_VERSION
 gem 'rake', '~> 0.9'
 gem 'stringex', '~> 1.4.0'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem 'image_optim'
+gem 'image_optim_pack'
+gem 'mini_magick'
 group :jekyll_plugins do
+    gem 'jekyll-assets', '~> 3.0.9'
     gem 'jekyll-feed'
     gem 'jekyll-sitemap'
     gem 'jekyll-paginate'
     gem 'jekyll-seo-tag'
-    gem 'jekyll-picture-tag', git: 'https://github.com/robwierzbowski/jekyll-picture-tag/'
 end

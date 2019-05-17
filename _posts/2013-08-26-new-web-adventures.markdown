@@ -7,7 +7,7 @@ comments: true
 categories:
  - applications 
  - dev ops
-image: assets/images/512px-Devops-toolchain.png
+image: 512px-Devops-toolchain.png
 ---
 Many ardent followers of this blog know that among other things, one of my professional hobbies is application development. I am a "weekend programmer." I always have a side project or two going, but do not professionally program (much) as part of my day job. That's not necessarily for lack of talent (cough), but for lack of desire to make my living from it. That said, as the CTO of a cloud security software company, it's rather good to know how software is built these days. As a bonus, by staying close to dev via a hobby or two, I can relate better to my colleagues who actually do make their living from programming. 
 

@@ -6,7 +6,7 @@ layout: post
 categories:
 - blog
 - applications
-image: assets/images/octopress_logo.png
+image: octopress_logo.png
 comments: true
 ---
 As part of a continuing experiment with static blogging, I have moved all of my historical blog posts from [securitymetrics.org](http://www.securitymetrics.org) to Markerbench.com. Everything is now here, including the somewhat notorious essay [Escaping the Hamster Wheel of Pain](http://www.markerbench.com/blog/2005/05/04/Escaping-the-Hamster-Wheel-of-Pain/), which introduced a certain rodent-related metaphor to the security trade and served as the introduction to my book, ["Security Metrics: Replacing Fear, Uncertainty and Doubt"](http://www.amazon.com/Security-Metrics-Replacing-Uncertainty-Doubt/dp/0321349989).

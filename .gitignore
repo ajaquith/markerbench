@@ -1,7 +1,8 @@
 _deploy
 _site
 .DS_Store
-.sass-cache
+.jekyll-cache
 .jekyll-metadata
+.sass-cache
 node_modules
 Gemfile.lock

@@ -8,7 +8,7 @@ categories:
 tags:
 - featured
 comments: true
-image: assets/images/metricon-x-pano.jpg
+image: metricon-x-pano.jpg
 ---
 
 _This is the nominal text of my opening remarks for [Metricon X](https://www.securitymetrics.org/blog/2019/01/28/metricon-x-agenda/), delivered on March 21, 2019. It has been lightly edited for clarity and a few identities have been slightly disguised. The views expressed in this speech do not necessarily reflect those of my present or past employers._

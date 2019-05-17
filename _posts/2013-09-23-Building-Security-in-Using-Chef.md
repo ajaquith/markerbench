@@ -6,7 +6,7 @@ categories:
 - security
 - DevOps
 layout: post
-image: assets/images/512px-Devops-toolchain.png
+image: 512px-Devops-toolchain.png
 comments: true
 ---
 

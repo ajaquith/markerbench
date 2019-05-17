@@ -10,7 +10,7 @@ categories:
 tags:
 - featured
 comments: true
-image: assets/images/hamster.png
+image: hamster.png
 ---
 
 ## Risk Management is Where the Confusion Is

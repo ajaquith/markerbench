@@ -8,12 +8,12 @@ categories:
 - metrics
 - books
 comments: true
-image: assets/images/arj-frog.png
+image: arj-frog.png
 ---
 
 Greetings everybody! I am pleased to announce that my book, [Security Metrics: Replacing Fear, Uncertainty and Doubt](http://www.amazon.com/Security-Metrics-Replacing-Uncertainty-Doubt/dp/0321349989/) has shipped from the printers and is on its way to better bookstores near you. You can also pre-order from Amazon. I have a printed copy in my hot little hands, and it looks great!
 
-{% picture assets/images/arj-frog.png %}
+{% asset arj-frog.png %}
 
 I'd like to thank my agent, my producer and my good friend Walter Matthau.
 

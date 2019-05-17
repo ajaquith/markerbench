@@ -13,7 +13,7 @@ permalink: "/author-andrew-jaquith.html"
                 <p class="excerpt">{{ site.authors.arj.bio }}</p>
             </div>
             <div class="col-md-3 text-right">
-                <img alt="{{ site.authors.arj.name }}" src="{{site.baseurl}}/{{ site.authors.arj.avatar }}" class="rounded-circle" height="100" width="100">
+                {% asset "{{ site.authors.arj.avatar }}" alt="{{ site.authors.arj.name }}" class="rounded-circle" magick:resize=100x100 @optim %}
             </div>
         </div>
         <h4 class="font-weight-bold spanborder"><span>Posts by {{page.title}}</span></h4>

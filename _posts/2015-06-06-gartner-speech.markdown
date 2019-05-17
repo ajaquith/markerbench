@@ -10,7 +10,7 @@ categories:
 tags:
 - sticky
 - featured
-image: assets/images/johnboyd.jpg
+image: johnboyd.jpg
 comments: true
 ---
 _This is the text of a speech I delivered at the Gartner Group Security and Risk Management Summit in June 2015. I originally wrote the speech for Sir Roger Carr, the Chairman of BAE Systems, to use at one of his public appearances. But it was too good not to re-use for myself as the BAE Applied Intelligence&rsquo; strategy lead. I felt no shame in doing so, seeing that I'd written it..._

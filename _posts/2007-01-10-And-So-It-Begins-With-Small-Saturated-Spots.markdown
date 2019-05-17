@@ -8,11 +8,12 @@ categories:
 - metrics
 - books
 - visualization
+image: arj-frog.png
 comments: true
 ---
 My publisher, Addison-Wesley, has recently updated the information on my book, [Security Metrics: Replacing Fear, Uncertainty and Doubt](http://www.amazon.com/Security-Metrics-Replacing-Uncertainty-Doubt/dp/0321349989/) on Amazon. Although I am particularly fond of the inside contents, I am also very pleased with the way the cover came out. AW's very talented Alan Clement put this great picture on the cover:
 
-{% picture assets/images/arj-frog.png %}
+{% asset arj-frog.png %}
 
 Isn't it nice? I like it not just because it's a great picture, but because it ties into the book's overall theme. Allow me to explain.
 

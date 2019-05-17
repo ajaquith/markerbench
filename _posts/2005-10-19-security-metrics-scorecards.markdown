@@ -6,6 +6,7 @@ layout: post
 categories:
 - book
 comments: true
+image: arj-frog.png
 ---
 
 _Author's note: the chapter is not finished. It has some organizational and structural flaws that won't be ironed out until later in the editing process. There are also some parts that need additional fleshing out. However, it should give you a good idea where my head is at._
@@ -16,71 +17,71 @@ The preferred method for giving me feedback is via the wiki. If you've got an ac
 
 I'm also happy to receive feedback privately via e-mail -- especially if you work for an enterprise and would rather keep out of the spotlight.
 
-{% picture assets/images/book-ch10/image-01.png %}
+{% asset book-ch10/image-01.png %}
 
-{% picture assets/images/book-ch10/image-02.png %}
+{% asset book-ch10/image-02.png %}
 
-{% picture assets/images/book-ch10/image-03.png %}
+{% asset book-ch10/image-03.png %}
 
-{% picture assets/images/book-ch10/image-04.png %}
+{% asset book-ch10/image-04.png %}
 
-{% picture assets/images/book-ch10/image-05.png %}
+{% asset book-ch10/image-05.png %}
 
-{% picture assets/images/book-ch10/image-06.png %}
+{% asset book-ch10/image-06.png %}
 
-{% picture assets/images/book-ch10/image-07.png %}
+{% asset book-ch10/image-07.png %}
 
-{% picture assets/images/book-ch10/image-08.png %}
+{% asset book-ch10/image-08.png %}
 
-{% picture assets/images/book-ch10/image-09.png %}
+{% asset book-ch10/image-09.png %}
 
-{% picture assets/images/book-ch10/image-10.png %}
+{% asset book-ch10/image-10.png %}
 
-{% picture assets/images/book-ch10/image-11.png %}
+{% asset book-ch10/image-11.png %}
 
-{% picture assets/images/book-ch10/image-12.png %}
+{% asset book-ch10/image-12.png %}
 
-{% picture assets/images/book-ch10/image-13.png %}
+{% asset book-ch10/image-13.png %}
 
-{% picture assets/images/book-ch10/image-14.png %}
+{% asset book-ch10/image-14.png %}
 
-{% picture assets/images/book-ch10/image-15.png %}
+{% asset book-ch10/image-15.png %}
 
-{% picture assets/images/book-ch10/image-16.png %}
+{% asset book-ch10/image-16.png %}
 
-{% picture assets/images/book-ch10/image-17.png %}
+{% asset book-ch10/image-17.png %}
 
-{% picture assets/images/book-ch10/image-18.png %}
+{% asset book-ch10/image-18.png %}
 
-{% picture assets/images/book-ch10/image-19.png %}
+{% asset book-ch10/image-19.png %}
 
-{% picture assets/images/book-ch10/image-20.png %}
+{% asset book-ch10/image-20.png %}
 
 A minor comment: I would add at least a paragraph for each of those metrics to explain what those are and why they are needed.
 
-{% picture assets/images/book-ch10/image-21.png %}
+{% asset book-ch10/image-21.png %}
 
-{% picture assets/images/book-ch10/image-22.png %}
+{% asset book-ch10/image-22.png %}
 
-{% picture assets/images/book-ch10/image-23.png %}
+{% asset book-ch10/image-23.png %}
 
-{% picture assets/images/book-ch10/image-24.png %}
+{% asset book-ch10/image-24.png %}
 
-{% picture assets/images/book-ch10/image-25.png %}
+{% asset book-ch10/image-25.png %}
 
-{% picture assets/images/book-ch10/image-26.png %}
+{% asset book-ch10/image-26.png %}
 
-{% picture assets/images/book-ch10/image-27.png %}
+{% asset book-ch10/image-27.png %}
 
-{% picture assets/images/book-ch10/image-28.png %}
+{% asset book-ch10/image-28.png %}
 
-{% picture assets/images/book-ch10/image-29.png %}
+{% asset book-ch10/image-29.png %}
 
-{% picture assets/images/book-ch10/image-30.png %}
+{% asset book-ch10/image-30.png %}
 
-{% picture assets/images/book-ch10/image-31.png %}
+{% asset book-ch10/image-31.png %}
 
-{% picture assets/images/book-ch10/image-32.png %}
+{% asset book-ch10/image-32.png %}
 
-{% picture assets/images/book-ch10/image-33.png %}
+{% asset book-ch10/image-33.png %}
 

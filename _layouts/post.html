@@ -17,7 +17,7 @@ layout: default
 					<h1 class="display-4 mb-4 article-headline">{{ page.title }}</h1>
 					<div class="d-flex align-items-center">
                         {% if author.avatar %}
-                        <img class="rounded-circle" src="{{site.baseurl}}/{{author.avatar}}" alt="{{author.name}}" width="70"/>
+                        {% asset "{{author.avatar}}" class="rounded-circle" alt="{{author.name}}" magick:resize=70x70 @optim %}
                         {% endif %}
 						<small class="ml-3"> {{ author.name }} <span><a target="_blank" href="{{ author.twitter }}" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
                             <span class="text-muted d-block mt-1">{{ page.date | date: '%b %d, %Y' }} · {% include meta-read-time.html %}</span>
@@ -26,7 +26,7 @@ layout: default
 				</div>
                 {% if page.image %}
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ page.image | absolute_url }}{% endif %}" alt="{{ page.title }}">
+				    {% asset "{{ page.image }}" class="rounded" alt="{{ page.title }}" %}
 				</div>
                 {% endif %}
 			</div>
@@ -110,7 +110,7 @@ layout: default
 				<div class="row mt-5">
 					<div class="col-md-2 align-self-center">
                          {% if author.avatar %}
-                        <img class="rounded-circle" src="{{site.baseurl}}/{{author.avatar}}" alt="{{author.name}}" width="90"/>
+                        {% asset "{{ author.avatar }}" class="rounded-circle" alt="{{author.name}}" magick:resize=90x @optim %}
                         {% endif %} 
 					</div>
 					<div class="col-md-10">		
@@ -138,12 +138,20 @@ layout: default
         <div class="row prevnextlinks small font-weight-bold">
           {% if page.previous.url %}
             <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="{{page.previous.url | absolute_url}}">{% if page.previous.image %} <img height="30px" class="mr-1" src="{{page.previous.image | absolute_url}}"> {% endif %} {{page.previous.title}}</a>
+                <a class="text-dark" href="{{page.previous.url | absolute_url}}"> {{page.previous.title}}
+                {% if page.previous.image %}
+                {% asset "{{ page.previous.image }}" class="mr-1" magick:resize=x30 @optim %}
+                {% endif %}
+                </a>
             </div>
           {% endif %}
           {% if page.next.url %}
             <div class="col-md-6 text-right pr-0">
-                <a class="text-dark" href="{{page.next.url | absolute_url}}"> {{page.next.title}} {% if page.next.image %} <img height="30px" class="ml-1" src="{{page.next.image | absolute_url}}"> {% endif %}</a>
+                <a class="text-dark" href="{{page.next.url | absolute_url}}"> {{page.next.title}}
+                {% if page.next.image %}
+                {% asset "{{ page.next.image }}" class="ml-1" magick:resize=x30 @optim %}
+                {% endif %}
+                </a>
             </div>
           {% endif %}
         </div>

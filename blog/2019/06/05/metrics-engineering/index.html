@@ -4,23 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>What do Security-Conscious People Choose? | Markerbench</title>
+    <title>SRE Metrics and Security Measurement | Markerbench</title>
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>What do Security-Conscious People Choose? | Markerbench</title>
+<title>SRE Metrics and Security Measurement | Markerbench</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="What do Security-Conscious People Choose?" />
+<meta property="og:title" content="SRE Metrics and Security Measurement" />
 <meta name="author" content="arj" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="At security conferences and events, I have noticed that the distribution of operating systems seems to differ somewhat from what I read in the papers. As my last post showed, the Internet Identity Workshop skewed decidedly in the Mac direction." />
-<meta property="og:description" content="At security conferences and events, I have noticed that the distribution of operating systems seems to differ somewhat from what I read in the papers. As my last post showed, the Internet Identity Workshop skewed decidedly in the Mac direction." />
-<link rel="canonical" href="http://localhost:4000/blog/2007/05/22/What-do-Security-Conscious-People-Choose/" />
-<meta property="og:url" content="http://localhost:4000/blog/2007/05/22/What-do-Security-Conscious-People-Choose/" />
+<meta name="description" content="Why can’t IT and security get along better? Disciplined technology teams uses data and metrics strategically. But security and risk teams think about metrics differently than the rest of IT. In this post, I’ll describe how the discipline of Site Reliably Engineering (SRE) stresses the importance of service levels, discuss the slightly different terminology used by security and risk teams, and then suggest how using the language of SRE is can help security and risk teams to build bridges to technologists and across the business." />
+<meta property="og:description" content="Why can’t IT and security get along better? Disciplined technology teams uses data and metrics strategically. But security and risk teams think about metrics differently than the rest of IT. In this post, I’ll describe how the discipline of Site Reliably Engineering (SRE) stresses the importance of service levels, discuss the slightly different terminology used by security and risk teams, and then suggest how using the language of SRE is can help security and risk teams to build bridges to technologists and across the business." />
+<link rel="canonical" href="http://localhost:4000/blog/2019/06/05/metrics-engineering/" />
+<meta property="og:url" content="http://localhost:4000/blog/2019/06/05/metrics-engineering/" />
 <meta property="og:site_name" content="Markerbench" />
+<meta property="og:image" content="http://localhost:4000/google-pipes.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2007-05-22T00:00:00-04:00" />
+<meta property="article:published_time" content="2019-06-05T00:00:00-04:00" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2007/05/22/What-do-Security-Conscious-People-Choose/"},"url":"http://localhost:4000/blog/2007/05/22/What-do-Security-Conscious-People-Choose/","headline":"What do Security-Conscious People Choose?","dateModified":"2007-05-22T00:00:00-04:00","datePublished":"2007-05-22T00:00:00-04:00","author":{"@type":"Person","name":"arj"},"description":"At security conferences and events, I have noticed that the distribution of operating systems seems to differ somewhat from what I read in the papers. As my last post showed, the Internet Identity Workshop skewed decidedly in the Mac direction.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"arj"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2019/06/05/metrics-engineering/"},"url":"http://localhost:4000/blog/2019/06/05/metrics-engineering/","image":"http://localhost:4000/google-pipes.jpg","headline":"SRE Metrics and Security Measurement","dateModified":"2019-06-05T00:00:00-04:00","datePublished":"2019-06-05T00:00:00-04:00","author":{"@type":"Person","name":"arj"},"description":"Why can’t IT and security get along better? Disciplined technology teams uses data and metrics strategically. But security and risk teams think about metrics differently than the rest of IT. In this post, I’ll describe how the discipline of Site Reliably Engineering (SRE) stresses the importance of service levels, discuss the slightly different terminology used by security and risk teams, and then suggest how using the language of SRE is can help security and risk teams to build bridges to technologists and across the business.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"arj"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -273,7 +274,7 @@ var documents = [{
     "id": 34,
     "url": "http://localhost:4000/blog/2013/01/08/static-blogging/",
     "title": "Outsource your web risks with a static website",
-    "body": "2013/01/08 - A few weeks ago I put together my annual Predictions blog post for the coming year. In that post and accompanying webinar, I suggested five emerging risk areas that CISOs need to pay attention to in the coming year. These are:  CISOs will wrestle with the risks of “as-a-Service” platforms Android’s security issues will force CISOs to take action Cloud application vendors will compete on metrics California will become the de facto privacy regulator Your password policy will undergo a major overhaulOf these, prediction numbers 1 and 3 both related to cloud services, and to the security thereof. The first one, about Platform-as-a-Service (PaaS) was by far the one that I spent the most time thinking about. That is because PaaS is the one that CISOs have the least amount of control over. It is the sneakiest. From CISO’s standpoint, knowing that large parts of your developer toolchain (source code repository, test VMs) and runtime environment (web servers, databases) is sitting out there in “the cloud” is scary, not least because these parts didn’t exactly go through the traditional procurement channel. Even worse, your typical IT security auditor isn’t really going to know what to do with PaaS, other than slap hands on face, MacCauley Culkin-style, and make a beeline for the exit. {% asset paas-2013. png alt=”Platform-as-a-Service Ecosystem” %} However, in this post I will describe one way in which the use of pervasive — and free — platform cloud services can actually reduce risk. That may sound ridiculous on its face, but I offer one worked example that proves the point: static websites. Static websites are exactly what you might think: websites whose content is entirely static. The server never executes any business logic: it simply retrieves whatever is asked for and serves it up to the client. By “whatever is asked for” we mean plain-old HTML, images, cascading style sheets, JavaScript or anything else that makes up the website. Static websites depend on four principles:  Websites are “compiled” offline on a workstation, and “published” by uploading to the server Servers execute no code, and only serve static resources All dynamic features execute on the browser via JavaScript Third party services provide “outsourced” commenting, social and analytics features via JavaScript, which are removed from the server’s areas of concernBecause the web server is not doing anything other than serving up static resources, it can be dumb as a bag of hammers, and locked down within an inch of its life. Even better, the simplicity of the server results in a radically reduced attack surface; there are no “user accounts,” no databases, and no middleware. Because the server does not need to, and indeed cannot, accept any user input, no application code needs to be audited. A new wrinkle on an old idea: Static websites are not new. They have been around for a long, long time — as long as the World Wide Web. In fact, prior to the invention of CGI and early server-side scripting languages like Cold Fusion, all websites were static. But in the mid-1990s, developers began adding server-side languages and scripting frameworks to make websites more dynamic. These include PHP, ASP, JSP, and more recently, server-side JavaScript implementations like Node. JS. Developers have also increased the number of components that collaborate server-side, too. In the early days, simple static websites required only a web server. But modern dynamic web applications are composed from many architectural components in addition to the web servers themselves. These additions include the various server-side scripting languages, plus application servers, application code, databases, and directories. And that is just for the simple applications. Even the humblest business website that serves up nothing more than corporate information from a content management system (CMS) needs most of these components. A site like that needs a web server (for example, Apache), scripting language (PHP), content management system (Drupal), database (MySQL) and a directory for authentication (Active Directory). That’s five components, and collectively they aren’t doing all that much. In contrast to the complexity of modern web applications, static websites turn back the clock on the web. The static website philosophy mixes old-school web publishing and new-school DevOps. If you want an example of old school, for example, look at my friend Dan Geer’s website or a representative posting on it. Dan’s site is just text; no flashiness, and no graphics. On its face, Dan’s site and mine are similar in one major respect. Both offer the same thing: static resources served up by a dumb server. Why not compile your website instead?: Modern static websites differ from their old-school cousins in two ways. First, the highly automated, explicitly developer-centric processes used to produce them feature many of the same tools used to produce code. Authors write posts using plain text editors rather than a WYSIWYG editor or CMS. They “check in” their posts into code versioning repositories the same way they check in their code. After the post or page is ready to publish, a designated DevOps person — perhaps the author — types a few commands to “compile” the site and upload it. Some static website aficionados have automated the process completely: one simply saves a new version of a post to a designated directory, and the website compiler automatically checks the page into GitHub, regenerates the site from scratch, and publishes it to the web server. The second difference between modern static websites and their old-school cousins is inclusion of dynamic features by deliberately “outsourcing” them to other, usually free, service providers. Instructions on the static web page cause JavaScript code to be loaded and executed, which communicates with the provider’s service and provides the illusion of dynamic behavior. This allows site owners to include modern features would ordinarily require server-side code. Years ago, if you needed analyze website visitor traffic, you would install WebTrends on the server. Today, you just pop in a couple of lines of JavaScript for Google Analytics (free). If you wanted commenting features with protections against spam, you needed an application that had a back-end database and a decent anti-spam filter, like WordPress. Now, you can simply embed Disqus (which is also free). Or suppose you wanted to allow visitors to recommend and share items on your website. Traditionally, you’d need to create a web form, hook it up to an email server, and create scripts to send recommendations via email. Now, all you need are a few JavaScript statements to load up Facebook’s “Like” button, Twitter tweet and follow buttons, or Google’s +1. Dynamic features aren’t just the only parts of the website that can be outsourced. The underlying web servers can be, too. For example, GitHub provides a free service called GitHub Pages that allows developers to upload HTML and other static resources. These are served up just like a website. Amazon S3 provides a similar service. For low-volume websites like this one (ha!), Amazon S3 is completely free. Outsourcing risk: Static websites are simple, and require just one architectural component: a web server. By contrast, the typical corporate website that does nothing more than serve up company information, and forward leads to Salesforce, nonetheless requires five. The simpler website is better because it is less complex, and less complex is good. But that is not the only advantage static websites have. Modern web applications aren’t just complex, but risky as well. They typically need to reach beyond the DMZ’s back-side firewall to resources inside the company; for example, to a database or three, or to an Active Directory forest. These additional network connections confer a corresponding amount of risk. Then there’s the setup, operations and maintenance tasks. Each architectural component needs to be configured, hardened, horizontally scaled, patched and monitored — forever. But when you create a static website, most of the complexity goes away, along with the cost and risk associated with each. If you choose to outsource the remaining architectural component — the web server — to a third party, that goes away too. Why not let the fine folks at Amazon, Heroku or GitHub configure, harden, scale, patch and monitor the web server? They are likely to be better at it than you are. Simplifying your architecture by eliminating complexity — and outsourcing the web server — eliminates a huge amount of security risk by cutting the attack surface nearly to zero. But the outsourcing of dynamic features such as user tracking, commenting, social sharing, analytics has another side-effect. Because the web server processes no user-generated content, a whole class of application and data-related security risks goes away. Cross-site scripting, SQL injection, parameter tampering, and the rest of the OWASP Top Ten are no longer worries. You don’t have any potential data breach obligations because you don’t keep any data. There is nothing to steal. Of course, just because you no longer need to worry about application and data-related security risks, your outsourced comment-management service (Disqus) still does. They, and Facebook, Twitter and other providers your client-side JavaScript links to still need to police their members for spam, fraud, impersonation, and identity theft. They need to secure their JavaScript APIs and web applications. But you don’t need to do any of these things any more; with a static website, you have essentially outsourced your risks to them. Indeed, it is more correct to say that you have transferred them. A few security risks remain. Access to servers that host static content must be controlled. If you manage those servers, you need to manage the SSH keys or passwords used for uploading content. And you should probably restrict the number of people allowed to operate the website compiler machinery to a few. And of course, you also need to worry about, um… a bunch of other, er… important stuff, like for example… let’s see… Honestly, I can’t think of anything else. Lock down the web servers and make sure only the right people can compile and post. That shouldn’t be too hard, right? Static websites aren’t for everybody. They still require a certain amount of developer savoir-faire, and they won’t reduce the need to build genuine web applications for business units. You can’t build a static e-commerce site or anything stateful, for example. But if you are a security-conscious company that just needs an online presence, static websites might be just the thing. If you disagree, feel let me know in the Comments section below. I’m using Disqus — of course! Coda: the making of this web page: I became interested in static websites several months ago when I read a few stray articles about the concept. But it wafted past me like so much second-hand smoke; I didn’t really inhale. However, after I did my Predictions webinar in December, I began spending more time digging into the capabilities of “new school” free-ish web service providers such as Heroku and GitHub. At a holiday party, my friend, neighbor and Drupal guru Stephan pointed out that these days it is pretty easy for a motivated developer to assemble a complete app infrastructure more-or-less for free. A few weeks later, to support one of my professional hobbies, I opened a repository on GitHub. Shortly thereafter, I read a few more articles about static blogging and started connecting the dots. I decided it would be fun to create my own static website to prove the concept. But to make it interesting, I wanted to create something representative of what most people would want. That meant that it needed to have the typical kinds of things you would expect, such as commenting features and social integration. I downloaded and started experimenting with two static blogging packages with a lot of buzz, Nanoc and Jekyll. Both implement the “website compiler” strategy: you customize some templates, write a few posts in Markdown and then type a few commands to generate the site and upload the contents to a web server. After starting with Nanoc and finding myself a little frustrated, I moved on to Jekyll. I was halfway through my proof-of-concept with Jekyll when I discovered Jekyll Bootstrap, a more kitted and polished version of Jekyll that didn’t have the some-assembly-required feeling. But finally, I discovered Octopress. It too is based on Jekyll, but includes pre-configured support for Google Analytics, Discus, Facebook, Twitter and Google+. In short, exactly what I wanted. So I got to work getting a feel for the software, started drafting this post, and after about a day or two of after-hours work, things looked good. I needed to find a place to host the blog and decided on GitHub Pages, which is part of my GitHub account. While I was at it, I created Google Analytics and Disqus accounts. All pretty easy to do. Octopress worked pretty nicely once I got over a few self-imposed obstacles. What you see here, on this page, is a totally out-of-the box standard version of OctoPress, with nothing more than a few titles and text properties changed. [Author’s note: as of February 1, 2013, Markerbench is no longer out-of-the box; I now build it using a brilliant Twitter Bootstrap-derived theme created by Adrian Artiles. ] With a little more effort, maybe someday I’ll be able to make something as nice-looking as the Trail of Bits website. One can but dream, no? [Author’s note: it turned out to be a fairly straightforward weekend project. ] As for this blog post: I initially set out to write something very silly about how cool it was to try my hand at this. But the post kept getting longer. Whoops. "
+    "body": "2013/01/08 - A few weeks ago I put together my annual Predictions blog post for the coming year. In that post and accompanying webinar, I suggested five emerging risk areas that CISOs need to pay attention to in the coming year. These are:  CISOs will wrestle with the risks of “as-a-Service” platforms Android’s security issues will force CISOs to take action Cloud application vendors will compete on metrics California will become the de facto privacy regulator Your password policy will undergo a major overhaulOf these, prediction numbers 1 and 3 both related to cloud services, and to the security thereof. The first one, about Platform-as-a-Service (PaaS) was by far the one that I spent the most time thinking about. That is because PaaS is the one that CISOs have the least amount of control over. It is the sneakiest. From CISO’s standpoint, knowing that large parts of your developer toolchain (source code repository, test VMs) and runtime environment (web servers, databases) is sitting out there in “the cloud” is scary, not least because these parts didn’t exactly go through the traditional procurement channel. Even worse, your typical IT security auditor isn’t really going to know what to do with PaaS, other than slap hands on face, MacCauley Culkin-style, and make a beeline for the exit.  However, in this post I will describe one way in which the use of pervasive — and free — platform cloud services can actually reduce risk. That may sound ridiculous on its face, but I offer one worked example that proves the point: static websites. Static websites are exactly what you might think: websites whose content is entirely static. The server never executes any business logic: it simply retrieves whatever is asked for and serves it up to the client. By “whatever is asked for” we mean plain-old HTML, images, cascading style sheets, JavaScript or anything else that makes up the website. Static websites depend on four principles:  Websites are “compiled” offline on a workstation, and “published” by uploading to the server Servers execute no code, and only serve static resources All dynamic features execute on the browser via JavaScript Third party services provide “outsourced” commenting, social and analytics features via JavaScript, which are removed from the server’s areas of concernBecause the web server is not doing anything other than serving up static resources, it can be dumb as a bag of hammers, and locked down within an inch of its life. Even better, the simplicity of the server results in a radically reduced attack surface; there are no “user accounts,” no databases, and no middleware. Because the server does not need to, and indeed cannot, accept any user input, no application code needs to be audited. A new wrinkle on an old idea: Static websites are not new. They have been around for a long, long time — as long as the World Wide Web. In fact, prior to the invention of CGI and early server-side scripting languages like Cold Fusion, all websites were static. But in the mid-1990s, developers began adding server-side languages and scripting frameworks to make websites more dynamic. These include PHP, ASP, JSP, and more recently, server-side JavaScript implementations like Node. JS. Developers have also increased the number of components that collaborate server-side, too. In the early days, simple static websites required only a web server. But modern dynamic web applications are composed from many architectural components in addition to the web servers themselves. These additions include the various server-side scripting languages, plus application servers, application code, databases, and directories. And that is just for the simple applications. Even the humblest business website that serves up nothing more than corporate information from a content management system (CMS) needs most of these components. A site like that needs a web server (for example, Apache), scripting language (PHP), content management system (Drupal), database (MySQL) and a directory for authentication (Active Directory). That’s five components, and collectively they aren’t doing all that much. In contrast to the complexity of modern web applications, static websites turn back the clock on the web. The static website philosophy mixes old-school web publishing and new-school DevOps. If you want an example of old school, for example, look at my friend Dan Geer’s website or a representative posting on it. Dan’s site is just text; no flashiness, and no graphics. On its face, Dan’s site and mine are similar in one major respect. Both offer the same thing: static resources served up by a dumb server. Why not compile your website instead?: Modern static websites differ from their old-school cousins in two ways. First, the highly automated, explicitly developer-centric processes used to produce them feature many of the same tools used to produce code. Authors write posts using plain text editors rather than a WYSIWYG editor or CMS. They “check in” their posts into code versioning repositories the same way they check in their code. After the post or page is ready to publish, a designated DevOps person — perhaps the author — types a few commands to “compile” the site and upload it. Some static website aficionados have automated the process completely: one simply saves a new version of a post to a designated directory, and the website compiler automatically checks the page into GitHub, regenerates the site from scratch, and publishes it to the web server. The second difference between modern static websites and their old-school cousins is inclusion of dynamic features by deliberately “outsourcing” them to other, usually free, service providers. Instructions on the static web page cause JavaScript code to be loaded and executed, which communicates with the provider’s service and provides the illusion of dynamic behavior. This allows site owners to include modern features would ordinarily require server-side code. Years ago, if you needed analyze website visitor traffic, you would install WebTrends on the server. Today, you just pop in a couple of lines of JavaScript for Google Analytics (free). If you wanted commenting features with protections against spam, you needed an application that had a back-end database and a decent anti-spam filter, like WordPress. Now, you can simply embed Disqus (which is also free). Or suppose you wanted to allow visitors to recommend and share items on your website. Traditionally, you’d need to create a web form, hook it up to an email server, and create scripts to send recommendations via email. Now, all you need are a few JavaScript statements to load up Facebook’s “Like” button, Twitter tweet and follow buttons, or Google’s +1. Dynamic features aren’t just the only parts of the website that can be outsourced. The underlying web servers can be, too. For example, GitHub provides a free service called GitHub Pages that allows developers to upload HTML and other static resources. These are served up just like a website. Amazon S3 provides a similar service. For low-volume websites like this one (ha!), Amazon S3 is completely free. Outsourcing risk: Static websites are simple, and require just one architectural component: a web server. By contrast, the typical corporate website that does nothing more than serve up company information, and forward leads to Salesforce, nonetheless requires five. The simpler website is better because it is less complex, and less complex is good. But that is not the only advantage static websites have. Modern web applications aren’t just complex, but risky as well. They typically need to reach beyond the DMZ’s back-side firewall to resources inside the company; for example, to a database or three, or to an Active Directory forest. These additional network connections confer a corresponding amount of risk. Then there’s the setup, operations and maintenance tasks. Each architectural component needs to be configured, hardened, horizontally scaled, patched and monitored — forever. But when you create a static website, most of the complexity goes away, along with the cost and risk associated with each. If you choose to outsource the remaining architectural component — the web server — to a third party, that goes away too. Why not let the fine folks at Amazon, Heroku or GitHub configure, harden, scale, patch and monitor the web server? They are likely to be better at it than you are. Simplifying your architecture by eliminating complexity — and outsourcing the web server — eliminates a huge amount of security risk by cutting the attack surface nearly to zero. But the outsourcing of dynamic features such as user tracking, commenting, social sharing, analytics has another side-effect. Because the web server processes no user-generated content, a whole class of application and data-related security risks goes away. Cross-site scripting, SQL injection, parameter tampering, and the rest of the OWASP Top Ten are no longer worries. You don’t have any potential data breach obligations because you don’t keep any data. There is nothing to steal. Of course, just because you no longer need to worry about application and data-related security risks, your outsourced comment-management service (Disqus) still does. They, and Facebook, Twitter and other providers your client-side JavaScript links to still need to police their members for spam, fraud, impersonation, and identity theft. They need to secure their JavaScript APIs and web applications. But you don’t need to do any of these things any more; with a static website, you have essentially outsourced your risks to them. Indeed, it is more correct to say that you have transferred them. A few security risks remain. Access to servers that host static content must be controlled. If you manage those servers, you need to manage the SSH keys or passwords used for uploading content. And you should probably restrict the number of people allowed to operate the website compiler machinery to a few. And of course, you also need to worry about, um… a bunch of other, er… important stuff, like for example… let’s see… Honestly, I can’t think of anything else. Lock down the web servers and make sure only the right people can compile and post. That shouldn’t be too hard, right? Static websites aren’t for everybody. They still require a certain amount of developer savoir-faire, and they won’t reduce the need to build genuine web applications for business units. You can’t build a static e-commerce site or anything stateful, for example. But if you are a security-conscious company that just needs an online presence, static websites might be just the thing. If you disagree, feel let me know in the Comments section below. I’m using Disqus — of course! Coda: the making of this web page: I became interested in static websites several months ago when I read a few stray articles about the concept. But it wafted past me like so much second-hand smoke; I didn’t really inhale. However, after I did my Predictions webinar in December, I began spending more time digging into the capabilities of “new school” free-ish web service providers such as Heroku and GitHub. At a holiday party, my friend, neighbor and Drupal guru Stephan pointed out that these days it is pretty easy for a motivated developer to assemble a complete app infrastructure more-or-less for free. A few weeks later, to support one of my professional hobbies, I opened a repository on GitHub. Shortly thereafter, I read a few more articles about static blogging and started connecting the dots. I decided it would be fun to create my own static website to prove the concept. But to make it interesting, I wanted to create something representative of what most people would want. That meant that it needed to have the typical kinds of things you would expect, such as commenting features and social integration. I downloaded and started experimenting with two static blogging packages with a lot of buzz, Nanoc and Jekyll. Both implement the “website compiler” strategy: you customize some templates, write a few posts in Markdown and then type a few commands to generate the site and upload the contents to a web server. After starting with Nanoc and finding myself a little frustrated, I moved on to Jekyll. I was halfway through my proof-of-concept with Jekyll when I discovered Jekyll Bootstrap, a more kitted and polished version of Jekyll that didn’t have the some-assembly-required feeling. But finally, I discovered Octopress. It too is based on Jekyll, but includes pre-configured support for Google Analytics, Discus, Facebook, Twitter and Google+. In short, exactly what I wanted. So I got to work getting a feel for the software, started drafting this post, and after about a day or two of after-hours work, things looked good. I needed to find a place to host the blog and decided on GitHub Pages, which is part of my GitHub account. While I was at it, I created Google Analytics and Disqus accounts. All pretty easy to do. Octopress worked pretty nicely once I got over a few self-imposed obstacles. What you see here, on this page, is a totally out-of-the box standard version of OctoPress, with nothing more than a few titles and text properties changed. [Author’s note: as of February 1, 2013, Markerbench is no longer out-of-the box; I now build it using a brilliant Twitter Bootstrap-derived theme created by Adrian Artiles. ] With a little more effort, maybe someday I’ll be able to make something as nice-looking as the Trail of Bits website. One can but dream, no? [Author’s note: it turned out to be a fairly straightforward weekend project. ] As for this blog post: I initially set out to write something very silly about how cool it was to try my hand at this. But the post kept getting longer. Whoops. "
     }, {
     "id": 35,
     "url": "http://localhost:4000/blog/2008/02/19/Every-time-you-perform-arithmetic-operations-on-ordinal-numbers-God-kills-a-kitten/",
@@ -580,36 +581,34 @@ function lunr_search(term) {
 <div class="container">
 <div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
 		<div class="h-100 tofront">
-			<div class="row  justify-content-center ">
-				<div class=" col-md-8  pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+			<div class="row  justify-content-between ">
+				<div class=" col-md-6  pr-0 pr-md-4 pt-4 pb-4 align-self-center">
 					<p class="text-uppercase font-weight-bold">
                         <span class="catlist">
 						
-                          <a class="sscroll text-danger" href="/categories.html#security">security</a><span class="sep">, </span>
-                        
-                          <a class="sscroll text-danger" href="/categories.html#windows">windows</a><span class="sep">, </span>
-                        
-                          <a class="sscroll text-danger" href="/categories.html#mac">mac</a><span class="sep">, </span>
-                        
                           <a class="sscroll text-danger" href="/categories.html#metrics">metrics</a><span class="sep">, </span>
                         
                         </span>
 					</p>
-					<h1 class="display-4 mb-4 article-headline">What do Security-Conscious People Choose?</h1>
+					<h1 class="display-4 mb-4 article-headline">SRE Metrics and Security Measurement</h1>
 					<div class="d-flex align-items-center">
                         
                         <img class="rounded-circle" alt="Andrew Jaquith" src="/assets/7b99df-4721eb824b20a090bf9d14251f3212a6a7adacfda9b6a3fc541f523119b827c3.jpg">
                         
 						<small class="ml-3"> Andrew Jaquith <span><a target="_blank" href="https://twitter.com/arj" class="btn btn-outline-success btn-sm btn-round ml-1">Follow</a></span>
-                            <span class="text-muted d-block mt-1">May 22, 2007 · <span class="reading-time">
+                            <span class="text-muted d-block mt-1">Jun 05, 2019 · <span class="reading-time">
   
   
-    3 mins read
+    8 mins read
   
 </span>
     </span>
 						</small>
 					</div>
+				</div>
+                
+				<div class="col-md-6 pr-0 align-self-center">
+				    <img class="rounded" alt="SRE Metrics and Security Measurement" src="/assets/google-pipes-72feb672b65ba160e01c768707b3c0424f156e5a42b2b71b81f87f8f3d0e47f3.jpg">
 				</div>
                 
 			</div>
@@ -649,96 +648,88 @@ function lunr_search(term) {
             
             <!-- Article -->
 			<article class="article-post">                
-			<p>At security conferences and events, I have noticed that the distribution of operating systems seems to differ somewhat from what I read in the papers. As my last post showed, the Internet Identity Workshop skewed decidedly in the Mac direction.</p>
+			<p>Why can’t IT and security get along better? Disciplined technology teams uses data and metrics strategically. But security and risk teams think about metrics differently than the rest of IT. In this post, I’ll describe how the discipline of Site Reliably Engineering (SRE) stresses the importance of service levels, discuss the slightly different terminology used by security and risk teams, and then suggest how using the language of SRE is can help security and risk teams to build bridges to technologists and across the business.</p>
 
-<p>I thought it would be fun to put together a quick poll asking the members of the securitymetrics.org mailing what operating systems they used. I sent out a note asking the membership to respond to two simple questions:</p>
+<p>Some background. For various reasons, I’ve been lately “sharpening the saw,” one of the seven habits Steven Covey described in his <a href="https://www.amazon.com/gp/product/1451639619/ref=dbs_a_def_rwt_bibl_vppi_i0">famous book</a>. The saw that I am sharpening is The Cloud; more specifically, deepening my understanding of some of the core architectural patters that underpin modern cloud stacks such as Google and Amazon. One of Google’s well-known patterns is something called <a href="https://landing.google.com/sre/">Site Reliability Engineering</a>, or SRE for short. I had a pretty good idea of what SRE was about, but wanted a more formal indoctrination.</p>
 
-<!--more-->
+<p>Google folk have written a book on SRE. The <a href="https://landing.google.com/sre/sre-book/chapters/service-level-objectives/">chapter on Service Level Objectives</a> is invigorating because it delivers an opinionated jolt about metrics, and their importance to reliability:</p>
+
+<blockquote>
+  <p>It’s impossible to manage a service correctly, let alone well, without understanding which behaviors really matter for that service and how to measure and evaluate those behaviors. To this end, we would like to define and deliver a given level of service to our users, whether they use an internal API or a public product.</p>
+
+  <p>We use intuition, experience, and an understanding of what users want to define service level indicators (SLIs), objectives (SLOs), and agreements (SLAs). These measurements describe basic properties of metrics that matter, what values we want those metrics to have, and how we’ll react if we can’t provide the expected service. Ultimately, choosing appropriate metrics helps to drive the right action if something goes wrong, and also gives an SRE team confidence that a service is healthy.</p>
+</blockquote>
+
+<p>Preaching to the converted! With a simple find-and-replace operation one could easily substitute <em>security</em> for <em>service</em>, and the result would closely capture the spirit of what I have been doing for the last five years inside several large financial institutions: namely, building measurement systems for security.</p>
+
+<p>In order to explain the parallels between security measurement and SRE metrics, I’ll first explain what I mean by “security measurement.” Security measurement tend to measure two things: <em>risks</em>, using Key Risk Indicators, and <em>controls</em>, using Key Performance Indicators.</p>
+
+<p><strong>Key Risk Indicators</strong> attempt to quantify risk. They are often produced by estimation, using a defined methodology such as <a href="https://www.fairinstitute.org">FAIR</a>, which produces dollars and cents. They can also be based on objective measurements that we know are good proxies for risk. For example, many compromises are the result of attackers using software exploits to gain access to unpatched systems. So, the “percentage of Internet-facing systems that are missing high-severity security patches” is a pretty good proxy for risk. “High severity,” in this case, means that the patch fixes a vulnerability that is remotely exploitable without needing the target to take any active steps, and is being actively exploited by bad guys <em>right now.</em> There is healthy debate in the security community about whether economic estimates or “proxy” performance indicators is a better KRI strategy. I have always preferred the latter approach (using selected KPIs as proxies) because they are simpler, and scale well.</p>
+
+<p><strong>Key Performance Indicators</strong>, by contrast, measure the effectiveness of activities. There is a rich and varied set of definitions about what KPIs are, but in security, these are generally “control processes” that discover, constrain, or reduce risk. The controls are generally drawn from frameworks such as NIST Cyber-Security Framework, COSO, ISO 27001, PCI-DSS or other régimes. In the vulnerability example described above, the “control” activity involves patching vulnerable systems. Many companies that have developed patch KPIs express them as the “percentage of systems patched on time,” with different definitions of “on time” (the service level agreement) depending on the importance of each system, and the importance of the patch. Personally, I like three buckets: patch it <em>now</em> (72 hours or less), patch it <em>soon</em> (within 30 days), and patch it <em>later</em> (everything else), along with a glossary that describes in plain English what goes into each bucket.</p>
+
+<p>KPIs and KRIs can have <em>thresholds</em> — upper and lower bounds — that separate goodness from not-so-goodness, and not-so-goodness from badness. They are essentially the numeric boundaries between green, red, and yellow. The collective set of KRIs, considered together with their thresholds, can form the basis of an oganization’s <em>risk appetite.</em> One institution I am familiar with expresses its cyber-security risk appetite with a small set of well-defined, compact “proxy” indicators as KRIs. The institution has two thresholds for each KRI: an “internal limit” (yellow!) that triggers immediate remedial action, and a “board limit” (red!) that absolutely nobody wants to get outside of, because it requires a command performance in front of the board.</p>
+
+<p>With that background, let’s compare and contrast these security measurement concepts with Google’s SRE service level objectives. As <a href="https://landing.google.com/sre/sre-book/chapters/service-level-objectives/">quoted</a> from <em>Site Reliability Engineering</em>:</p>
+
+<blockquote>
+  <p><strong>Indicators</strong>. An SLI is a service level indicator — a carefully defined quantitative measure of some aspect of the level of service that is provided. Most services consider <em>request latency</em> — how long it takes to return a response to a request — as a key SLI. Other common SLIs include the <em>error rate</em>, often expressed as a fraction of all requests received, and <em>system throughput</em>, typically measured in requests per second. The measurements are often aggregated: i.e., raw data is collected over a measurement window and then turned into a rate, average, or percentile… Ideally, the SLI directly measures a service level of interest, but sometimes only a proxy is available because the desired measure may be hard to obtain or interpret. For example, client-side latency is often the more user-relevant metric, but it might only be possible to measure latency at the server.</p>
+
+  <p><strong>Objectives</strong>. An SLO is a <em>service level objective</em>: a target value or range of values for a service level that is measured by an SLI. A natural structure for SLOs is thus <em>SLI ≤ target</em>, or <em>lower bound ≤ SLI ≤ upper bound</em>. For example, we might decide that we will return Shakespeare search results “quickly,” adopting an SLO that our average search request latency should be less than 100 milliseconds… Choosing and publishing SLOs to users sets expectations about how a service will perform. This strategy can reduce unfounded complaints to service owners about, for example, the service being slow. Without an explicit SLO, users often develop their own beliefs about desired performance, which may be unrelated to the beliefs held by the people designing and operating the service.</p>
+
+  <p><strong>Agreements</strong>. Finally, SLAs are service level agreements: an explicit or implicit contract with your users that includes consequences of meeting (or missing) the SLOs they contain. The consequences are most easily recognized when they are financial — a rebate or a penalty — but they can take other forms. An easy way to tell the difference between an SLO and an SLA is to ask “what happens if the SLOs aren’t met?”: if there is no explicit consequence, then you are almost certainly looking at an SLO.</p>
+</blockquote>
+
+<p>As you can see, one can easily draw an analogy from security measurement to SRE service level metrics. Security KRIs and KPIs neatly map to Service Level Indicators. Security measurement thresholds (and what security teams often call “SLAs”) are very similar to Service Level Objectives. And while Service Level Agreements (as defined in SRE) don’t have a perfect analog, the arrangements many GRC teams make about what to do when their they hit their thresholds (for example, report to the board) are essentially agreements.</p>
+
+<table class="table-striped">
+  <thead>
+    <tr>
+      <th>SRE concept</th>
+      <th>Security measurement concept</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Service level indicators (SLIs)</td>
+      <td>Key Performance Indicators, Key Risk Indicators</td>
+    </tr>
+    <tr>
+      <td>Service level objectives (SLOs)</td>
+      <td>Indicator thresholds, SLAs</td>
+    </tr>
+    <tr>
+      <td>Service level agreements (SLAs)</td>
+      <td>Escalation standards, board limits</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The concepts are close enough that many organizations may wish to adopt SRE terminology across the board, instead of clinging to special jargon that <a href="https://www.bis.org/publ/bcbs195.pdf">only the security and risk teams, and (regrettably) the regulators, speak</a>. Why? I know this verges on heresy, but the advantages are plain enough.</p>
 
 <ul>
-  <li>What is the operating system and e-mail client you use at <em>work</em>?</li>
-  <li>What is the operating system and e-mail client you use at <em>home</em> (or for personal activities)?</li>
+  <li>
+    <p>Although “SRE” <a href="https://en.wikipedia.org/wiki/Site_Reliability_Engineering">originated at Google</a>, having explicit service level indicators, objectives and agreements is a modern twist on a classic IT operations discipline. It is well-understood by the business.</p>
+  </li>
+  <li>
+    <p>Because most technology organizations are several orders of magnitude larger than their corresponding security and risk teams, having common language increases the understanding each team has of the other’s mission.</p>
+  </li>
+  <li>
+    <p>Last: embracing SRE-aligned definitions of measurement helps clarify what security teams mean when they say “measurement.” If you prefer that it refer explicitly to empiricial observations of “ground truth,” and not to other kinds of numbers — such as ordinal 1–5 scales or risk indices made using mystery math —  the SRE philosophy should suit you just fine.</p>
+  </li>
 </ul>
 
-<p>I’ve compiled some preliminary statistics for your reading pleasure. Thanks to the 27 people who responded out of a total membership of about 300. That’s nearly a 10% response rate in less than a day — not bad at all!</p>
+<p>Bluntly: <a href="https://a16z.com/2011/08/20/why-software-is-eating-the-world/">software is eating the world</a>. Security and risk folks, you are surrounded by technologists. Why not use their language?</p>
 
-<h3 id="objectives-and-methodology">Objectives and Methodology</h3>
-<p>The goal of this little survey was to try and figure out if self-selected, security conscious people had a preference for operating systems or e-mail clients that differed markedly from the  mainstream.</p>
-
-<p>I’ve compiled operating system and e-mail statistics from three related sources:</p>
-
-<ul>
-  <li>Responses to my previous e-mail (27 replies) — what is your operating system and e-mail client at work and at home?</li>
-  <li>Analysis of e-mail “X-Mailer” and related headers from the securitymetrics.org mailing list (20 June 2006 to present)</li>
-  <li>Analysis of same from metricon@securitymetrics.org traffic (<em>i.e.</em>, paper submissions) (31 March 2006 to present)</li>
-</ul>
-
-<p>In total, I identified 170 people who have contributed to this mailing list or sent submissions to Metricon 1.0 and 2.0. Of those, 27 provided OS/email information to me directly; I relied on header analysis for the remaining 143.</p>
-
-<p>In total, I was able to identify a “preferred” operating system (either the one specified as the ‘home’ OS in a direct e-mail to me, or the one identified in the header) for 93 people. I identified e-mail programs for 131 people.</p>
-
-<h3 id="operating-systems">Operating Systems</h3>
-<p>For respondents who contacted me directly, and specified their work OS (<em>n</em>=27), Windows was the majority OS.</p>
-<table class="table table-striped"><thead><tr><th>Name</th><th>#</th><th>%</th></tr></thead>
-<tr><td>Windows</td><td>15</td><td>56%</td></tr>
-<tr><td>Linux</td><td>5</td><td>19%</td></tr>
-<tr><td>OS X</td><td>7</td><td>26%</td></tr>
-</table>
-
-<p>For home (<em>n</em>=28), the results are quite different:</p>
-<table class="table table-striped"><thead><tr><th>Name</th><th>#</th><th>%</th></tr></thead>
-<tr><td>Windows</td><td>8</td><td>29%</td></tr>
-<tr><td>Linux</td><td>7</td><td>25%</td></tr>
-<tr><td>OS X</td><td>13</td><td>46%</td></tr>
-</table>
-
-<p>Of the 27 respondents, 14 (55%) reported using a different OS at home compared to work. After taking into account X-Mailer headers, I’ve concluded that for members of this list (“security conscious people”), we can conclude that when they have a choice, our members slightly prefer Macs. Results (<em>n</em>=92):</p>
-<table class="table table-striped"><thead><tr><th>Name</th><th>#</th><th>%</th></tr></thead>
-<tr><td>Windows</td><td>38</td><td>41%</td></tr>
-<tr><td>Linux</td><td>15</td><td>16%</td></tr>
-<tr><td>OS X</td><td>39</td><td>42%</td></tr>
-</table>
-
-<p>Amazingly enough, this suggests that Windows is a minority operating system, at least on this list.</p>
-
-<h3 id="e-mail-clients">E-Mail Clients</h3>
-<p>For respondents who specified their work e-mail client (<em>n</em>=27), Microsoft Outlook was the majority client.</p>
-<table class="table table-striped"><thead><tr><th>Name</th><th>#</th><th>%</th></tr></thead>
-<tr><td>Outlook</td><td>14</td><td>52%</td></tr>
-<tr><td>Thunderbird</td><td>4</td><td>15%</td></tr>
-<tr><td>Apple Mail</td><td>3</td><td>11%</td></tr>
-<tr><td>Mutt</td><td>2</td><td>7%</td></tr>
-<tr><td>Other</td><td>4</td><td>15%</td></tr>
-</table>
-
-<p>For home (<em>n</em>=28), the results are, once again, quite different — and quite diverse:</p>
-<table class="table table-striped"><thead><tr><th>Name</th><th>#</th><th>%</th></tr></thead>
-<tr><td>Thunderbird</td><td>7</td><td>25%</td></tr>
-<tr><td>Apple Mail</td><td>6</td><td>21%</td></tr>
-<tr><td>Outlook</td><td>3</td><td>11%</td></tr>
-<tr><td>Google Mail</td><td>3</td><td>11%</td></tr>
-<tr><td>Pine</td><td>2</td><td>7%</td></tr>
-<tr><td>Mutt</td><td>2</td><td>7%</td></tr>
-<tr><td>Other</td><td>5</td><td>18%</td></tr>
-</table>
-
-<p>Of the 28 respondents, nearly 2/3 (17 or 63%) specified a different home e-mail client compared to the one they used at work. After analysis of X-Mailer headers is taken into account (<em>n</em>=131), I conclude that our members prefer webmail overall, and prefer free (and non-Microsoft) native clients.</p>
-<table class="table table-striped"><thead><tr><th>Name</th><th>#</th><th>%</th></tr></thead>
-<tr><td>Google Mail</td><td>23</td><td>18%</td></tr>
-<tr><td>Thunderbird</td><td>22</td><td>17%</td></tr>
-<tr><td>Apple Mail</td><td>20</td><td>15%</td></tr>
-<tr><td>Outlook</td><td>20</td><td>15%</td></tr>
-<tr><td>Lotus Notes</td><td>10</td><td>8%</td></tr>
-<tr><td>Other</td><td>36</td><td>27%</td></tr>
-</table>
-
-<p>Interesting, no? Statistically relevant — maybe not! Let the debates begin in earnest!</p>
+<p><em>Image: Google Pipes Datacenter, <a href="https://www.flickr.com/photos/jjorquera/15433132769">Jorge Jorquera</a> via Flickr (CC BY-NC-ND 2.0)</em></p>
                 
 			</article>
 			
 			<!-- Tags -->
 			<div class="mb-4">
 				<span class="taglist">
+				
+				  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="/tags.html#featured">featured</a>
 				
 				</span>
 			</div>
@@ -797,17 +788,13 @@ function lunr_search(term) {
         <div class="row prevnextlinks small font-weight-bold">
           
             <div class="col-md-6 rightborder pl-0">
-                <a class="text-dark" href="/blog/2007/05/15/Metrics-from-Internet-Identity-Workshop/"> Metrics from Internet Identity Workshop
+                <a class="text-dark" href="/blog/2019/03/21/metricon-x-opening/"> Five Things the Last Decade Taught Me About Security Metrics
+                
+                <img class="mr-1" src="/assets/5585c1-d657460eb6a045a5df9e1c93ab22a63ec1a29a1fd29767da5175514f2b4fed48.jpg">
                 
                 </a>
             </div>
           
-          
-            <div class="col-md-6 text-right pr-0">
-                <a class="text-dark" href="/blog/2007/07/19/The-Futility-of-Geographic-Security-Metrics/"> The Futility of Geographic Security Metrics
-                
-                </a>
-            </div>
           
         </div>
     </div>

@@ -13,8 +13,6 @@ As part of a continuing experiment with static blogging, I have moved all of my 
 
 For the curious, here's some background on why I moved everything here:
 
-<!-- more -->
-
 The securitymetrics.org site has for many years been running on [JSPWiki](http://incubator.apache.org/jspwiki/), a Java Enterprise Edition (JEE) application that uses "wiki text" as a markup language. It has served me well, and I am proud to have been one of the platform's primary authors. However, my (older) deployed version of JSPWiki has suffered from a slow memory leak that has required me to restart the web app container about once per month. I have also had to disable site registration and commenting features, due to the lack of a reasonably-bulletproof spam filtering system. That meant that securitymetrics.org had become essentially a static website. So, why go to the trouble and expense of hosting it on a complex web app server? Now that I've gotten the hang of [Octopress](http://octopress.org), a Jekyll-based static web publishing system, the time was right to make the move to a much simpler alternative. And because I had used securitymetrics.org as a personal blog, it seemed like a good idea to move all of the bloggish-type posts here.
 
 Moving everything to Octopress means that I now write in Markdown, John Gruber's [elegant markup language](http://daringfireball.net/projects/markdown/). Among other things, that gives me the ability to use my preferred writing application, [iAWriter](http://www.iawriter.com) -- a beautiful writer's tool that synchronizes with iCloud and hence, with all my devices. Markdown is a simpler markup language than wiki text; similar in many respects but with some key differences:

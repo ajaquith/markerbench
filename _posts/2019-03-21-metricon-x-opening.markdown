@@ -19,8 +19,6 @@ I appreciate everybody coming today. It&rsquo;s a great turnout for a conference
 
 The theme of the conference is &ldquo;plus &ccedil;a change&hellip;,&rdquo; the second half of which is &ldquo;plus c&rsquo;est la m&ecirc;me chose.&rdquo; Colloquially: &ldquo;the more things change, the more they stay the same.&rdquo; So what we&rsquo;re really here to talk about are the constants and the change. But because I suspect that we will have ample time to reheat some of the old chestnuts (the constants), I&rsquo;d like to offer a few remarks on the _changes_ &mdash; that is, notable happenings in the world of security metrics over the last 12 years.
 
-<!-- more -->
-
 # Data-driven security took root
 
 One of the most gratifying things to emerge in security over the last 10-plus years is the increased fluency and comfort people have with real security data. This is not completely new. [Bill Cheswick](http://www.cheswick.com/ches/)&rsquo;s work at Bell Labs in the late 1990s on network mapping, for example, helped create a company ([Lumeta](http://www.lumeta.com)) that specialized in analyzing networks, and developed a specialty in analytics for use in M&A situations. [Jim Cowie](https://www.linkedin.com/in/jameshcowie/), formerly CTO of Renesys, as another example, was doing large-scale analytics on BGP routes at the turn of the millennium. The last dozen years has brought many more examples, notably:

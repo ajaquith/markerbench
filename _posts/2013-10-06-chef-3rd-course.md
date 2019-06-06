@@ -16,8 +16,6 @@ If you read the [first](/blog/2013/10/01/chef-starter/) and [second](/blog/2013/
 
 In this post, I will demonstrate one of the most challenging aspects of any server automation project: copying sensitive keying materials, such as SSL private keys, to server nodes. Although SSL certificates themselves are not sensitive,  certificate private keys are. In order to use Chef to truly “build security in,” these materials must be securely conveyed from the Chef server to the target server nodes. To do this, you will use Chef’s encrypted data bag feature and an add-on feature called `chef-vault`. You will create a custom cookbook recipe that performs all of the necessary decryption and file-creation actions on the target node. At the end of this post, you will possess a repeatable, reliable and secure method for conveying SSL keying materials or other secrets to target nodes.
 
-<!-- more -->
-
 # Generate self-signed SSL certificate
 To use SSL with your webserver, you must have an SSL certificate. In production environments, you will likely use a certificate signed by a public certificate authority, such as VeriSign, Thawte, or GoDaddy. But you can also use a self-signed certificate, which you will do here. At the command line, change to your `chef-repo/.chef` directory. Type:
 

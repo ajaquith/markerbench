@@ -19,15 +19,11 @@ A few weeks ago I put together my annual [Predictions blog post](https://blog.pe
 4. California will become the _de facto_ privacy regulator
 5. Your password policy will undergo a major overhaul
 
-<!--more-->
-
 Of these, prediction numbers 1 and 3 both related to cloud services, and to the security thereof. The first one, about Platform-as-a-Service (PaaS) was by far the one that I spent the most time thinking about. That is because PaaS is the one that CISOs have the least amount of control over. It is the sneakiest. From CISO's standpoint, knowing that large parts of your developer toolchain (source code repository, test VMs) and runtime environment (web servers, databases) is sitting out there in "the cloud" is scary, not least because these parts didn't exactly go through the traditional procurement channel. Even worse, your typical IT security auditor isn't really going to know what to do with PaaS, other than slap hands on face, MacCauley Culkin-style, and make a beeline for the exit.
 
 {% asset paas-2013.png alt="Platform-as-a-Service Ecosystem" %}
 
 However, in this post I will describe one way in which the use of pervasive — and free — platform cloud services can actually _reduce_ risk. That may sound ridiculous on its face, but I offer one worked example that proves the point: static websites.
-
-<!--more-->
 
 _Static websites_ are exactly what you might think: websites whose content is entirely static. The server never executes any business logic: it simply retrieves whatever is asked for and serves it up to the client. By "whatever is asked for" we mean plain-old HTML, images, cascading style sheets, JavaScript or anything else that makes up the website. Static websites depend on four principles:
 

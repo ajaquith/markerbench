@@ -17,8 +17,6 @@ My publisher, Addison-Wesley, has recently updated the information on my book, [
 
 Isn't it nice? I like it not just because it's a great picture, but because it ties into the book's overall theme. Allow me to explain.
 
-<!--more-->
-
 I am highly visual person. I have always believed that when you want to make a point, particularly to executives, you need to deliver it in a way that drives it home forcefully and clearly. Accompanying numbers with clear, crisp, honest graphics is an important way of doing this.
 
 The great [Edward Tufte](http://www.edwardtufte.com), arguably the most influential information designer of the last 25 years, contends that the strategic application of small, saturated points of color in exhibits can draw attention to key points. His tastes run exactly opposite to the mainstream, as evidenced by many exhibits I see from reputable vendors. Most people's idea of a "slick exhibit" means three-dimensional bar charts clad in radioactive colors. But instead of drenching entire exhibits with leftover Sherwin Williams inventory, Tufte argues that in many cases exhibits should be relatively austere, save for those few key spots where you want to make your point. _That_ is where you bust out the saturated color. In short, Tufte argues that restraint should rule. As a raging contrarian and visually driven person, I agree wholeheartedly.

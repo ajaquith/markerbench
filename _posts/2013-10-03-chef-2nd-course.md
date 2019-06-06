@@ -13,8 +13,6 @@ comments: true
 _This is the second in a series of occasional posts about security and DevOps. The ultimate goal of this series is to show how to build a reasonably secure Apache web server using the popular DevOps automation tool [Chef](http://www.opscode.com/chef/). The server I am describing how to build will be suitable for serving static content. Readers of this blog know that I am a fan of static blogging tools like [Octopress](http://octopress.org), which I use to generate this website._
 
 If you read the [first post in this series](/blog/2013/10/01/chef-starter/), you learned how to set up the Chef workstation and server account. You created an Apache server role and a test environment; set up a virtual machine; and built your first node. In this post, I will show you how to create a new role called `base` that includes security enhancements to OpenSSH. You will also fine-tune Apache to remove non-essential modules.
-
-<!-- more -->
  
 # Tightening the Apache configuration
 To recap, in the last post I described how to create a sample virtual machine called `tester.local`, onto which Chef installed the Apache 2 web server. If you were (as they say in the game-show world) “playing along at home,” you created a sample role called `webserver` that caused the `apache2` and `apt` packages to be installed on the node `tester.local`. You also bootstrapped the node so that it converged into the desired state.

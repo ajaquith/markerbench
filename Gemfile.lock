@@ -97,7 +97,7 @@ GEM
     progress (3.5.0)
     public_suffix (3.0.3)
     rack (2.0.7)
-    rake (0.9.6)
+    rake (12.3.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -130,7 +130,7 @@ DEPENDENCIES
   jekyll-seo-tag
   jekyll-sitemap
   mini_magick
-  rake (~> 0.9)
+  rake (~> 12.3)
   stringex (~> 1.4.0)
 
 RUBY VERSION

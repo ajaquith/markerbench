@@ -9,7 +9,7 @@ ruby RUBY_VERSION
 #
 
 # If you have any plugins, put them here!
-gem 'rake', '~> 0.9'
+gem 'rake', '~> 12.3'
 gem 'stringex', '~> 1.4.0'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'image_optim'

@@ -1,0 +1,221 @@
+/* 
+   Load EB Garamond from Google as described in this article: 
+   https://medium.com/@lisa.berteau.smith/face-it-how-to-link-google-fonts-and-local-fonts-to-css-a329bc1c2fde
+*/
+@font-face {
+    font-family: 'EB Garamond';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/ebgaramond/v27/SlGUmQSNjdsmc35JDF1K5GR1SDk_YAPI.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+  
+@font-face {
+    font-family: 'EB Garamond';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/ebgaramond/v27/SlGFmQSNjdsmc35JDF1K5GRwUjcdlttVFm-rI7e8QL99U661hGFJRvw.woff) format('woff');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/ebgaramond/v27/SlGUmQSNjdsmc35JDF1K5GR1SDk_YAPI.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+ 
+@font-face {
+    font-family: 'EB Garamond';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/ebgaramond/v27/SlGUmQSNjdsmc35JDF1K5GR1SDk_YAPI.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/ebgaramond/v27/SlGUmQSNjdsmc35JDF1K5GR1SDk_YAPI.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Put all headings and body text in EB Garamond. */
+
+body {
+    font-family: EB Garamond, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+h1, .h1 {
+    font-family: EB Garamond, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 500 !important;
+}
+
+.h2, .h3, .h4, .h5, .h6, h2, h3, h4, h5, h6 {
+    font-family: EB Garamond, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 300 !important;
+}
+
+.mainheading h1.sitetitle {
+    font-family: EB Garamond, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 500 !important;
+}
+
+/* Bump up the sizes for card titles and text. */
+
+.card-title {
+    font-size: 1.4em !important;
+    font-weight: 500 !important;
+}
+
+.card-text {
+    font-size: 1.2em !important;
+    line-height: 1.3em !important;
+}
+
+/* Put article text in Garamond. Tweak bulleted lists to increase the room
+   between bullets, and trim the space between the list and the next paragraph. */
+
+.article-post {
+    font-family: EB Garamond, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    font-size: 1.4em;
+    font-weight: 400;
+    line-height: 1.45em;
+}
+
+.article-post ol, .article-post ul {
+    margin-bottom: 0.5rem;
+}    
+
+.article-post li {
+    padding-bottom: 0.5em;
+}
+
+/* Jumbotron tags get a Yale Blue background, rounded chicklet corners, and sans-serif font. */
+
+.jumbotron.fortags a {
+    background-color: #0f4d92 !important;
+}
+
+ul.tags {
+    margin: 2.5rem 0 2.5rem 0;
+}
+
+ul.tags li a {
+    border-radius: 30px !important;
+    padding: 5px 10px 7px !important;
+}    
+
+.tags, .fortags, .share, .post-top-meta, .author-meta {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}    
+
+/* Navigation links are slightly bigger and bolder. */
+
+.PageNavigation {
+    font-family: EB Garamond, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 500 !important;
+    font-size: 1.4em;
+    line-height: 1.3em;
+}
+
+/* Remove the bottom padding on the navbar and expand the navlink padding to
+offset it, so that we can align the menu highlight line with the line at the
+bottom of the navbar. Bump up the size of navbar items. The selected navbar
+item is a crimson line (which we break through). */
+
+ul.navbar-nav li.nav-item {
+    border-bottom-color: crimson;
+    border-bottom-width: 2px;
+}
+
+li.nav-item {
+    font-size: 1.4em !important;
+}    
+    
+.navbar {
+    padding-bottom: 0;
+}    
+
+.nav-link {
+    padding-bottom: 1rem;
+}
+
+li.active a {
+    border-bottom-color: crimson;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+/* Section titles also get a crimson line. */
+
+.section-title span {
+    border-bottom-color: crimson;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+/* Stylistic tweaks to links, blockquotes, code, and tables. */
+
+a, a:hover {
+    color: #0f4d92; /* Yale Blue */
+}
+
+blockquote {
+    border-left-color: crimson;
+    border-left-width: 2px;
+    margin-left: 0.5em !important;
+    font-style: normal;
+}    
+
+code {
+    color: crimson;
+    font-size: 0.75em;
+}    
+
+table {
+    margin: 1rem 1rem 1.2rem 1rem;
+}
+
+th {
+    border-bottom: 1px solid gray;
+}
+
+/* Article end-caps. */
+
+span.end-cap {
+    margin-left: 0.9em;
+    background: #fff center/cover url("/images/markerbench.svg") no-repeat;
+    vertical-align: middle;
+    margin-bottom: 0.15em;
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    zoom: 1;
+}
+
+/* Special formmatting for homepage content. */
+
+.homepage p {
+    font-size: 1.5em;
+    line-height: 1.2em;
+    padding-bottom: 0.5em;
+}
+
+.homepage li {
+    font-size: 1.5em;
+    line-height: 1.2em;
+}
+
+/* Tweak Bootstap carousel to add shadows to the text. */
+
+.carousel-caption {
+    text-shadow: 2px 2px 8px #101010;
+}

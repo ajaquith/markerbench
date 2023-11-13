@@ -1,0 +1,91 @@
+{{ define "header"}}
+    {{- partial "_shared/navbar.html" . -}}
+{{ end }}
+
+{{ define "main" }}
+    <div class="main-content">
+        <div class="row">
+            <!-- Title and Hero -->
+            <div id="homepageCarousel" class="col-md-12 pb-5 carousel slide carousel-fade" data-ride="carousel" data-wrap="false" data-interval="5000">
+                <ol class="carousel-indicators">
+                  <li data-target="#homepageCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#homepageCarousel" data-slide-to="1"></li>
+                  <li data-target="#homepageCarousel" data-slide-to="2"></li>
+                  <li data-target="#homepageCarousel" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="/images/great-day-crop.png" alt="Great Day">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Cybersecurity is a high-stakes sport.</h1>
+                        <h2>When nothing happens, you’ve had a great day.</h2>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="/images/happy-board-crop.png" alt="Happy Board">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Make the right choices, and your board, employees, and shareholders are happy.</h1>
+                        <h2>But what if you’ve got big plans, and big risks to match?</h2>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="/images/pressure-crop.png" alt="Pressure">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Fail to find the right balance risk and reward, and you’re out of a job.</h1>
+                        <h2>Threats keep escalating. The pressure never stops.</h2>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="/images/move-the-earth-crop.png" alt="Move the Earth">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>You need a partner who can be a force multiplier.</h1>
+                        <h2>Crush Cyber Risk. Move the Earth.</h2>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row remove-site-content-margin">
+            <!-- Main content -->
+            <div class="col-md-8">
+                <div class="sticky-top sticky-top-offset homepage">
+                    {{ .Content}}
+                </div>
+            </div>
+            <!-- Featured posts -->
+            <div class="col-md-4">
+                <div class="sticky-top sticky-top-offset">
+                    <div class="section-title">
+                        <h2><span>Featured Content</span></h2>
+                    </div>
+                    <ol class="list-featured">
+                        {{ range (where .Site.Pages "Params.Featured" "==" true) }}
+                        <li class="mb-4">
+                            <span>
+                                <h4>
+                                    <a href="{{ .Permalink }}" class="text-dark">{{ .Title }}</a>
+                                </h4>
+                                <span class="d-block text-muted">
+                                    <i class="far fa-clock clock"></i>
+                                    {{ .ReadingTime }} min read
+                                    <span class="catlist">
+                                        {{ range .Params.tags }}
+                                        &#8729;
+                                        <a class="text-capitalize text-muted smoothscroll" href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a>
+                                        {{ end }}
+                                    </span>
+                                </span>
+                            </span>
+                        </li>
+                        {{end}}
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{- partial "_shared/alertbar.html" . -}}
+{{ end }}
+
+{{ define "footer"}}
+    {{- partial "_shared/footer.html" . -}}
+{{ end }}

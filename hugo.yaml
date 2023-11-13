@@ -1,0 +1,42 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: Markerbench
+summaryLength: 25
+copyright: Markerbench LLC
+module:
+  imports:
+    - path: github.com/ajaquith/mediumish-gohugo-theme
+
+params:
+  logo: /images/markerbench-logo.svg
+  showTitles: false
+  dateFormat: 'January 2, 2006'
+  meta:
+    description: 'High-stakes cyber.'
+    keywords: cyber
+  social:
+    github: ajaquith
+    linkedin: ajaquith
+    twitter: "@arj"
+  customcss:
+    - /css/arj.css
+
+taxonomies:
+  author: "authors"
+  category: "categories"
+  tag: "tags"
+
+menu:
+  main:
+    - name: Advisory
+      weight: 100
+      pageRef: /advisory
+    - name: Who We Are
+      weight: 200
+      pageRef: /authors
+    - name: Perspective
+      weight: 300
+      pageRef: /posts
+    - name: Book
+      url: https://www.amazon.com/Security-Metrics-Replacing-Uncertainty-Doubt/dp/0321349989
+      weight: 400

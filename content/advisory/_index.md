@@ -1,8 +1,8 @@
 ---
 title: Advisory
-layout: single
+layout: page
 ---
-Markerbench services include:
+The principals of Markerbench have successfully completed strategic projects in the following areas:
 
 ### Management
 - Executive and Board briefings and education

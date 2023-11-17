@@ -2,6 +2,7 @@
 title: 'High Consequence Work for CISOs'
 author: arj
 date: 2023-11-15T15:49:05-04:00
+draft: true
 ---
 
 This article kicks off a short series for CISOs about “high-consequence work”: attacking hard problems that can make or break your reputation as a practitioner. Each article frames an issue, describes why it’s important, outlines how to approach it, refers you to other resources you may can use to dig deeper, and closes with some personal observations. These are written Axios-style: fast, hard-hitting, and opinionated. I’d love your comments and feedback.

@@ -8,7 +8,7 @@ module:
     - path: github.com/ajaquith/mediumish-gohugo-theme
 
 params:
-  logo: /images/markerbench-logo.svg
+  logo: /images/logo.svg
   showTitles: false
   dateFormat: 'January 2, 2006'
   meta:

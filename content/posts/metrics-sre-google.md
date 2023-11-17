@@ -6,7 +6,6 @@ date: 2019-06-05 16:00:01 -0400
 tags:
   - metrics
 image: /images/google-pipes.jpg
-featured: true
 aliases:
   - /blog/2019/06/05/metrics-engineering/
 ---

@@ -4,6 +4,7 @@ description: Microsoft’s new advice for securing Active Directory does custome
 author: arj
 date: 2020-12-22 12:00:00 -0400
 image: /images/drop-dead.png
+featured: true
 tags:
   - security
   - vendor-bashing

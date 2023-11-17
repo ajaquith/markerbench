@@ -6,7 +6,6 @@ date: 2013-08-13 23:01:00 -0500
 tags: 
   - visualization
 image: /images/few.jpg
-featured: true
 aliases:
   - /blog/2013/08/13/my-kind-of-cranky/ 
 ---

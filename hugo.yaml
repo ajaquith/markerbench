@@ -40,3 +40,6 @@ menu:
     - name: Book
       url: https://www.amazon.com/Security-Metrics-Replacing-Uncertainty-Doubt/dp/0321349989
       weight: 400
+
+disqusShortname: 'markerbench'
+googleAnalytics: 'G-392995349'

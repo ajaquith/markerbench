@@ -10,3 +10,5 @@ github.com/ajaquith/mediumish-gohugo-theme v0.0.0-20231117154905-d260f66fe517 h1
 github.com/ajaquith/mediumish-gohugo-theme v0.0.0-20231117154905-d260f66fe517/go.mod h1:gcFQjZTwb2oV6Hf7aNjOilc9gPCxTkKK+8bXNuUwc+g=
 github.com/ajaquith/mediumish-gohugo-theme v0.0.0-20231120141259-3953e19a83fc h1:uOP9nGzpzg7EWoskBdsCMbyV2hLbPoBK5pu73luQPNk=
 github.com/ajaquith/mediumish-gohugo-theme v0.0.0-20231120141259-3953e19a83fc/go.mod h1:gcFQjZTwb2oV6Hf7aNjOilc9gPCxTkKK+8bXNuUwc+g=
+github.com/ajaquith/mediumish-gohugo-theme v0.0.0-20231120165054-4cecb6e920e2 h1:zgp2xXga+KOIYU4QT3/0FOvVcRiMyx+D2BIs7WYheLc=
+github.com/ajaquith/mediumish-gohugo-theme v0.0.0-20231120165054-4cecb6e920e2/go.mod h1:gcFQjZTwb2oV6Hf7aNjOilc9gPCxTkKK+8bXNuUwc+g=

@@ -1,6 +1,5 @@
 ---
 title: Crush cyber risk. Move the Earth.
-layout: homepage
 image: /images/move-the-earth.jpg
 ---
 # Welcome to High-Consequence Cyber

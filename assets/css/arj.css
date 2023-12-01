@@ -49,30 +49,49 @@
 
 /* Put all headings and body text in EB Garamond. */
 
-body {
-    font-family: EB Garamond, Helvetica Neue, Helvetica, Arial, sans-serif;
+html {
+    font-family: EB Garamond, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    font-size: 16px;
+    line-height: 1.2em;
 }
 
-h1, .h1 {
-    font-family: EB Garamond, Helvetica Neue, Helvetica, Arial, sans-serif;
+body, h1, h2, h3, h4, h5, h6, .article-post {
+    font-family: EB Garamond, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+}
+
+h1, .h1, .card-title {
+    font-family: EB Garamond, Helvetica Neue, Helvetica, Arial, sans-serif !important;
     font-weight: 500 !important;
 }
 
 .h2, .h3, .h4, .h5, .h6, h2, h3, h4, h5, h6 {
-    font-family: EB Garamond, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-weight: 300 !important;
+    font-family: EB Garamond, Helvetica Neue, Helvetica, Arial, sans-serif !important;
 }
 
-.mainheading h1.sitetitle {
-    font-family: EB Garamond, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-weight: 500 !important;
+p {
+    font-size: 1.4rem;
+    line-height: 1.25em;
+}
+
+li {
+    font-size: 1.4rem;
+    line-height: 1.25em;
+    margin-bottom: 0.5em;
+}
+
+li.nav-item {
+    line-height: 1.5em;
+    margin-bottom: 0;
+}
+
+.section-title h2 {
+    font-weight: 300 !important;
 }
 
 /* Bump up the sizes for card titles and text. */
 
 .card-title {
     font-size: 1.4em !important;
-    font-weight: 500 !important;
 }
 
 .card-text {
@@ -84,10 +103,12 @@ h1, .h1 {
    between bullets, and trim the space between the list and the next paragraph. */
 
 .article-post {
-    font-family: EB Garamond, Helvetica Neue, Helvetica, Arial, sans-serif !important;
     font-size: 1.4em;
-    font-weight: 400;
-    line-height: 1.45em;
+    line-height: 1.45em !important;
+}
+
+.article-post p {
+    line-height: 1.45em !important;
 }
 
 .article-post ol, .article-post ul {
@@ -95,7 +116,7 @@ h1, .h1 {
 }    
 
 .article-post li {
-    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 /* Jumbotron tags get a Yale Blue background, rounded chicklet corners, and sans-serif font. */
@@ -120,7 +141,6 @@ ul.tags li a {
 /* Navigation links are slightly bigger and bolder. */
 
 .PageNavigation {
-    font-family: EB Garamond, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-weight: 500 !important;
     font-size: 1.4em;
     line-height: 1.3em;
@@ -203,19 +223,6 @@ span.end-cap {
     width: 0.9em;
     height: 0.9em;
     zoom: 1;
-}
-
-/* Special formmatting for homepage content. */
-
-.homepage p {
-    font-size: 1.5em;
-    line-height: 1.2em;
-    padding-bottom: 0.5em;
-}
-
-.homepage li {
-    font-size: 1.5em;
-    line-height: 1.2em;
 }
 
 /* Tweak Bootstap carousel to add shadows to the text. */

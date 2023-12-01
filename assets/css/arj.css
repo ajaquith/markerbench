@@ -148,6 +148,10 @@ li.nav-item {
     padding-bottom: 1rem;
 }
 
+a.navbar-brand img {
+    max-height: 30px;
+}
+
 li.active a {
     border-bottom-color: crimson;
     border-bottom-width: 2px;

@@ -8,7 +8,8 @@ tags:
   - cyber
   - operational risk
 image: /images/cyber_risk_events.png
-featured: false
+featured: true
+comments: true
 ---
 During a recent engagement, a large financial institution asked Markerbench to review and recommend changes to its Key Risk Indicators (KRIs) for cybersecurity. As background, our client&rsquo;s first line of defense (1LOD) collects a series of cyber-related KRIs and presents them to senior stakeholders quarterly. The metrics program is well-organized and its monthly reporting packages are widely circulated.
 

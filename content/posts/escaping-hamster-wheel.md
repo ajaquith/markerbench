@@ -8,6 +8,7 @@ tags:
   - hamsters
   - books
 featured: true
+comments: true
 aliases:
   - /blog/2005/05/04/Escaping-the-Hamster-Wheel-of-Pain/
 ---

@@ -7,6 +7,7 @@ tags:
   - metricon
 image: /images/metricon-x-pano.jpg
 featured: true
+comments: true
 aliases:
   - /blog/2019/03/21/metricon-x-opening/
 ---

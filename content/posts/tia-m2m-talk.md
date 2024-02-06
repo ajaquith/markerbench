@@ -6,6 +6,7 @@ date: 2013-06-04 16:00:00 +0000
 tags: 
   - security
 featured: true
+comments: true
 aliases:
   - /blog/2013/06/04/tia-m2m-talk/
 ---

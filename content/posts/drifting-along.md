@@ -9,7 +9,6 @@ tags:
   - applications
   - metrics
 image: /images/aws.jpg
-featured: true
 aliases:
   - /blog/2019/09/25/drifting-along/
 ---

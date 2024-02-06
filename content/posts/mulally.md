@@ -8,6 +8,7 @@ tags:
   - leadership
 image: /images/mulally.jpg
 featured: true
+comments: true
 aliases:
   - /blog/2013/02/21/Mulally-leadership/
 ---

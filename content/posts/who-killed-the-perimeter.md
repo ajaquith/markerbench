@@ -5,6 +5,7 @@ date: 2023-11-14 12:00:00 -0400
 description: "Enterprise network perimeters have been disappearing: at first slowly, and then suddenly, all at once and at knifepoint. If this were a game of Clue, I’d accuse the Ransomware Actor, on the Edge Device, with the Zero-Day."
 image: /images/clue.png
 featured: true
+comments: true
 tags: 
   - security
 ---

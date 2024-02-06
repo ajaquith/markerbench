@@ -9,6 +9,7 @@ tags:
   - big data
 image: /images/johnboyd.jpg
 featured: true
+comments: true
 aliases:
   - /blog/2015/06/06/gartner-speech/
 ---

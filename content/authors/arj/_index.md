@@ -1,7 +1,7 @@
 ---
 name: Andrew Jaquith
 description: Managing Director, Markerbench
-linkedin: "https://linkedin.com/"
+linkedin: ajaquith
 twitter: "@arj"
 ---
 [Andrew Jaquith](https://www.linkedin.com/in/ajaquith/) is the Managing Director of Markerbench. Andrew’s 25-year career as a CISO, executive, and cyber practitioner spans startups (with two successful exits), Fortune 100s, and global financial services firms. He has managed a broad spectrum of technology and cyber risk areas and is a trusted advisor to customers, staff, and boards. He serves as an Board Advisor to [SecurityScorecard](https://securityscorecard.com) and as a member of the Technical Advisory Board of [Panaseer](https://panaseer.com).

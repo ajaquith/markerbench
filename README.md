@@ -18,7 +18,7 @@
 
 # Maintenance
 
-To refresh modules, use `hugpo mod get`:
+To refresh modules, use `hugo mod get`:
 
     hugo mod get github.com/ajaquith/mediumish-gohugo-theme
 
@@ -30,3 +30,12 @@ Occasionally, upgrade the local versions of Go and Hugo installed on the develop
 2. Change the value of the `HUGO_VERSION` in `.github/workflows/hugo.yaml` to the correct version.
 3. Change the value of the `go` line in `go.mod` to the correct version.
 4. Commit and push.
+
+Occasionally, check if GitHub Actions dependent script references in `.github/workflows/hugo.yaml` change; the Actions run will throw errors or warnings. For example, bumping versions for:
+
+- `actions/checkout`
+- `actions/configure-pages`
+- `actions/upload-pages-artifact`
+- `actions/deploy-pages`
+
+See also the GitHub Actions [starter pages](https://github.com/actions/starter-workflows/blob/main/pages/hugo.yml).

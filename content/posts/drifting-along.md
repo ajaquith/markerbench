@@ -9,6 +9,7 @@ tags:
   - applications
   - metrics
 image: /images/aws.jpg
+math: true
 aliases:
   - /blog/2019/09/25/drifting-along/
 ---
@@ -38,11 +39,11 @@ Here's a real example. My [securitymetrics.org test application](https://github.
 
 Drift is straightforward to calculate: execute the plan, and run the playbook. Then, count the number of changes. This is the _amount of drift_. Divide by the number of tasks. The result, expressed as a percentage, is the _drift rate_.
 
-More formally, the _drift rate_ is:
- 
-               # changes
-      ---------------------------
-       # tasks - # skipped tasks 
+More formally, the drift rate _d_ is equal to the number of changes _c_ divided by the difference between the total number of tasks _t_ and the number of skipped tasks _t<sub>s</sub>_:
+
+$$
+d = \frac{c}{t - t_s}
+$$
 
 Note that we remove &ldquo;skipped&rdquo; tasks from the denominator so that the results are not polluted by tasks that did not need to run for some reason or because they did not apply.
 

@@ -57,6 +57,7 @@ html {
 
 body, h1, h2, h3, h4, h5, h6, .article-post {
     font-family: EB Garamond, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    font-weight: 600 !important;
 }
 
 h1, .h1, .card-title {

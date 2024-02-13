@@ -20,6 +20,24 @@ params:
     twitter: "@arj"
   customcss:
     - /css/arj.css
+  math: false
+
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
+        enable: true
+    renderer:
+      unsafe: true
 
 taxonomies:
   author: "authors"

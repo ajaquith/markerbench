@@ -1,8 +1,9 @@
 ---
 title: "Run, Do Not Walk, To Your Browser and Read Dan Geer’s Analysis"
-author: arj
+authors:
+ - arj
 date: 2007-11-13 13:46:38 -0500
-tags: 
+tags:
   - metrics
   - security
 aliases:

@@ -1,8 +1,9 @@
 ---
 title: "The Symantec Threat Report: Read Between the Lines"
-author: arj
+authors:
+ - arj
 date: 2005-09-22 09:51:39 -0400
-tags: 
+tags:
   - security
   - vendor-bashing
 aliases:
@@ -26,7 +27,7 @@ First, __understand the report's motive__: to sell Symantec gear, software and s
 * managed security services
 * personal firewalls
 
-...all of which SYMC sells. Now, they aren't quite brazen enough to recommend their own products, but it is clearly implied. Interestingly, SYMC _does not_ recommend patch management software---something that isn't in their portfolio. 
+...all of which SYMC sells. Now, they aren't quite brazen enough to recommend their own products, but it is clearly implied. Interestingly, SYMC _does not_ recommend patch management software---something that isn't in their portfolio.
 
 Second, the best way to interpret the Symantec data itself is for __trending information__, not for absolute numbers. For example, it's interesting that:
 
@@ -37,9 +38,9 @@ Second, the best way to interpret the Symantec data itself is for __trending inf
 * Rental pricing for a 150k-strong botnet is $300 (for some unclear period of time)
 * Implied DDOS attacker profile is 15 bots (15k average active bots daily divided by 1,000 detected attacks/day)
 
-But some of the other statistics raise more questions than answers. Symantec tells us, for example, that it detects  just under 10,000 active zombie PCs on a daily basis. That sounds impressive, but it's hard to tell what percentage of their sample base this represents. It's not even clear that the measured increase in the number is relevant either, since we don't know whether they've increased their sensor network during the reporting period. Thus, we have no real way of knowing exactly how big the botnet problem really is, nor can we tell whether there are more botnets, or fewer. 
+But some of the other statistics raise more questions than answers. Symantec tells us, for example, that it detects  just under 10,000 active zombie PCs on a daily basis. That sounds impressive, but it's hard to tell what percentage of their sample base this represents. It's not even clear that the measured increase in the number is relevant either, since we don't know whether they've increased their sensor network during the reporting period. Thus, we have no real way of knowing exactly how big the botnet problem really is, nor can we tell whether there are more botnets, or fewer.
 
-Third, if you interpret the numbers a certain way, they would appear to expose some __deficiencies and blind spots in Symantec's portfolio__. For example, the huge increase in the number of malware variations begs the question of exactly how close to the limits of signature-based technologies we might be. I was at Peter Szor's recent presentation last week at the RSA Power Day event in NY, and he told me that Symantec is seeing close to 4,000 new variations a month. If you fast-forward a bit, suppose the number  trends to 10,000 a month.  That's an implied _net_ number of new signatures of 120,000 annually. There's just no way a signature-based product is going to be able to cope with the memory demands this implies, never mind the disk space usage. Of course, signatures are at the core of SYMC's business. 
+Third, if you interpret the numbers a certain way, they would appear to expose some __deficiencies and blind spots in Symantec's portfolio__. For example, the huge increase in the number of malware variations begs the question of exactly how close to the limits of signature-based technologies we might be. I was at Peter Szor's recent presentation last week at the RSA Power Day event in NY, and he told me that Symantec is seeing close to 4,000 new variations a month. If you fast-forward a bit, suppose the number  trends to 10,000 a month.  That's an implied _net_ number of new signatures of 120,000 annually. There's just no way a signature-based product is going to be able to cope with the memory demands this implies, never mind the disk space usage. Of course, signatures are at the core of SYMC's business.
 
 Another potential blind spot is exposed by their spam numbers. In contrast to every other message security vendor I've spoken to, SYMC says that the percentage of mail that is spam, as reported by BrightMail is actually _decreasing_. They attribute the decrease to the use of traffic-shaping products (more subtle plugging, this time for TurnTide boxen). I think attributing the decrease to traffic-shaping may be disingenuous; it could also signal a decrease in effectiveness of their core content-filtering software. This is almost certainly true in any case; detection strategies that look at sender traffic patterns are a [much more prominent part of modern anti-spam architectures](http://www.yankeegroup.com/public/research/author_page.jsp?ID=E6175864177D44AD). Thus, we have yet another example where the numbers tell us more about Symantec's aging product line than they do about the actual threat landscape.
 

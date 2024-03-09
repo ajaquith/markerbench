@@ -1,14 +1,15 @@
 ---
 title: Metrics, Rothman, and Gaming the System
-author: arj
+authors:
+ - arj
 date: 2006-11-18 10:27:51 -0500
-tags: 
+tags:
   - security
   - metrics
 aliases:
   - /blog/2006/11/18/Metrics-Rothman-and-Gaming-the-System/
 ---
-As usual, the purposefully provocative, belligerently blogging Mike Rothman has [gone and done it again](http://securityincite.com/blog/mike-rothman/the-daily-incite-november-14-2006#TBP2) &#x2014; aimed his treacly firehose at security metrics. Most recently, he's waded into the post-fest on the subject, of which [Amrit Williams](http://techbuddha.wordpress.com/2006/11/15/you-can-measure-security/), [Rich Mogull](http://securosis.com/2006/11/15/no-metrics-no-budget-or-paycheck/), [Pete Lindstrom](http://spiresecurity.typepad.com/spire_security_viewpoint/2006/11/security_metric.html) and [Alex Hutton](http://riskmanagementinsight.com/riskanalysis/?p=55) have been willing participants. 
+As usual, the purposefully provocative, belligerently blogging Mike Rothman has [gone and done it again](http://securityincite.com/blog/mike-rothman/the-daily-incite-november-14-2006#TBP2) &#x2014; aimed his treacly firehose at security metrics. Most recently, he's waded into the post-fest on the subject, of which [Amrit Williams](http://techbuddha.wordpress.com/2006/11/15/you-can-measure-security/), [Rich Mogull](http://securosis.com/2006/11/15/no-metrics-no-budget-or-paycheck/), [Pete Lindstrom](http://spiresecurity.typepad.com/spire_security_viewpoint/2006/11/security_metric.html) and [Alex Hutton](http://riskmanagementinsight.com/riskanalysis/?p=55) have been willing participants.
 
 Now, I recognize that Mike's stock-in-trade is hyperbole. He generally tells you exactly what he thinks, albeit with some slight exaggeration to get people's blood pumped up and their tongues wagging in reply. He wants spirited debate, and if it takes a little baiting to get it, he'll do it.
 
@@ -22,11 +23,11 @@ I can't possibly convert Mike over to my way of thinking in a single blog post. 
 
 Mike frames the problem well... but he also provides strong clues about what the correct answer is. The key phrase here is "behavior." I think we would both agree that every metric has inputs that can be manipulated. And every measurement regime produces behavioral side-effects, some of which can be peverse. But how is security different in this respect than any other management concern?
 
-First, let's consider the inputs to metrics and their potential for abuse by way of an example. Nearly every firm with an e-commerce presence watches a metric related to website uptime. It is common practice to tie operations bonuses to uptime. But carrots (bonuses) aren't the only way this can be done; sticks are often employed too. I know of a prominent Wall Street financial services firm that _personally fines_ senior operations management when their key systems have unscheduled downtime. 
+First, let's consider the inputs to metrics and their potential for abuse by way of an example. Nearly every firm with an e-commerce presence watches a metric related to website uptime. It is common practice to tie operations bonuses to uptime. But carrots (bonuses) aren't the only way this can be done; sticks are often employed too. I know of a prominent Wall Street financial services firm that _personally fines_ senior operations management when their key systems have unscheduled downtime.
 
-Now, I would pose this question: do we think that operations managers game the uptime numbers? Sure they do. When the rules for counting downtime periods aren't clear, it makes it easy to fool around with the numbers that go into the uptime formula. But does that mean that because the potential for abuse exists, we would be better off simply tossing out the metric? 
+Now, I would pose this question: do we think that operations managers game the uptime numbers? Sure they do. When the rules for counting downtime periods aren't clear, it makes it easy to fool around with the numbers that go into the uptime formula. But does that mean that because the potential for abuse exists, we would be better off simply tossing out the metric?
 
-Nobody I know would make that argument. That's because many organizations put checks in place to ensure that venality doesn't pollute reliability measures. And by "checks" I mean clear rules that govern what can and can't be counted as downtime, how to measure increments of time, and the scope of covered systems. Note also that _even those firms that don't do these things well still track uptime,_ because it provides a directionally correct historical record of their e-commerce systems' reliability. 
+Nobody I know would make that argument. That's because many organizations put checks in place to ensure that venality doesn't pollute reliability measures. And by "checks" I mean clear rules that govern what can and can't be counted as downtime, how to measure increments of time, and the scope of covered systems. Note also that _even those firms that don't do these things well still track uptime,_ because it provides a directionally correct historical record of their e-commerce systems' reliability.
 
 If we accept that uptime statistics can be gamed somewhat, but we still use them anyway, why would security be any different?
 

@@ -1,8 +1,9 @@
 ---
 title: "Paving Over the Proprietary Web: The Java Security Bigger Picture"
-author: arj
+authors:
+ - arj
 date: 2013-01-21 12:00:00 +0000
-tags: 
+tags:
   - Java
   - Flash
   - ActiveX
@@ -21,7 +22,7 @@ Client-side Java is part of the web's proprietary past, and its time is ending. 
 
 Since 2005, though, the native web has changed dramatically, and for the better. HTML 5, CSS and JavaScript toolkits have been the major catalysts of a revolution in web design. The `canvas` element [added to HTML 5](http://en.wikipedia.org/wiki/Canvas_element), for example, allowed standards-compliant browsers to draw shapes, create and fill paths, and animate objects. This, plus the `video` element, [freed designers](http://en.wikipedia.org/wiki/HTML5_video) from needing Flash. [Cascading Style Sheets](http://en.wikipedia.org/wiki/Cascading_Style_Sheets) (CSS) Levels 2 and 3 gave designers increasingly pixel-perfect control over the placement and appearance of content — a task made even easier with CSS pre-processors such as [LESS](http://lesscss.org) and [Sass](http://sass-lang.com), and with kitted CSS assemblies such as [Twitter Bootstrap](http://twitter.github.com/bootstrap/). On the JavaScript front, third-generation toolkits such as [jQuery](http://jquery.org) made it simple to make websites dynamic and responsive. You can do all of these things for free, without needing to buy any of the various Studios from Adobe or Microsoft.
 
-The slow-motion revolution in how the Web is made means that the _raîson-d'être_ for proprietary web technologies is going away. Like a lumbering concrete mixer, HTML5 and JavaScript are slowly paving over the parts of the web that had previously been occupied by Flash, ActiveX and Java. Ironically, the vendors of these proprietary technologies have, in their own ways, added limestone, clay and water to the paving machine. 
+The slow-motion revolution in how the Web is made means that the _raîson-d'être_ for proprietary web technologies is going away. Like a lumbering concrete mixer, HTML5 and JavaScript are slowly paving over the parts of the web that had previously been occupied by Flash, ActiveX and Java. Ironically, the vendors of these proprietary technologies have, in their own ways, added limestone, clay and water to the paving machine.
 
 Microsoft, for example, turned an entire generation of web developers against it with its long, and ultimately fruitless, [resistance against robust CSS support](http://web.archive.org/web/20080420044607/http://www.microsoft.com/windowsxp/expertzone/chats/transcripts/08_0320_ez_ie8.mspx) in Internet Explorer. Although modern versions of IE are highly standards-compliant, Internet Explorer did not pass the CSS Acid3 test until [September 2011](http://www.winrumors.com/internet-explorer-9-and-10-now-pass-acid3-test-with-100-thanks-to-test-changes/). Any web developer who has been working with CSS for more than 5 years, for example, can probably regale you with stories of massive hacks needed to allow older Microsoft browsers to work with standards-based websites.
 

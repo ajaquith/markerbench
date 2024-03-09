@@ -1,8 +1,9 @@
 ---
 title: "Four Things To Like About Obama’s Executive Order on Cyber-Security... and Four to Dislike"
-author: arj
+authors:
+ - arj
 date: 2013-02-14 12:00:00 +0000
-tags: 
+tags:
   - security
 aliases:
   - /blog/2013/02/14/SOTU/

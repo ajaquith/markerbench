@@ -1,6 +1,8 @@
 ---
 title: "The DevOps Security Handbook: Building Security In With Chef, Part I"
-author: arj
+authors:
+ - arj
+summary: This first post in a series about security and DevOps describes how to bootstrap development of a virtual test server.
 date: 2013-10-01 16:18:00 -0500
 tags:
   - security
@@ -11,7 +13,7 @@ aliases:
 ---
 {{< figure src="/images/512px-Devops-toolchain.png" title="Image copyright 2016 by Kharnagy, licensed under the Creative Commons Attribution-Share Alike 4.0 International license." >}}
 
-## Introduction
+# Introduction
 This is the first in a series of posts about [Chef](http://www.opscode.com/chef/), an infrastructure automation platform. The goal of this series is to describe how to build a reasonably secure Apache web server. By using Chef, we can quickly and efficiently build identical web servers with assurance that they will work the same way, every time, and have the security properties we want.
 
 You will build this server in stages. The server will ultimately contain the following elements:
@@ -24,8 +26,8 @@ You will build this server in stages. The server will ultimately contain the fol
 For purposes of testing, the server will be spun up as a virtual machine on your local workstation. You will use VirtualBox VMs for this purpose.
 
 This first post will describe how to set up a basic test infrastructure that uses Chef. You will set up the Chef workstation and server account, create an Apache server role and a test environment, set up a virtual machine, and build your first node. The web server will not do much, and it will not be especially secure — at least not initially. Subsequent posts will gradually add more security components. By adding security features gradually, you will learn how to use Chef. As a side effect, you will learn how Chef’s philosophy of “convergence” makes it easy to gradually massage your nodes into the states you want. This is important when adding Chef to servers that already exist.
- 
-## Getting started
+
+# Getting started
 In order to demonstrate how Chef works, you will need a virtual machine to play with. To create one, you will use Vagrant to instantiate a new VirtualBox VM. Our goal is to create a VM that you can boot and access on your laptop for testing purposes. After you do that, you will bootstrap it with Chef so that you can configure and manage it.
 
 Some prerequisites. You will need to download and install:
@@ -48,7 +50,7 @@ Using the Chef workstation tools, you create and edit Chef roles, environments, 
 
 With the initial setup stuff out of the way, let’s start getting into the fun stuff.
 
-## Creating sample server run-lists, roles and environments
+# Creating sample server run-lists, roles and environments
 I have found the OpsCode QuickStart documentation to be quite well-written. But it only gets you so far, and it leaves out some important steps for using Chef in a more serious way. Let’s take this opportunity to stray from the OpsCode documentation a bit and lay down some additional foundation-work for building the web server. In particular, let’s set up some initial run-lists, roles and environments for your test VM.
 
 Some background. Chef “converges” nodes into their desired states by applying a ”run-list” of [recipes](http://docs.opscode.com/essentials_cookbook_recipes.html) to each node. The run-list of recipes (Apache2, NTPD, user creation, etc) that apply can be specified in several ways. The quickest and most direct way is to specify the node’s run-list of recipes when the node is initially bootstrapped with Chef; that is, when the Chef agent (`chef-client`) is initially installed on the node. Bootstrapping the node configuration is done using Knife, and the syntax looks like this:
@@ -112,7 +114,7 @@ To bootstrap using roles instead of directly specifying recipes, you would use t
 
     knife bootstrap tester.local --run-list "role[webserver]" -E testing
 
-Again, don’t type this in, because it won’t work without some additional syntax; you will get to it soon enough. 
+Again, don’t type this in, because it won’t work without some additional syntax; you will get to it soon enough.
 
 Let's complete the initial Chef setup. So far, you have created a sample test environment called `testing`, and a sample server role called `webserver`. To complete the initial setup, you need to do two more things: download the actual cookbooks that Chef will apply to the node; and upload the cookbooks to the Chef server so that any nodes that are assigned it can get it. The cookbooks we need are `apt` (required to install Apache), and `apache2` (Apache itself).
 
@@ -133,7 +135,7 @@ Then upload your cookbooks to the Chef server:
 
 It might seem a little strange to have to upload the cookbooks to the Chef server. After all, they are managed centrally from the community cookbook site. Why can’t roles simply reference the cookbooks stored there, instead of needing to make copies? Frankly, I am not too sure why this is the case. I suspect Chef works this way so that cookbooks and recipes can be hacked up when needed. Regardless, you must upload cookbooks to Chef server after you update them. If you don’t, the Chef client on any nodes you create will continue to use outdated recipes.
 
-## Backing up Chef server data
+# Backing up Chef server data
 Because you are using Enterprise Chef, your nodes, roles, environments and data bags are stored on the server — not locally. While I trust OpsCode to keep their servers up and available, I like to keep copies of important data on my client so that I have a record of them, and can version them with Git. You should, too.
 
 To do that, you will need to install the `backup-export` Knife plugin, part of the [Knife Hacks](https://github.com/stevendanna/knife-hacks) package. Then, you should copy a specific plugin file from GitHub into our local Chef knife plugin cache in `~/.chef/plugins/knife`, creating the directory if necessary. A few quick commands should do the trick:
@@ -159,7 +161,7 @@ By default, backups are stored in `.chef/chef_server_backup`. You can change thi
 
 If you have gotten this far, your initial Chef setup is complete. Now, let’s create a test machine.
 
-## Creating a virtual machine for testing
+# Creating a virtual machine for testing
 Change to your Chef repo directory. Create a new file `Vagrantfile` with these contents, or edit the existing one so that it matches this:
 
     # -*- mode: ruby -*-
@@ -246,7 +248,7 @@ If you would like to verify that the VM is really up, you can SSH into the box u
 
 > Note: by default, base boxes used with Vagrant ship with a pre-installed SSH public/private key pair that is used for SSHing into VMs it creates. These base boxes also ship with default `vagrant/vagrant` credentials. This configuration is [not secure](http://stackoverflow.com/questions/14715678/vagrant-insecure-by-default). For testing purposes on your local workstation this should not be a problem, because we have configured the VM to use host-based networking. It cannot be accessed outside of the workstation. But production servers should not use Vagrant with its default configuration.
 
-## Bootstrapping the virtual machine with Chef
+# Bootstrapping the virtual machine with Chef
 So far, so good. You have successfully created a test virtual machine, but it isn't much good to us yet because it doesn’t have Chef on it. Until it does, you cannot manage it.
 
 It is (finally!) time to “bootstrap” the VM using Knife. This installs the `chef-client` agent on the node, and registers the new node with the Chef server. Type in the following:
@@ -259,49 +261,49 @@ Immediately after hitting Enter, a long list of output lines should appear. Thes
 
     Bootstrapping Chef on tester.local
     tester.local --2013-09-29 03:20:41--  https://www.opscode.com/chef/install.sh
-    tester.local 
-    tester.local Resolving www.opscode.com (www.opscode.com)... 
+    tester.local
+    tester.local Resolving www.opscode.com (www.opscode.com)...
     tester.local 184.106.28.82
-    tester.local 
-    tester.local Connecting to www.opscode.com (www.opscode.com)|184.106.28.82|:443... 
+    tester.local
+    tester.local Connecting to www.opscode.com (www.opscode.com)|184.106.28.82|:443...
     tester.local connected.
-    tester.local 
-    tester.local HTTP request sent, awaiting response... 
+    tester.local
+    tester.local HTTP request sent, awaiting response...
     tester.local 200 OK
 
-followed by 	
+followed by
 
     tester.local Starting Chef Client, version 11.6.0
-    tester.local 
+    tester.local
     tester.local resolving cookbooks for run list: ["apt", "apache2"]
-    tester.local 
+    tester.local
     tester.local Synchronizing Cookbooks:
-    tester.local 
+    tester.local
     tester.local   - apt
-    tester.local 
+    tester.local
     tester.local   - apache2
-    tester.local 
+    tester.local
     tester.local Compiling Cookbooks...
 
 and then a series of lines that indicate that APT and Apache have been installed. The last lines indicate that Apache has been installed and restarted, and that the resources on the box have been updated:
 
     tester.local Recipe: apache2::default
-    tester.local 
+    tester.local
     tester.local   * service[apache2] action restart
-    tester.local 
-    tester.local 
+    tester.local
+    tester.local
     tester.local     - restart service service[apache2]
-    tester.local 
-    tester.local 
-    tester.local 
+    tester.local
+    tester.local
+    tester.local
     tester.local Chef Client finished, 28 resources updated
-    tester.local 
+    tester.local
 
-If you see output similar to this, and no errors, it means that you have successfully converged your first node. Congratulations! Excellent work. 
+If you see output similar to this, and no errors, it means that you have successfully converged your first node. Congratulations! Excellent work.
 
 You verify that the web server is up by firing up your browser to the address `http://tester.local`. It should return a “Forbidden” message because we have not actually provided any HTML pages for Apache to serve up. But that is evidence enough that Apache is actually working.
 
-## Next: Adding security to the box
+# Next: Adding security to the box
 This post covered the basics of how to get going with Chef. You have installed the Chef workstation software and supporting components Git, Ruby and VirtualBox and Vagrant. You have created a sample role called `webserver` and assigned two sample recipes, `apache2` and `apt`, to it. You created a virtual machine called `tester` with the domain name `tester.local` and bootstrapped Chef onto it, placing it under Chef control.
 
 In the [next post](/images/blog/2013/10/03/chef-2nd-course/), you will begin doing more useful work. I’ll describe how to fine-tune the Apache installation. We will also begin increasing the security of the machine.

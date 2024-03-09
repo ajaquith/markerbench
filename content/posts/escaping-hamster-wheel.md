@@ -1,25 +1,24 @@
 ---
 title: Escaping the Hamster Wheel of Pain
-description: Security shouldn’t be an endless patch-and-pray exercise. Metrics offer a way out.
-author: arj
+summary: Security shouldn’t be an endless patch-and-pray exercise. Metrics offer a way out.
+authors:
+ - arj
 date: 2005-05-04 11:56:33 -0400
-tags: 
+tags:
   - security
   - hamsters
   - books
 featured: true
-comments: true
+image: /images/hamster.png
 aliases:
   - /blog/2005/05/04/Escaping-the-Hamster-Wheel-of-Pain/
 ---
-## Risk Management is Where the Confusion Is
+# Risk Management is Where the Confusion Is
 Lately I’ve been accumulating a lot of slideware from security companies advertising their wares. In just about every deck the purveyor bandies about the term “risk management,” and offers their definition of what that is. In most cases, their definition does not match mine.
 
 ![Hamsters](/images/hamster.png)
 
 I first encountered the term “risk management” used in the context of security in 1998, when I read Dan Geer’s landmark essay [Risk Management is Where the Money Is](http://www.cs.ucsd.edu/users/goguen/courses/275f00/geer.html). At the time, I was completely gobsmacked by its thoughtfulness and rhetorical force. It was like a thunderbolt of lucidity; several days later, I could still smell the ozone. Seven years later, I’ve found that much of his essay stands up well. Unfortunately for Dan’s employer at the time, purveyors of bonded identities did not flourish and monetize electronic commerce security as he had predicted. But he was absolutely correct in identifying digital security risk as a commodity that could be identified, rated, mitigated, traded, and above all, quantified and valued.
-
-<!--more-->
 
 Most of the decks I see miss this last point. Nearly everyone shows up with a doughnut-shaped “risk management” chart whose arrows rotate clockwise in a continuous loop. Why clockwise? I have no idea, but they are always this way. The chart almost always contains variations of these four phases:
 
@@ -59,7 +58,7 @@ Is it time to administer last rites to ”risk management”?  I think it is.  T
 
 My point is that ”risk management” as an overarching theme for understanding digital security has outlived its usefulness. Commercial entities abuse the definition of the term, and nobody has a handle on the asset valuation part of the equation.
 
-## Key Indicators Supplant Risk Management
+# Key Indicators Supplant Risk Management
 If “risk management” isn’t the answer, what is?
 
 Even though he was not the first to say it, Bruce Schneier said it best when he stated that “security is a process.” Surely he is right about this. But if it _is_ a process, exactly what sort of process is it? I would submit to you that the hamster wheel is not what he (or Dan) had it mind. Here’s the dirty little secret about “process”: process is boring, routine, and institutional. Process doesn’t always get headlines in the trade rags. In short, process is _operational._ How are processes measured? Through metrics (numbers about numbers) and key indicators (consistently-measured health diagnostics).

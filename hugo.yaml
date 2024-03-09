@@ -18,9 +18,9 @@ params:
     github: ajaquith
     linkedin: ajaquith
     twitter: "@arj"
-  customcss:
-    - /css/arj.css
   math: false
+  disqus:
+    api_key: 'LG6T0Rm0aJ2ZHn1B3WtnUdwsnZh2SAjvDqN92ebcwFvm17iHhmD6u9tBIVw2yP5g'
 
 markup:
   goldmark:
@@ -39,10 +39,16 @@ markup:
     renderer:
       unsafe: true
 
+services:
+  disqus:
+    shortname: 'markerbench'
+  googleAnalytics:
+    ID: 'G-ZPHMV7LB8G'
+
 taxonomies:
-  author: "authors"
-  category: "categories"
-  tag: "tags"
+  author: authors
+  category: categories
+  tag: tags
 
 menu:
   main:
@@ -58,6 +64,3 @@ menu:
     - name: Book
       url: https://www.amazon.com/Security-Metrics-Replacing-Uncertainty-Doubt/dp/0321349989
       weight: 400
-
-disqusShortname: 'markerbench'
-googleAnalytics: 'G-ZPHMV7LB8G'

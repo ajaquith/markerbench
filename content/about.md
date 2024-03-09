@@ -1,5 +1,6 @@
 ---
 title: About Markerbench
-author: arj
+authors:
+ - arj
 ---
 Andy is great.

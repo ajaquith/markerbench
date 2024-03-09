@@ -1,8 +1,9 @@
 ---
 title: "Charging for Guaranteed Spam: Better Than It Sounds?"
-author: arj
+authors:
+ - arj
 date: 2006-02-12 22:34:51 -0500
-tags: 
+tags:
   - security
   - spam
 aliases:
@@ -16,11 +17,11 @@ Much ink has been spilled over the recent AOL and Yahoo announcements that they 
 
 * The ahem, marketing companies are clearly frustrated by the fact that their mail is getting blocked more and more often. If you believe the numbers from MessageLabs and others, spam is now 80-85% of all Internet e-mail.
 * The existing spam filters of Yahoo and AOL are clearly annoying some of their most-phished customers (read: banks) by blocking their legitimate communications
-* AOL and Yahoo clearly think that can make a buck on this 
+* AOL and Yahoo clearly think that can make a buck on this
 
-I can't stand spam in any form. It's why I switched my private e-mail from [these guys](http://www.earthlink.net) to another provider. I used to get so many e-mails containing viruses, worms, trojan horses and other nasties that I almost longed for the simple "would you like some V1@grA?" type. Clearly, the deluge of spam is largely being fueled by the botnet boom, and the malware-laden variety is crushing the stuff that's merely solicitous.  
+I can't stand spam in any form. It's why I switched my private e-mail from [these guys](http://www.earthlink.net) to another provider. I used to get so many e-mails containing viruses, worms, trojan horses and other nasties that I almost longed for the simple "would you like some V1@grA?" type. Clearly, the deluge of spam is largely being fueled by the botnet boom, and the malware-laden variety is crushing the stuff that's merely solicitous.
 
-And there's the rub. There are genuine businesses out there, like banks, who want to communicate with their customers. And there are other sorts of businesses who simply want to  bombard us with come-ons for lots of stuff we don't need and didn't ask for. Yahoo and AOL clearly don't think it's worthwhile to try to distinguish between the two, so it's easiest to simply say: make 'em _all_ pay. 
+And there's the rub. There are genuine businesses out there, like banks, who want to communicate with their customers. And there are other sorts of businesses who simply want to  bombard us with come-ons for lots of stuff we don't need and didn't ask for. Yahoo and AOL clearly don't think it's worthwhile to try to distinguish between the two, so it's easiest to simply say: make 'em _all_ pay.
 
 That's just fine with me. The larger banks can clearly afford to pay, while the Spanish-fly-by-night yahoos (oops) will only do so if they think the risk/return is worth it. As for the latter type, I'm happy to let AOL and Yahoo drain their marketing budgets dry.
 

@@ -1,8 +1,9 @@
 ---
 title: "Moving securitymetrics.org to Octopress"
-author: arj
+authors:
+ - arj
 date: 2013-02-04 00:00:00 +0000
-tags: 
+tags:
   - security
   - web security
   - applications

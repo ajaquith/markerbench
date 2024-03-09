@@ -1,6 +1,7 @@
 ---
 title: Building Security In Using Chef
-author: arj
+authors:
+ - arj
 date: 2013-09-23 00:02:00 -0500
 tags:
   - security
@@ -19,19 +20,19 @@ I am not talking about a new buddy gourmand, about a pal I go out to restaurants
 
 Cookbooks are packages that define how packages, applications or system functions should be built and configured. Cookbooks exist for Apache, NTP, user and group account creation, and just about every common application you can imagine. At a file level, cookbooks are basically composed of property files, templates and clever glue-code. The cookbook’s job is to declare required packages and dependencies; provide templates for configuration files that need to be modified, and provide Ruby code that sets up the packages, configures things or does whatever is needed to achieve the desired result. The process for building nodes is similar to how developers build code.
 
-## Typical Chef workflow
+# Typical Chef workflow
 Here’s what a typical project workflow looks like. With Chef, you:
 
 * Create a new developer project using Git
 * Download one or more cookbooks for the applications or services you want to manage; or, you create new ones from scratch
 * Modify the properties associated with each cookbook as needed
 * Upload the modified cookbooks and/or properties to the master Chef server
-* “Bootstrap” new nodes from standard machine images, for example a generic CentOS VM. The bootstrap process injects Chef agents onto the new nodes and then... 
+* “Bootstrap” new nodes from standard machine images, for example a generic CentOS VM. The bootstrap process injects Chef agents onto the new nodes and then...
 * “Converge” each new nodes into the desired state by downloading the required cookbooks and properties (the “run list”) that apply, and then running all of the cookbook recipes in the run-lists
 
 I’ve glossed over quite a few things here, but the overall strategy is that the Chef agent transforms the node into the state you want. Sometimes this takes multiple passes through the run-list, although the Chef agent is generally smart enough to figure out how to manage dependencies without intervention. That is why Chef uses the term “converge” to describe how the node morphs into the desired state. Nodes need not be clones of each other, and indeed Chef can be injected into existing systems long after they are created. One might say that the Chef philosophy is exactly the opposite of the traditional “golden image” concept where every system is an exact copy of every other. It is more correct to say that with Chef, every package and application within scope — those you have created cookbooks for — is _configured_ in exactly the way you expect. Chef stresses _idempotency_ — a fancy way of saying that when you execute the run-list on multiple nodes, you get the same result every time. For the curious, Sean O’Meara provides an excellent overview of Chef [on his blog](http://blog.afistfulofservers.net/post/2011/03/16/a-brief-chef-tutorial-from-concentrate/).
 
-## Chef tools for cooking in the kitchen
+# Chef tools for cooking in the kitchen
 Chef includes several components that work together to produce consistent results every time:
 
 * __Knife__, a command-line workhorse that you use to create, download, edit and upload cookbooks, clients, nodes, roles and environments. _Clients_ are the workstations that edit Chef configurations. _Nodes_ are the machines that Chef produces. _Roles_ are run-lists of cookbooks and configs for a common purpose, for example, a role called “webserver” with cookbooks and properties for Apache, PHP, CGI, and your company's standard HTML chrome. _Environments_ are variations on either global configurations or roles for specific situations, for example “development,” “production,” etc.
@@ -45,7 +46,7 @@ In addition to its own components, Chef also makes good use of a few other key t
 * __Git__, the distributed version control system at the epicenter of the DevOps movement. When you create a new Chef project, the first thing you usually do is commit the new project into a local [Git repository](http://git-scm.com/). At that point, you can easily create and link to a remote repository so that changes to the project are appropriately versioned centrally. As noted above, client-side keying materials are not automatically versioned; they are part of the default _.gitignore_ file initially downloaded from the server.
 * __Vagrant__, a command-line utility for managing virtual machines. [Vagrant](http://www.vagrantup.com/) allows you to download and cache a pristine community machine image, which can be quickly spun up,  bootstrapped with Chef, and destroyed. The default VM image type is Oracle’s VirtualBox, but Vagrant can also manage VMWare, Amazon and Rackspace images. With VirtualBox images, Vagrant can also manage networking settings so that it is easy to create test machines on your laptop. Using Chef and Vagrant together,  for example, I was able to create a new virtual machine, bootstrap it with Chef, and converge it to a desired Apache state in about 30 seconds.
 
-## Implications for security
+# Implications for security
 So, why is a security guy like me fooling around with Chef, and what are the implications for security? Here’s what I like about it:
 
 * __Infrastructure as code__. I really like how you can create and manage machines essentially as code. I do a fair amount of programming as an after-hours “professional hobby,” so it is great to be able to use some of the same tools and languages (notably Git and Ruby) here also.
@@ -53,15 +54,15 @@ So, why is a security guy like me fooling around with Chef, and what are the imp
 * __Stepwise assimilation__. I like how Chef can be added to an existing machine so that it can be massaged into the desired state. When I have a little more time, I plan to perfect my Apache cookbook adaptations and converge my existing [securitymetrics.org](http://www.securitymetrics.org) server into it. That would allow me to quickly recreate the web-server parts of the site if it got 0wned. I keep a rather long list of anal-retentive instructions for hand-tuning the Apache, Mailman, Logwatch, SSHD, etc. I intend to gradually move each of these items under Chef control. Gradual assimilation is nice, because it easier for most organizations to implement rather than focusing on big-gulp “golden image” projects.
 * __Baked-in security possibilities__. As you might imagine, the ability to converge nodes into predictable and known states is Chef’s strong point. If you are a security professional who believes in Building Security In (“Mr McGraw, white courtesy phone...”), Chef gives you powerful tools in service of that goal. Through Chef, cookbooks, services and applications can be [minimized](http://docs.opscode.com/resource_service.html). Key exposures can be limited via existing cookbooks or through custom ones that you may create.
 
-## Key caveats when working with Chef
+# Key caveats when working with Chef
 So, that’s what I like about Chef. However, Chef has some important limitations that security professionals must keep in mind:
 
 * __Chef’s frame of reference is that of an Agile developer__, not that of a system administrator or a security pro. Cookbooks and recipes, and infrastructure-as-code are powerful metaphors, but they are different than those used by traditional configuration management tools. There is no concept of a CMDB other than in a very loose sense — the Chef server data and any projects managed by Git. Using Chef effectively requires you tho think like a developer. In companies where Agile or Lean has taken root — where development and operations are tightly coupled in a common workflow — this is a plus. But shops that aren’t fully wedded to the DevOps philosophy are likely to find Chef’s mindset a little alien.
 * __Chef’s learning curve is steep and can lock you in__. Chef property files and cookbook scripts are nothing more than stock Ruby files arranged in specific directory layouts and used in specific ways. Consequently, mastering Chef requires one to [learn a bit of Ruby](http://docs.opscode.com/just_enough_ruby_for_chef.html). Personally, I’ve found Ruby easier to learn than Perl or Bash (neither one of which I like very much). It allows me to express intent more simply and in a more compact fashion. What it means is that if you are a security or infrastructure professional who wants to build security in, you will have to roll up your sleeves a bit and learn a new language. Your investment in learning Chef and Ruby will lead to increased lock-in, which is _usually_ a good thing. Certainly, it is better than the alternatives — rat’s nests of Perl, Bash, wikis and READMEs.
 * __Chef’s documentation is average for open projects__, with the pluses and minuses this implies. OpsCode offers a licensing and support model similar to other hybrid companies: the source code is freely available for most components; licensing is generous and corporate-friendly (Apache 2.0 license); and a vibrant community helps newbies ascend the initial learning curves. If you want support you have to pay. For those who want to self-support, documentation is on par but not dramatically better than many open source projects: it covers basic use cases well, but minor deviations from potted plots cause hiccups. In my own experiments, for example, a server node wasn’t converging as it should have because `chef-client` wasn’t running as root. Error messages were cryptic and shed no light on the cause. Attempting to reinitialize the master workstation client made matters worse because I erased my private keys. I eventually figured out what was going on, but only through logical deduction rather than consulting the documentation.
-* __Chef is server-centric__, and won’t help you converge state on other types of devices, such as routers, load-balancers or databases. For those whose ambitions extend to automating the configuration of entire virtual or physical environments, you will need to bolster Chef with other tools. That isn’t necessarily a minus, but it does mean that Chef is only good at the things it is meant to be good at. It won’t be the only tool in your bag. 
+* __Chef is server-centric__, and won’t help you converge state on other types of devices, such as routers, load-balancers or databases. For those whose ambitions extend to automating the configuration of entire virtual or physical environments, you will need to bolster Chef with other tools. That isn’t necessarily a minus, but it does mean that Chef is only good at the things it is meant to be good at. It won’t be the only tool in your bag.
 
-## Alternatives to Chef
+# Alternatives to Chef
 As Sean’s blog points out, [Chef is not the only game in town](http://blog.afistfulofservers.net/post/2011/12/30/cfengine-puppet-and-chef-part-1/). Puppet serves a similar role for many companies, and its design philosophy is close to that of Chef. Both were inspired by CFEngine. I chose to experiment with Chef because I felt it had more polish and refinement than Puppet. I have no idea whether this is actually true or not. At a certain point, it does not matter. Whether you like Chef, Puppet or CFEngine, the point is to try them out and see where it takes you. I am quite pleased so far with Chef and look forward to using it more with my own projects. I will post more details in future blog posts.
 
 If you are a security or infrastructure who is working with Chef or similar tools, I would love to hear about you experiences. Add a comment or send me an email!

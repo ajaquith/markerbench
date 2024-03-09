@@ -1,9 +1,10 @@
 ---
 title: "New Web Adventures with Heroku"
-author: arj
+authors:
+ - arj
 date: 2013-08-26 08:55:00 -0500
 tags:
- - applications 
+ - applications
  - devops
 image: /images/512px-Devops-toolchain.png
 aliases:
@@ -11,13 +12,13 @@ aliases:
 ---
 {{< figure src="/images/512px-Devops-toolchain.png" title="Image copyright 2016 by Kharnagy, licensed under the Creative Commons Attribution-Share Alike 4.0 International license." >}}
 
-Many ardent followers of this blog know that among other things, one of my professional hobbies is application development. I am a "weekend programmer." I always have a side project or two going, but do not professionally program (much) as part of my day job. That's not necessarily for lack of talent (cough), but for lack of desire to make my living from it. That said, as the CTO of a cloud security software company, it's rather good to know how software is built these days. As a bonus, by staying close to dev via a hobby or two, I can relate better to my colleagues who actually do make their living from programming. 
+Many ardent followers of this blog know that among other things, one of my professional hobbies is application development. I am a "weekend programmer." I always have a side project or two going, but do not professionally program (much) as part of my day job. That's not necessarily for lack of talent (cough), but for lack of desire to make my living from it. That said, as the CTO of a cloud security software company, it's rather good to know how software is built these days. As a bonus, by staying close to dev via a hobby or two, I can relate better to my colleagues who actually do make their living from programming.
 
 I have been programming most of my life. I learned to program around age 11 on time-sharing systems, and then later, on the Apple II+ and the PDP 11-44. My high-school computer science team was nationally ranked, usually #1 or #2 in the country, and I scored well enough on my high school Advanced Placement (AP) test — 5 on a 5 scale — to waive all of my college science requirements in college. I could have majored in computer science but chose economics and political science instead, with huge dollops of Japanese and architecture on the side. I took just one computer science class in college — for fun — as a senior. It was CS 201, the hard-core freshman course for future majors. The course focused on LISP. I hated it, frankly, because Lisp is a weird language, and because all of my 201 classmates were jumping with both feet into their future majors and left me breathing their dust. As a result, I found myself — for the first time in my life — on the ass end of the grading curve. That aside, I got my first consulting gigs after college as a programmer, and have kept coding, on-and-off, ever since.
 
 A few of my "weekend projects" have been more than that. For example, in the early 2000s I became enamored of Java 2 Enterprise Edition (J2EE) in general, and with a Java-based wiki software package (JSPWiki) in particular. I didn't like JSPWiki's security model and volunteered to re-write it. That was fun. Five years later, I had contributed about 100,000 lines of code, added LDAP and database authentication, re-wrote the authorization system, given it a new front end based on [Stripes](http://www.stripesframework.org/display/stripes/Home), and helped incubate it into a [top-level Apache Software Foundation project](http://jspwiki.apache.org). By that time, I had essentially become the co-lead on the project with my colleague [Janne Jalkanen](http://www.ecyrd.com/ButtUgly/). But I found that I was no longer using the software day-to-day, and other life priorities intervened (marriage and a job change). So I retired from JSPWiki.
 
-More recently, I have indulged interests in two areas: mobile development — iOS in particular — and [Dev Ops](http://www.markerbench.com/blog/2013/01/17/phoenix/). In the mobile realm, I have been working on-and-off on an ambitious (too ambitious?) productivity app that will address a need that everyone has. 
+More recently, I have indulged interests in two areas: mobile development — iOS in particular — and [Dev Ops](http://www.markerbench.com/blog/2013/01/17/phoenix/). In the mobile realm, I have been working on-and-off on an ambitious (too ambitious?) productivity app that will address a need that everyone has.
 
 On Dev Ops, I have lately been fooling around with some of the build-automation and hosting frameworks. [Heroku](http:///www.heroku.com) is my current preoccupation. It combines server-side build automation with hosting. What that means is that developers can write code in their language of choice using a Heroku-mandated directory structure and packaging specification. Developers check in their code to Heroku's servers using [Git](http://git-scm.com). When the code is checked in, Heroku packages the app based on the packaging document — called a _Procfile_ — and deploys it in one or more web servers, depending on how much scalability the customer pays for. Heroku also offers a pre-configured private SQL database (Postgres), which developers can use for application data storage. As a bonus, Heroku offers a downloadable set of command-line utilities called [Toolbelt](https://toolbelt.heroku.com) that allow the server-side environment to be simulated and tested on the client. Best of all, Heroku offers compute time on one server — which they call a [_dyno_](https://devcenter.heroku.com/articles/dynos) — more-or-less for free, assuming the cycles don't exceed a relatively generous threshold.
 
@@ -27,7 +28,7 @@ What it all means is that developers can create, deploy, test and use low-volume
 
 All of which ought to be terrifying for security managers.
 
-From the big picture perspective, Heroku represents a complete rethink, and outsourcing of, the entire application development stack. That it can all be done for free — at least, for the first hit — means that Heroku and providers that offer similar stacks (CloudBees, Joyent, Engine Yard) create a natural alternative to traditional IT for prototyping, experimentation, and possibly, deployment. 
+From the big picture perspective, Heroku represents a complete rethink, and outsourcing of, the entire application development stack. That it can all be done for free — at least, for the first hit — means that Heroku and providers that offer similar stacks (CloudBees, Joyent, Engine Yard) create a natural alternative to traditional IT for prototyping, experimentation, and possibly, deployment.
 
 We can take this one step further. What Heroku and services like it means is that in the future, IT will remain relevant only if it can continue to engender respect with developers. If IT insists on being a roadblock — for example, if it can't or won't buy prototyping servers fast enough, imposes uninformed mandates about "company standard" frameworks, continues to require CVS (shudder) or SVN (wince) rather than Git, or breaks out in hives at the mention of this newfangled Hadoop thingy — it will create economic incentives for developers to look elsewhere. By "IT" I mean it as an aggregate entity — the architect rule-setters, security-gate-keepers and purse-string-holders that collectively and emergent-ly determine how applications are made and where they run.
 

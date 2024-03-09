@@ -1,15 +1,16 @@
 ---
 title: Coding in Anger
-author: arj
+authors:
+ - arj
 date: 2007-01-01 23:31:14 -0500
-tags: 
+tags:
   - security
   - web security
   - identity
 aliases:
   - /blog/2007/01/01/Coding-in-Anger/
 ---
-Last week's shutoff of this website's self-registration system was something I did with deep misgivings. I've always been a fan of keeping the Web as open as possible. I cannot stand soul-sucking, personally invasive registration processes like the New York Times website. However, my experience with a particularly persistent Italian vandal was instructive, and it got me thinking about the relationship between accountability and identity. 
+Last week's shutoff of this website's self-registration system was something I did with deep misgivings. I've always been a fan of keeping the Web as open as possible. I cannot stand soul-sucking, personally invasive registration processes like the New York Times website. However, my experience with a particularly persistent Italian vandal was instructive, and it got me thinking about the relationship between accountability and identity.
 
 <!--more-->
 
@@ -23,7 +24,7 @@ During the holiday break, I did a bit of thinking and exploration about how to a
 
 One obvious way to address self-registration identity issue is to introduce a vetting system into the registration process. That is, when someone registers, it triggers a little workflow that requires me to do some investigation on the person. I already do this for the mailing list, so it would be a logical extension to do it for the wiki, too. This would solve the identity issue &#x2014; successfully vetting someone would enable the administrator to have much higher confidence in their identity claims, albeit with some sacrifice
 
-There's just one problem with this &#x2014; I hate vetting people. It takes time to do, and I am always far, far behind. 
+There's just one problem with this &#x2014; I hate vetting people. It takes time to do, and I am always far, far behind.
 
 A second approach is to not do anything special for registration, but moderate page changes. This, too, requires workflow. On the JSPWiki developer mailing lists, we've been discussing this option quite a bit, in combination with blacklists and anti-spam heuristics. This would help solve the accountability problem.
 
@@ -37,14 +38,14 @@ So, InfoCards have promise. But they use the WS-* XML standards for communicatio
 
 OpenID holds more promise for me. There are loads more implementations available (and several choices for Java libraries), and the mechanism that identity providers use to communicate with relying parties is simple and comprehensible by humans. It doesn't require special software because it relies on HTTP redirects to work. And best of all, the thing the identity is based on is something "my kind of people" all have: a website URL. Identity, essentially, boils down to an assertion of ownership over a URL. I like this because it's something I can verify easily. And by visiting your website, I can usually tell whether the person who owns that URL is my kind of people.
 
-OpenID is cool. I got far enough into the evaluation process to do some reasonably serious interoperability testing with the [SXIP](http://code.sxip.com/openid4java/) and [JanRain](http://www.openidenabled.com/openid/libraries/java) libraries. I mocked up a web server and got it to sucessfully accept identities from the [Technorati](http://www.technorati.com/weblog/2006/10/144.html) and [VeriSign](http://pip.verisignlabs.com/) OpenID services. But I hit a few snags. 
+OpenID is cool. I got far enough into the evaluation process to do some reasonably serious interoperability testing with the [SXIP](http://code.sxip.com/openid4java/) and [JanRain](http://www.openidenabled.com/openid/libraries/java) libraries. I mocked up a web server and got it to sucessfully accept identities from the [Technorati](http://www.technorati.com/weblog/2006/10/144.html) and [VeriSign](http://pip.verisignlabs.com/) OpenID services. But I hit a few snags.
 
-Recall that the point of all of this fooling around is to figure out a way to balance privacy and authenticity. By "privacy", I mean that I do not want to ask users to disgorge too much personal information to me when they register. And correspondingly, I do not want the custodial obligation of having to store and safeguard any information they give me. The ideal implementation, therefore, would accept an OpenID identity when presented, dyamically collect the attributes we want (really, just the full name and websute URL) and pull them into our in-memory session, and flush them at the end of the session. In other words, the integrity of the attributes presented, _combined with transience_ yields privacy. It's kind of like the front-desk guard I used to see when I consulted to the Massachussetts Department of Mental Health. He was a rehabilitated patient, but his years of illness and heavy treatment left him with no memory for faces at all. Despite the fact I'd visited DMH on dozens of occasions, _every time_ I signed in he would ask "Have you been here before? Do you know where you are going?" Put another way, integrity of identity + dynamic attribute exchange protocols + enforced amnesia = privacy.  
+Recall that the point of all of this fooling around is to figure out a way to balance privacy and authenticity. By "privacy", I mean that I do not want to ask users to disgorge too much personal information to me when they register. And correspondingly, I do not want the custodial obligation of having to store and safeguard any information they give me. The ideal implementation, therefore, would accept an OpenID identity when presented, dyamically collect the attributes we want (really, just the full name and websute URL) and pull them into our in-memory session, and flush them at the end of the session. In other words, the integrity of the attributes presented, _combined with transience_ yields privacy. It's kind of like the front-desk guard I used to see when I consulted to the Massachussetts Department of Mental Health. He was a rehabilitated patient, but his years of illness and heavy treatment left him with no memory for faces at all. Despite the fact I'd visited DMH on dozens of occasions, _every time_ I signed in he would ask "Have you been here before? Do you know where you are going?" Put another way, integrity of identity + dynamic attribute exchange protocols + enforced amnesia = privacy.
 
 By "authenticity" I mean having reasonable assurance that the person on my website is not just who they say they are, but that I can also get some idea about their intentions (or what they might have been). OpenID meets both of these criteria... if I want to know something more about the person registering or posting on my website, I can just go and check 'em out by visiting their URL.
 
 But, in my experiments I found that the attribute-exchange process needs work... I could not get VeriSign's or Technorati's identity provider to release to my relying website the attributes I wanted, namely my identity's full name and e-mail addresses. I determined that this was because neither of these identity providers support what the OpenID people call the "Simple Registration" profile _aka_ SREG.
 
-More on this later. Needless to say, I am encouraged by my progress so far. And regardless of the outcome of my investigations into InfoCard and OpenID, my JSPWiki workflow library development continues at a torrid pace. 
+More on this later. Needless to say, I am encouraged by my progress so far. And regardless of the outcome of my investigations into InfoCard and OpenID, my JSPWiki workflow library development continues at a torrid pace.
 
 Bottom line: once we have a decent workflow system in place, I'll open registrations back up. And longer term, we will have more some open identity system choices.

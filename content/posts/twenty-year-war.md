@@ -1,15 +1,15 @@
 ---
 title: The Twenty-Year War on Cybercrime
-author: arj
-description: Digital crime is on the rise. To defeat it, defenders need to scale up, gain the full picture of risk, and heed the lessons of John Boyd.
+authors:
+ - arj
+summary: Digital crime is on the rise. To defeat it, defenders need to scale up, gain the full picture of risk, and heed the lessons of John Boyd.
 date: 2015-06-06 12:00:01 -0400
-tags: 
+tags:
   - security
   - risk
   - big data
 image: /images/johnboyd.jpg
 featured: true
-comments: true
 aliases:
   - /blog/2015/06/06/gartner-speech/
 ---
@@ -17,7 +17,7 @@ aliases:
 
 _This is the text of a speech I delivered at the Gartner Group Security and Risk Management Summit in June 2015. I originally wrote the speech for Sir Roger Carr, the Chairman of BAE Systems, to use at one of his public appearances. But it was too good not to re-use for myself as the BAE Applied Intelligence&rsquo; strategy lead. I felt no shame in doing so, seeing that I'd written it..._
 
-## Introduction
+# Introduction
 
 Good afternoon. Thank you for coming. It is a privilege to speak with you today. I've been asked to speak to you about digital crime: its rise, its significance, and what can be done about it.
 
@@ -27,14 +27,14 @@ But I also know that I am the last thing between you and beer, so I will keep th
 
 Certainly, “cyber security” (I hate that phrase, but there we are) is a topic that can be treated lightly, and it is ambitious to try and cover the whole subject in 20 minutes. Nonetheless. I will discuss the rise of digital crime: how criminal enterprises, state-sponsored actors, and other parties are robbing the industrialized world of its secrets and personal information. I’ll discuss the impact that these activities have on businesses, citizens and governments. And I’ll discuss what can be done from our perspective as BAE Systems, one of the world’s largest defense contractors and providers of digital crime solutions.
 
-### Introduce Self
+## Introduce Self
 
 But first, allow me to introduce myself and BAE Systems.
 
 I am the strategy officer for BAE Systems Applied Intelligence. I’m a recovering analyst; you might know me from, as they say on late-night TV, “another network,” in this case Forrester, where I covered data security and mobile security, and advised hundreds of enterprise clients on these topics, and on security strategy. I also wrote a fairly well-regarded book on security metrics called, funnily enough, “[Security Metrics](https://www.amazon.com/Security-Metrics-Replacing-Uncertainty-Doubt/dp/0321349989).”
 
 
-### Introduce BAE
+## Introduce BAE
 
 Most of you probably know BAE Systems because of the work we do with the UK government and the Ministry of Defense. BAE’s role is to safeguard and enhance our customers’ vital interests. We have a robust defense business: we build aircraft such as the the Typhoon; we build, service and repair naval ships; we make land-based armaments, such as the Bradley Fighting Vehicle; and we are a key supplier to aerospace and defense companies worldwide.
 
@@ -42,13 +42,13 @@ Most of you probably do _not_ know that we have a billion-dollar risk and securi
 
 All of these activities give us a unique vantage point on the challenges of cyber-security, and on the problem of digital crime.
 
-## The Rise of Digital Crime
+# The Rise of Digital Crime
 
 First, let's talk about the rise of digital crime: what it is, and what it means. When we speak about “digital crime” we mean the use of computers either as the main component of, or as an accessory to, criminal activities that result in financial gain or in competitive advantage. Broadly speaking, “digital crime” includes all dastardly deeds that span cyber-crime, financial crime, fraud, and insider activity. The common element is that unlike purely physical crimes — for example, pickpockets on a crowded subway car, these crimes rely on technology in some way.
 
 Increasingly, we see significant interplay between the different types of digital crime. Cyber is a key enabler of financial fraud, of healthcare fraud, and of the theft of industrial secrets. As reported by Scotland Yard in April 2014, [seven out of ten financial fraud offenses involve cyber in some way](http://www.standard.co.uk/news/crime/seven-out-of-10-frauds-are-now-cyber-crimes-police-chief-warns-9297024.html). And because every part of society is becoming increasingly automated, instrumented, and network-connected, we expect that cyber will be involved in an increasingly large proportion of crimes over the next few years.
 
-### Two types of threat actors: nation-states and criminal enterprises
+## Two types of threat actors: nation-states and criminal enterprises
 
 Today, digital crime is perpetrated by two main types of actors: nation-states and criminal enterprises. Many of the most important cyber incidents that you have no doubt read about over the last five years have involved _nation-states._ These nation-states are engaged in state-sponsored hacking and industrial espionage on a grand scale. Two years ago, for example, US forensics firm Mandiant revealed that an elite hacking unit of the People's Liberation Army was responsible for stealing industrial secrets from the U.S. defense industrial base, leading security software firms, and other businesses. More recently, North Korea stands accused of penetrating the networks of Sony Pictures to embarrass executives and steal intellectual property.
 
@@ -58,7 +58,7 @@ _Criminal enterprises_ present a danger of a different sort. Their goals are to 
 
 Some examples. Last year, the U.S. retailer Target suffered from a data breach that caused the payment card details of over 40 million customers to be stolen, plus the personal details of over 70 million additional customers. And last month, the healthcare company Anthem was breached, exposing millions of healthcare records. A Bloomberg report suggested that the [real target of the Anthem breach were the employees of its customers](http://www.bloomberg.com/news/articles/2015-02-05/signs-of-china-sponsored-hackers-seen-in-anthem-attack), which included Northrop Grumman and Boeing. Attackers were in effect using weaknesses found in Anthem’s defenses to get to these other companies.
 
-### The advantages attackers have over defenders
+## The advantages attackers have over defenders
 
 Although both classes of attacker — state-sponsored actors and organized criminal enterprises — have different objectives, they have several things in common, which give them advantages over their targets, who must defend themselves:
 
@@ -70,24 +70,24 @@ But it gets worse. You may not know that that the _lingua franca_ of the Interne
 
 Against such a backdrop, the adversary is always assured of asymmetric advantage. Defenders have to get it right all the time. Attackers, just once. To use a colloquial phrase, one might expect that for attackers, this should be rather like shooting fish in a barrel. And indeed it has been.
 
-### The Impact of Digital Crime
+## The Impact of Digital Crime
 
-The impact of digital crime is significant no matter how one chooses to measure it. 
+The impact of digital crime is significant no matter how one chooses to measure it.
 
   - The cost of digital crime begins with the _direct costs_; the cost of cleanup, notifications to customers, and fines. Target stores has spent almost $150 million cleaning up after their data breach. Heartland Payments Systems, a payment processor, was breached in 2008 and had over a hundred million payment card details stolen, with direct costs from the breach totaling nearly $150 million, only 30 million of which was covered by insurance. In general, industry analysts estimate that breaches of customer information can cost victims — companies and customers — millions of dollars. But the criminals nearly always make a mint: the gangs that broke into Target, for example, [may have made over 675 million dollars of profit](http://krebsonsecurity.com/2014/05/the-target-breach-by-the-numbers/).
-  - The cost of digital crime includes the damage to the victim’s _reputation_. A significant breach can cause significant personal embarrassment to executives and to customers. The co-chairman of Sony Pictures, for example, was forced resign last month because her company’s security was so poor. The CEO of Target stores resigned because of its hack. Security is indeed becoming a board level issue in the sense that people are getting fired because they don't have enough of it. 
+  - The cost of digital crime includes the damage to the victim’s _reputation_. A significant breach can cause significant personal embarrassment to executives and to customers. The co-chairman of Sony Pictures, for example, was forced resign last month because her company’s security was so poor. The CEO of Target stores resigned because of its hack. Security is indeed becoming a board level issue in the sense that people are getting fired because they don't have enough of it.
   - The cost of digital crime includes _changes in stock price and profits_ in the wake of a security breach, although these are usually temporary. Often overlooked are the inevitable class-action _lawsuits_ that arise against public companies after data breaches. The management of Heartland Payment Systems has spent over five years defending itself against 27 separate consumer and institutional class-action lawsuits.
   - Finally, the cost of digital crime includes the _loss of trust_ of one's customers. Once lost, it is often difficult to regain. This is particularly challenging with firms that sell to other businesses. In the Heartland case, after years of growing its merchant base at double-digit rates between 10 and 20 percent, in the 2 years following the breach, merchant growth went into reverse, dropping 2%.
 
 (more examples here…)
 
-These costs — direct costs, damage to reputation, stock price and profit drops, lawsuits, and loss of trust — are significant costs for any individual organization to bear. Taken in aggregate, the near-continuous stream of bad news leads to a gradual erosion of trust in digital business in general. 
+These costs — direct costs, damage to reputation, stock price and profit drops, lawsuits, and loss of trust — are significant costs for any individual organization to bear. Taken in aggregate, the near-continuous stream of bad news leads to a gradual erosion of trust in digital business in general.
 
-## What can be done
+# What can be done
 
 The problems associated with digital crime are complex. So are the solutions, but that is in part because of the way we as customers, suppliers and national governments have been thinking about the problem of digital crime. We need to think differently. We need to think deeply. And we need to think quickly.
 
-### Systems thinking, not silo thinking
+## Systems thinking, not silo thinking
 
 First, we need to think about systems as a whole, and not about silos.
 
@@ -102,23 +102,23 @@ In cyber, we have been following a similar script. Consider the case of Target s
   - anti-virus software
   - firewalls
   - intrusion detection systems, and:
-  - log management software to filter through security device logs. 
+  - log management software to filter through security device logs.
 
 All of these items are mandated by PCI-DSS and are required to be installed on systems that process cardholder data.
 
-In addition, the retailer also operated a security operations center in Minnesota. It had installed a $1.5 million advanced malware detection system, FireEye, which _did_ detect the malware that ultimately compromised its network. 
+In addition, the retailer also operated a security operations center in Minnesota. It had installed a $1.5 million advanced malware detection system, FireEye, which _did_ detect the malware that ultimately compromised its network.
 
 In short, Target could not possibly have been accused of skimping on security.
 
 What happened? Target’s failure came down to something fairly simple: the various silos of security did not talk to each other. Target’s advanced malware detection system saw the malware and created an alert. But the information was not acted on by Target’s staff. It was lost amidst the noise, or not presented in a relevant or timely way. Target did not arrive at the conclusions they needed to fast enough, which was not “you’ve got malware” but: “your point of sale systems are being taken over by a criminal enterprise.” In short, Target’s tragedy was the failure to think of its data sources, individual security systems, directories, suppliers and point-of-sale terminals as a single, interconnected system, and to attach relevance and meaning to the patterns of behavior seen within it.
 
-A _system_, in the broad definition, is a set of connected technologies or processes that form a greater, more complex whole. Target thought it had a system in place, but it’s clear it only had silos: FireEye, the Bangalore team, the Security Operation Center in Minnesota, and many individual security technologies. When needed the most, they acted (or didn’t act) separately. 
+A _system_, in the broad definition, is a set of connected technologies or processes that form a greater, more complex whole. Target thought it had a system in place, but it’s clear it only had silos: FireEye, the Bangalore team, the Security Operation Center in Minnesota, and many individual security technologies. When needed the most, they acted (or didn’t act) separately.
 
-When we rethink security, we must re-imagine security processes as an integrated whole. Systems thinking. To prevent and detect attacks, one must integrate all the elements — email, networks, physical, web, monitoring systems and many others. The components don’t all have to be from the same company, but they need to be integrated in such a way that the data flows seamlessly. Crucially, the information needs to be filtered and packaged so that it can be rapidly assessed, evaluated and acted on by human analysts. 
+When we rethink security, we must re-imagine security processes as an integrated whole. Systems thinking. To prevent and detect attacks, one must integrate all the elements — email, networks, physical, web, monitoring systems and many others. The components don’t all have to be from the same company, but they need to be integrated in such a way that the data flows seamlessly. Crucially, the information needs to be filtered and packaged so that it can be rapidly assessed, evaluated and acted on by human analysts.
 
-### Getting the full picture of risk
+## Getting the full picture of risk
 
-Second, we need to think about the full picture of risk. 
+Second, we need to think about the full picture of risk.
 
 Digital crime, particularly cyber crime, does not happen in a vacuum. Regardless of whether an attacker is trying to steal secrets, purloin personal information or launder lucre, nearly every type of digital crime can be reduced to a few common steps.
 
@@ -130,7 +130,7 @@ Every method used in these steps generate some sort of tell-tale signal or artif
 
 Appreciating the full picture of risk means having full knowledge, within the span of your control, of all of these artifacts. It means having the ability to sift through noise to find signal. It means acquiring, analyzing and acting on information at high speeds and at large scales. And it means having effective processes, technology and skills to spot anomalies, communicate them coherently, and act quickly.
 
-### Scaling up
+## Scaling up
 
 Third, we need to scale up.
 
@@ -149,11 +149,11 @@ Here in the United States, we are working with several state insurance agencies 
 
 These are all examples of how having a multi-company, transnational vantage helps solve industry-wide problems.
 
-## Conclusions
+# Conclusions
 
 The three strategies I’ve described — employing systems thinking, not silo thinking; getting the full picture of risk; and “scaling up” to span industries and international boundaries — are key to solving the complex, costly and critical problem of digital crime. But these items will not be sufficient in and of themselves. Because what we also need as businesses, as consumers and as society as a whole is a new mindset.
 
-### The risk intelligence mindset
+## The risk intelligence mindset
 
 The mindset we need to adopt is a more informed, intelligent approach to thinking about and managing risk: “risk intelligence” if you like. Not every plan to protect the business will be perfect. It is impossible to imagine a world in which there is no fraud, no theft, and no successful cyber-attacks. BAE might well wish it could sell silver bullets in addition to the conventional kind, but silver bullets do not exist.
 
@@ -163,7 +163,7 @@ What I mean by “risk intelligence” is that customers have enough information
   - effectively _analyze_ the data on hand to create information that can be put to use; and then:
   - decisively _act_ on that information to achieve better business outcomes: for example, reducing fraud, repelling cyber attacks, or rapidly responding to a break-in.
 
-### Learning from John Boyd
+## Learning from John Boyd
 
 There is a precedent for this type of thinking, and it comes courtesy of BAE’s main business, the military business. In the 1970s American military strategist Colonel John Boyd wrote about something called the “OODA loop,” which stands for Observe, Orient, Decide and Act. Boyd theorized that in combat conditions, one must:
 
@@ -180,15 +180,15 @@ It is also why digital crimes take days, months and years to detect. Adversaries
 
 So, when we say that to properly combat digital crime, we need “risk intelligence,” we mean quickly acquiring data, effectively analyzing it, and decisively acting. In essence: speeding up customers’ own analytics and decision-making processes to match or exceed the speed of the adversary.
 
-### Result: make customers’ jobs easier
+## Result: make customers’ jobs easier
 
-Imagine a world where risk intelligence becomes the norm. Done right, our customers’ jobs become simpler. Today, the Chief Information Security Officer’s role in most organizations is to catalog all of the vulnerabilities in the environment; prioritize them; and then serially eliminate them one after the other. He or she buys many best-of-breed products to solve many narrow problems. Along the way, he or she writes policies that few people read, and some business unit owners actually regard as harmful. He or she spends valuable staff time answering hundreds of pesky audit questionnaires. That is the day job. 
+Imagine a world where risk intelligence becomes the norm. Done right, our customers’ jobs become simpler. Today, the Chief Information Security Officer’s role in most organizations is to catalog all of the vulnerabilities in the environment; prioritize them; and then serially eliminate them one after the other. He or she buys many best-of-breed products to solve many narrow problems. Along the way, he or she writes policies that few people read, and some business unit owners actually regard as harmful. He or she spends valuable staff time answering hundreds of pesky audit questionnaires. That is the day job.
 
 _The after-hours job_ is what happens when the company is actually compromised or subjected to fraud or attack. In these circumstances, the Security Officer scrambles, dodges, and weaves before making the best of a bad situation. Because policy is prioritized over speed of decision-making, the Security Officer is always caught by surprise.
 
 In future, the Chief Information Security Officer’s job will be measured not by the pound — that is, by the weight of policies produced and purchase orders placed. It will be measured instead by the tick — that is, by the number of ticks of the clock between when the adversary initially acts, and when he or she is able to acquire, analyze and act in response, or _in advance_ of the adversary’s next move.
 
-## Parting thought
+# Parting thought
 
 I will close with a quote from Sir Winston Churchill:
 

@@ -1,14 +1,13 @@
 ---
 title: "“Everything was green. Mulally thought that was odd for a company losing billions.”"
-description: Real leaders create environments where risks can be discussed candidly.
-author: arj
+summary: Real leaders create environments where risks can be discussed candidly.
+authors:
+ - arj
 date: 2013-02-21 23:31:00 +0000
-tags: 
+tags:
   - strategy
   - leadership
 image: /images/mulally.jpg
-featured: true
-comments: true
 aliases:
   - /blog/2013/02/21/Mulally-leadership/
 ---

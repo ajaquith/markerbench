@@ -1,8 +1,9 @@
 ---
 title: “Every time you perform arithmetic operations on ordinal numbers, God kills a kitten”
-author: arj
+authors:
+ - arj
 date: 2008-02-19 15:12:40 -0500
-tags: 
+tags:
   - humor
   - metrics
   - security

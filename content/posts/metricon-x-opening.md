@@ -1,13 +1,13 @@
 ---
 title: Five Lessons from a Decade of Security Metrics
-description: The data revolution sweeping over IT has come to cybersecurity. CISOs can learn from their success disasters, instrument their controls, and write key risk indicators (KRIs) that resonate with their audiences.
-author: arj
+summary: The data revolution sweeping over IT has come to cybersecurity. CISOs can learn from their success disasters, instrument their controls, and write key risk indicators (KRIs) that resonate with their audiences.
+authors:
+ - arj
 date: 2019-03-21 09:00:01 -0400
-tags: 
+tags:
   - metricon
 image: /images/metricon-x-pano.jpg
 featured: true
-comments: true
 aliases:
   - /blog/2019/03/21/metricon-x-opening/
 ---
@@ -15,23 +15,23 @@ aliases:
 
 _This is the nominal text of my opening remarks for [Metricon X](https://www.securitymetrics.org/blog/2019/01/28/metricon-x-agenda/), delivered on March 21, 2019. It has been lightly edited for clarity and a few identities have been slightly disguised. The views expressed in this speech do not necessarily reflect those of my present or past employers._
 
-## Welcome
+# Welcome
 
 I appreciate everybody coming today. It&rsquo;s a great turnout for a conference that we rather deliberately did not advertise. If you&rsquo;re here, it&rsquo;s because you wanted to be here. You&rsquo;ve self-selected.
 
 The theme of the conference is &ldquo;plus &ccedil;a change&hellip;,&rdquo; the second half of which is &ldquo;plus c&rsquo;est la m&ecirc;me chose.&rdquo; Colloquially: &ldquo;the more things change, the more they stay the same.&rdquo; So what we&rsquo;re really here to talk about are the constants and the change. But because I suspect that we will have ample time to reheat some of the old chestnuts (the constants), I&rsquo;d like to offer a few remarks on the _changes_ &mdash; that is, notable happenings in the world of security metrics over the last 12 years.
 
-## Data-driven security took root
+# Data-driven security took root
 
 One of the most gratifying things to emerge in security over the last 10-plus years is the increased fluency and comfort people have with real security data. This is not completely new. [Bill Cheswick](http://www.cheswick.com/ches/)&rsquo;s work at Bell Labs in the late 1990s on network mapping, for example, helped create a company ([Lumeta](http://www.lumeta.com)) that specialized in analyzing networks, and developed a specialty in analytics for use in M&A situations. [Jim Cowie](https://www.linkedin.com/in/jameshcowie/), formerly CTO of Renesys, as another example, was doing large-scale analytics on BGP routes at the turn of the millennium. The last dozen years has brought many more examples, notably:
 
   - __The Verizon Data Breach Investigations Report (DBIR)__, which fused together law-enforcement data and private sources to paint a data-rich picture of what data breaches look like, are caused by, and cost. The [DBIR](https://enterprise.verizon.com/resources/reports/dbir/), and publications such as Larry Ponemon&rsquo;s eponymous studies on breach costs, helped popularize a metric known as &ldquo;cost per record.&rdquo; As a result, we now have relatively well-accepted currency for calculating potential and actual consumer information exposures.
-  - __Observables and ratings__. Spurred on, in part, by the challenges of the the questionnaire-based approach to evaluating vendor security, vendors such as [BitSight](www.bitsight.com) and [Security Scorecard](securityscorecard.com) have focused on inferring the security of companies based on what they can empirically observe. If your MX and DNS records are messed up, or if spam is coming from IP address space you control, or if externally-facing systems appear to be compromised, then the rest of your security program probably isn&rsquo;t any good either. Ratings are derived from how spotless one&rsquo;s external presence is. Data about your supply base, for example, can help you make a decision about when need to dispatch the goon squad to interrogate a high-risk vendor. 
-  - __The increased use of statistical and data science tools__ to analyze large security data sets. These include Python (eg [PANDAS](https://pandas.pydata.org) and [NumPy](https://www.numpy.org)), and the [R ecosystem](https://www.r-project.org), the [HadleyVerse](https://www.tidyverse.org) and so on. There are a healthy number of &ldquo;R-heads&rdquo; in the security metrics community, such as [Jay Jacobs](https://www.linkedin.com/in/jayjacobs1/), [Bob Rudis](https://www.linkedin.com/in/hrbrmstr/) and many others. I count myself among them. Although many of the studies are custom-made, the prevailing attitude is to practice reproducible science using a tool-driven analysis and workflow. Find interesting problems and data sets. Explore them. Publish findings. Repeat! 
+  - __Observables and ratings__. Spurred on, in part, by the challenges of the the questionnaire-based approach to evaluating vendor security, vendors such as [BitSight](www.bitsight.com) and [Security Scorecard](securityscorecard.com) have focused on inferring the security of companies based on what they can empirically observe. If your MX and DNS records are messed up, or if spam is coming from IP address space you control, or if externally-facing systems appear to be compromised, then the rest of your security program probably isn&rsquo;t any good either. Ratings are derived from how spotless one&rsquo;s external presence is. Data about your supply base, for example, can help you make a decision about when need to dispatch the goon squad to interrogate a high-risk vendor.
+  - __The increased use of statistical and data science tools__ to analyze large security data sets. These include Python (eg [PANDAS](https://pandas.pydata.org) and [NumPy](https://www.numpy.org)), and the [R ecosystem](https://www.r-project.org), the [HadleyVerse](https://www.tidyverse.org) and so on. There are a healthy number of &ldquo;R-heads&rdquo; in the security metrics community, such as [Jay Jacobs](https://www.linkedin.com/in/jayjacobs1/), [Bob Rudis](https://www.linkedin.com/in/hrbrmstr/) and many others. I count myself among them. Although many of the studies are custom-made, the prevailing attitude is to practice reproducible science using a tool-driven analysis and workflow. Find interesting problems and data sets. Explore them. Publish findings. Repeat!
 
 And also, somewhere along the line, data science became a Thing. Some of us used to call it &ldquo;statistics.&rdquo; Speaking of which&hellip;
 
-## &ldquo;AI&rdquo; has come to security, with uneven results
+# &ldquo;AI&rdquo; has come to security, with uneven results
 
 &ldquo;AI&rdquo; has come to security, with uneven results. I say &ldquo;AI&rdquo; in quotes because what we call AI in the popular press is not about endowing computing machines with cognition. I must tell you, every time I see that Microsoft commercial with the rapper Common extolling the virtues of &ldquo;AI,&rdquo; I feel like Marvin Minsky spins another turn in his grave, and that Douglas Hofstadter rips up and crumples one of his piano compositions and weeps.
 
@@ -39,13 +39,13 @@ Once you get beyond the commercials, &ldquo;AI&rdquo; is primarily about creatin
 
 In security, many of these &ldquo;AI&rdquo; techniques are being put to use to help solve some very real operational security problems, for example, making a security operations team more efficient. Consider an enterprise-class SOC with dozens of analysts. The sensor grid will ingest daily log volumes in the tens of millions, extract tens of thousands of potentially suspicious activities, and then reduce these down to dozens of cases to put in front of human analysts. As a rule of thumb, it&rsquo;s about roughly one million pieces of straw in every haystack, for each needle found in it.
 
-Financial services and national agencies are two types of organizations that have the threat volume, funding and organizational capability to fund vendor and internal efforts in this space. They have big haystacks and lots of needles to find. A large focus of research and vendor efforts is in increasing the signal-to-noise ratio. From a measurement perspective, this means using &ldquo;AI&rdquo; to correctly classify genuine intrusions (true positives) and non-intrusions (true negatives), and reduce the false-positive and false-negative rate. 
+Financial services and national agencies are two types of organizations that have the threat volume, funding and organizational capability to fund vendor and internal efforts in this space. They have big haystacks and lots of needles to find. A large focus of research and vendor efforts is in increasing the signal-to-noise ratio. From a measurement perspective, this means using &ldquo;AI&rdquo; to correctly classify genuine intrusions (true positives) and non-intrusions (true negatives), and reduce the false-positive and false-negative rate.
 
 But results have been &ldquo;uneven&rdquo; because it&rsquo;s a tough problem space. Many vendors will tell you that they&rsquo;ve got bulletproof, universal techniques that solve all sorts of superficially related problems. For example, network intrusion detection and insurance fraud are both anomaly detection problems, right? I&rsquo;ve heard a vendor say, &ldquo;well, our AI/neural net/ML engine solves both of these problems.&rdquo; Actually, they are in different domains and have very different characteristics in terms of variety of data sources, completeness, and outlier detection strategies. There is no one size fits all. I&rsquo;m inherently suspicious of generalizable AI in security. But every time I see a well-bounded, domain specific strategy, I&rsquo;m happy.
 
 In addition, there is lots of low-hanging fruit that can be harvested by simply fusing data together at the presentation level to make investigations more efficient. SOC labor optimization is more like an operations research problem than an &ldquo;AI&rdquo; problem. With respect to making SOCs more efficient, there&rsquo;s plenty of room for experimentation at both ends of the funnel, by attacking the top and middle of the funnel to present the truest and most accurate incidents; and then, improving the efficiency of the investigations of the cases that fall through to the bottom of the funnel.
 
-## Success disasters are great teachers
+# Success disasters are great teachers
 
 Dr Dan Geer first introduced me to the concept of a &ldquo;success disaster&rdquo;; something that goes so well that it creates painful side-effects. Here in New York, you could argue that the [cronut craze](https://mic.com/articles/52843/the-cronut-craze-is-spiraling-out-of-control#.8QY5hj6NM) that began in 2013 was a success disaster for the Dominique Ansell Bakery. Sure, there were lines around of the block, but it led to a black market in resellable cronuts, counterfeit cronuts, quotas for cronuts, and I am sure, staff burnout and ingredient shortages. It was also a disaster for ordinary customers. If, for you, the Ansell Bakery had been a lovely place to have your morning French roast while leisurely enjoying a croissant, reading Le Monde and chain-smoking Galois cigarettes, it is no longer. That dream was trampled by all of the marauding tourists.
 
@@ -53,7 +53,7 @@ In security metrics, it&rsquo;s been gratifying to see a lot more focus on data,
 
 Many organizations have matured their thinking and have gotten religion about measuring things. At a bank I&rsquo;m familiar with, for example, the GRC team produces a 100-page monthly pack of metrics that cover all areas of technology risk. Many of the metrics count things things that risk or control owners consider important, typically trailing indicators, often with breakdowns by organizational units, and almost always with commentary and correct attribution about sources. The 1,000 or so metrics in this pack are assiduously collected every month and assembled into a polished report. This is wonderful. It is a success. It is also a disaster, because the quantity of data is challenging to assimilate. It is challenging to see the forest for the trees.
 
-Here&rsquo;s another success disaster: vulnerability management. Everybody in the audience knows what a vulnerability scan is, and what it does. It finds weaknesses and exposures in technology assets, typically on endpoints such as servers and desktops. The tools have gotten very good and produce few false positives. What&rsquo;s more, there&rsquo;s a general consensus on an industry-wide rating scheme for measuring severity: the Common Vulnerability Scoring System ([CVSS](https://www.first.org/cvss/)). The market is mature, with well-established vendors such as [Qualys](https://www.qualys.com), [Rapid7](https://www.rapid7.com) and [Tenable](https://www.tenable.com). 
+Here&rsquo;s another success disaster: vulnerability management. Everybody in the audience knows what a vulnerability scan is, and what it does. It finds weaknesses and exposures in technology assets, typically on endpoints such as servers and desktops. The tools have gotten very good and produce few false positives. What&rsquo;s more, there&rsquo;s a general consensus on an industry-wide rating scheme for measuring severity: the Common Vulnerability Scoring System ([CVSS](https://www.first.org/cvss/)). The market is mature, with well-established vendors such as [Qualys](https://www.qualys.com), [Rapid7](https://www.rapid7.com) and [Tenable](https://www.tenable.com).
 
 What&rsquo;s not to like about vulnerability scanners? They have a consistent measurement system, are accurate and pervasive. If the scanner says something is bad, it must be right? We should fix all &ldquo;critical&rdquo; vulnerabilities right away, shouldn&rsquo;t we? Sounds great. But the problem is that there are too many darned vulnerabilities: millions in the typical large enterprise. What do you fix first? This is very much a success disaster.
 
@@ -63,13 +63,13 @@ For coping with success disasters in areas such as risk and control issues, I te
 
 There are many ways to look at the data &mdash; for example, finding who has the largest number of high-severity issues, or those with the largest number of longest-aged ones. Mean-time-to-close is another. Personally, I like &ldquo;velocity&rdquo; as the right way to look at the problem. Who&rsquo;s paying down debt fastest, and who&rsquo;s letting it sit?
 
-I stole a metric from the warehousing industry called &ldquo;turnover,&rdquo; which is defined as the number of SKUs flowing through a warehouse, divided into the average inventory.   For example, Apple&rsquo;s inventory turnover in 2017 was 60, meaning it sold through everything in its warehouses every 6 days. 
+I stole a metric from the warehousing industry called &ldquo;turnover,&rdquo; which is defined as the number of SKUs flowing through a warehouse, divided into the average inventory.   For example, Apple&rsquo;s inventory turnover in 2017 was 60, meaning it sold through everything in its warehouses every 6 days.
 
 When adapted for issue turnover, we define it as the number of closed issues divided into the average inventory. You don&rsquo;t get credit for issues you postpone or renew. So for example, if you start with 100 issues on Feb 1, and end with 120 on Feb 28th, that&rsquo;s bad, right? But what if you closed 65, and added 85? That&rsquo;s pretty good, because you closed half of your issues during the month. Your issue turnover is 0.5, or when expressed as an annualized figure means your inventory would turn over 6 times per year. That&rsquo;s actually quite outstanding. Now imagine computing issue turnover by organizational unit and severity of issue. You&rsquo;d see the high and low performers right away.
 
 This issue turnover metric works well because it is easy to understand and rewards the behaviors we want to see: paydown of issue debt. This is another example of how a success disaster causes us to evolve our thinking, and allows us to prioritize better.
 
-## Controls instrumentation offers terrific bang for the buck
+# Controls instrumentation offers terrific bang for the buck
 
 When I joined a large investment bank as the MD for technology risk measurement and analytics, I was excited that I&rsquo;d be able to put some of my ideas about security metrics into practice. I&rsquo;d done a fair bit of metrics work on a smaller scale in prior roles, but the bank had both the commitment and the resources to do it properly. But what I found out quite quickly after coming in was that the primary use of &ldquo;metrics&rdquo; was in demonstrating controls conformance, chiefly for Sarbanes-Oxley and assurance r&eacute;gimes such as SSAE-18. Our biggest customer wasn&rsquo;t the security organization &mdash; it was our external auditors. They needed our data to be able to show quantitatively that the key controls were working. Our second biggest customer was the finance organization, because they ran SOX, although they were less interested in the data than the results.
 
@@ -97,7 +97,7 @@ There are some caveats:
 
 In short, having a rigorous plan to delivery incremental value of a small number of representative metrics makes assessment processes more timely, precise and objective. It&rsquo;s important to keep the exercise limited to key controls that you can tangibly measure. And it is critical to keep reminding everybody about all of the cost and complexity that&rsquo;s being removed &mdash; typically, millions of dollars of labor that is largely guesswork.
 
-## Audience is everything
+# Audience is everything
 
 People want data for different reasons. And people consume data differently. What might seem good to you might be Greek to someone else. As a rule, I believe that when we build exhibits and reports, we tend to condescend to the reader. We assume that if we don&rsquo;t lard exhibits with lots of reds, yellows, and greens, the person who is reading it won&rsquo;t get it. Or we use simple pie and bar charts that waste space and are not data-dense. I ranted about this in my book a long time ago, but it&rsquo;s still true. I rarely see information graphics related to security metrics that are more complicated than one-dimensional, for example, categorical data displayed as a bar chart. This is understandable in many ways, because most information graphs used in high-volume reports don&rsquo;t need to do too much. They&rsquo;re not there because they provide a lot of diagnostic power. They are meant to just get a simple message out. But is the message even right? If you don&rsquo;t know who your audience is and what they want, it can&rsquo;t possibly be &mdash; and so you are forced to keep it simple. If you knew your audience better, you could take them along much further, with more relevant and powerful metrics.
 

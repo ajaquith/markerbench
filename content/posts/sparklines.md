@@ -1,8 +1,9 @@
 ---
 title: A Picture is Worth 1,000 Words
-author: arj
+authors:
+ - arj
 date: 2005-09-30 07:45:57 -0400
-tags: 
+tags:
   - security
   - metrics
   - books
@@ -18,7 +19,7 @@ The first graphic (below) shows the distributed network intrusion detection proj
 
 ![Picture](/images/arj-07-15.png)
 
-One can easily imagine how this exhibit could be enhanced. Instead of simply showing the &ldquo;top 10&rdquo; most-scanned ports, we could show the top 100, or a subset of the most common well-known ports. Doing so would require some graphical nips and tucks; the &ldquo;Explanation&rdquo; column would need to vanish, and we would want to combine the &ldquo;Service Name&rdquo; and &ldquo;Port Number&rdquo; columns. From the point of view of aesthetics, representing the scan results as solid filled area charts on a white background (instead of black) could increase the small-multiple format&rsquo;s readability. 
+One can easily imagine how this exhibit could be enhanced. Instead of simply showing the &ldquo;top 10&rdquo; most-scanned ports, we could show the top 100, or a subset of the most common well-known ports. Doing so would require some graphical nips and tucks; the &ldquo;Explanation&rdquo; column would need to vanish, and we would want to combine the &ldquo;Service Name&rdquo; and &ldquo;Port Number&rdquo; columns. From the point of view of aesthetics, representing the scan results as solid filled area charts on a white background (instead of black) could increase the small-multiple format&rsquo;s readability.
 
 An intriguing small-multiple format that would work well here is the sparkline---a minimalist &ldquo;simple, intense, word-sized graphics&rdquo; format invented by Tufte.  The figure below shows a fictitious re-drawing of the previous exhibit using sparkline format, constructed using Excel. Each mini-chart includes a dark gray line to show the trend for each cross-section, as well as a light gray band denoting the &ldquo;normal&rdquo; range; that is, the mean value plus or minus the standard deviation.  So that the reader can understand the plot lines in context, the final data point in each series is highlighted with a red marker and numeric label.
 

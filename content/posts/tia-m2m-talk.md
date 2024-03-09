@@ -1,19 +1,18 @@
 ---
 title: "Cybersecurity for Machine-to-Machine (M2M) Networks"
-description: Billions of internet-connected devices are now online and talking amongst themselves. To secure them, vendors need to design them to avoid surprises they didn’t intend.
-author: arj
+summary: Billions of internet-connected devices are now online and talking amongst themselves. To secure them, vendors need to design them to avoid surprises they didn’t intend.
+authors:
+ - arj
 date: 2013-06-04 16:00:00 +0000
-tags: 
+tags:
   - security
-featured: true
-comments: true
 aliases:
   - /blog/2013/06/04/tia-m2m-talk/
 ---
 _This is the nominal text of panel remarks I delivered at the Telecommunications Industry Association's M2M & Cybersecurity Workshop on June 4th, 2013. The objective of the panel was to discuss the following topic:_
- 
+
 > Define a cohesive vision for a secure, reliable and economically viable machine network. What are the key objectives and what level of risk can be tolerated?
- 
+
 Good afternoon. I am Andrew Jaquith, the CTO of SilverSky, a leading cloud security provider. It's great to talk to you today. You may not know SilverSky, so first, a little about us and our qualifications:
 
 <!-- more -->
@@ -47,7 +46,7 @@ So, defining a vision for M2M is arguably a fool's errand. That said, if I could
 * _Eternal vigilance_: having a strategy for continuous monitoring; for incident handling, and for response activities (often neglected)
 * _Risk management_: eyes-open knowledge of what adverse events are acceptable, and how frequently they can be tolerated
 
-Let me illustrate by example. Ten years ago I helped design of a security subsystem for some hardware devices due to be deployed by one of the most zealous and security conscious organizations around. This organization would do just about anything to ensures that their mission was achieved, that their devices were not compromised, and that they were as protected as possible from the threat posed by attackers. No, I'm not talking about the military, the CIA, or the NSA. I'm talking about cable TV. 
+Let me illustrate by example. Ten years ago I helped design of a security subsystem for some hardware devices due to be deployed by one of the most zealous and security conscious organizations around. This organization would do just about anything to ensures that their mission was achieved, that their devices were not compromised, and that they were as protected as possible from the threat posed by attackers. No, I'm not talking about the military, the CIA, or the NSA. I'm talking about cable TV.
 
 The job was to design Comcast's next-generation conditional access system (called DCAS aka True Thru-Way). What was the goal? To design a bulletproof CAS that would securely deliver any programming of the customer's choice, so they could get anything they wanted _and_ paid for. _But_ — and this is important — not what they didn't pay for. Also: nobody else could get the programming without paying either. The system we designed had a three key features designed to advance this goal:
 
@@ -61,7 +60,7 @@ This should give you an idea of what is required to build devices with high leve
 
 On the other side, look at what happened with Stuxnet. The attack was essentially via USB stick plus a stealthy worm that attacked Siemens SCADA systems used to control and monitor centrifuges for enriching uranium. This system runs a variant of Windows. Very few of the ideal security characteristics one would like to see in a robust, secure embedded operations system were in place in this case. (Arguably in the case of Stuxnet this was a feature rather than a bug.)
 
-My wish for the industries that are involved in M2M, looping back to my original comment, is that we design collectively and individually for the absence of surprise. Any surprises you get should be those you expect... And then, of course, they aren't surprises. They fall into the category of what Donald Rumsfeld memorably called "known unknowns." Our eyes are wide open, based on enlightened economic self interest. In addition, I would hope that have enough eyes wide open that many of the "unknown unknowns" are imagined as well. 
+My wish for the industries that are involved in M2M, looping back to my original comment, is that we design collectively and individually for the absence of surprise. Any surprises you get should be those you expect... And then, of course, they aren't surprises. They fall into the category of what Donald Rumsfeld memorably called "known unknowns." Our eyes are wide open, based on enlightened economic self interest. In addition, I would hope that have enough eyes wide open that many of the "unknown unknowns" are imagined as well.
 
 That won't be good enough in all cases, though. In closing, we will need to consider incentives to swing the calculus to align economic self interest with good security outcomes. Speaking as a trained economist who works in the security field (and who programs to relax), almost all security failures are rooted in perverse economic incentives. Our goal ought to be to align incentives so we get better outcomes. In my view, everything should be on the table: software security liability for manufacturers, legal shielding for sharing of security data and incidents, promotion of industry standards and inclusion of these standards in purchasing guidelines, and, in cases where the risks demand it, regulation or legislation.
 

@@ -1,15 +1,15 @@
 ---
 title: Talking to Executives About Cyber and Technology Risks
-description: Senior managers talk about risks, and not about threats or controls. To have better conversations with senior leaders, focus where the risks are coming from, and why. This post offers a vocabulary for talking about cyber- and technology-related risks and their causes. 
-author: arj
+summary: Senior managers talk about risks, and not about threats or controls. To have better conversations with senior leaders, focus where the risks are coming from, and why. This post offers a vocabulary for talking about cyber- and technology-related risks and their causes.
 date: 2024-01-31 09:00:01 -0400
-tags: 
+authors:
+  - arj
+tags:
   - risk
   - cyber
   - operational risk
 image: /images/cyber_risk_events.png
 featured: true
-comments: true
 ---
 During a recent engagement, a large financial institution asked Markerbench to review and recommend changes to its Key Risk Indicators (KRIs) for cybersecurity. As background, our client&rsquo;s first line of defense (1LOD) collects a series of cyber-related KRIs and presents them to senior stakeholders quarterly. The metrics program is well-organized and its monthly reporting packages are widely circulated.
 
@@ -17,7 +17,7 @@ In our 360-review of the cyber metrics reporting program, we encountered a commo
 
 To use an analogy, when I&rsquo;m asked what a CISO&rsquo;s good day looks like, I reply that &ldquo;it&rsquo;s a day when nothing bad happens.&rdquo; Picture a duck calmly moving across the surface of the tranquil pond. It might look effortless, but that picture of Zen is an illusion. You can&rsquo;t see the duck furiously paddling under the surface of the water to stay afloat, avoid hazards, and move forward. The CISO&rsquo;s peers and other higher-ups don&rsquo;t want to hear about all of the paddling that CISOs do&mdash;the controls they&rsquo;ve implemented, what&rsquo;s covered and what isn&rsquo;t, the godforsaken RCSAs, or blah-blah about &ldquo;completeness.&rdquo; To be clear, all of these topics are an important part of the CISO&rsquo;s job.[^1] They just aren&rsquo;t part of _their peers&rsquo; jobs_. Senior leaders want to hear about the risk climate: will it remain calm? Are we safe? Is the environment changing? Are we more exposed, and how might we know? What can we do about it? In short, when they want data, they want risk indicators, not control measurements. When risk indicators go south, of course, then&mdash;and only then&mdash;will senior leaders ask for additional data to help figure out _why_ risks have increased, and _who_ is responsible for fixing the underlying problem that manifested in the KRIs.
 
-## The language of risk
+# The language of risk
 
 In order to have meaningful dialogue with senior stakeholders, then, we need to frame risks using the _language_ of risk. That might sound obvious, but for many CISOs or their delegates, risk is&mdash;counterintuitively&mdash;a foreign tongue. Believe it or not, Chief Risk Officers and boards don&rsquo;t talk about cyber risks using the classical InfoSec conjuring words of Confidentiality, Integrity, and Availability.[^2] Instead, they talk about financial and reputational risks, business risks, and operational risks. In other words, they want to know what is the likelihood that bad things will happen, and what they can do to avoid them.
 
@@ -31,7 +31,7 @@ The ORX&rsquo;s taxonomy is _multi-dimensional_ because it doesn&rsquo;t ask pra
 - __Cause__: why the bad thing happened: a third-party suffered a control failure (read: got ransome&rsquo;d), a malicious external actor hacked them, or an employee made a mistake.
 - __Impact__: the result of the bad thing happening: the firm suffered direct financial losses such as fines, penalties, and legal costs; incurred indirect financial losses such as disruption of client services or opportunity cost; or sustained non-financial impacts, such as litigation, reputation damage, or regulatory action.
 
-## Risk statements
+# Risk statements
 
 The ORX taxonomy covers the entire universe of operational risk. Other than for strategic or financial risks, practitioners can use the ORX&rsquo;s grammar to express nearly any risk they can imagine as a combination of causes, events, and impacts. Even better, practitioners can use the grammar to inspire concise but powerful _risk statements_ that capture the risks simply. For example:
 
@@ -53,7 +53,7 @@ From a storytelling perspective, practitioners can use the grammar of causes, ri
 
 | Risk Statement | Risk Event | Cause | Impact |
 |----------------|-------|------------|--------|
-| External fraud targeting employees who can authorize bank payments, resulting in stolen funds | External Fraud > First party fraud | External > Malice | Direct Financial Losses > Internal costs (excl. Legal) | 
+| External fraud targeting employees who can authorize bank payments, resulting in stolen funds | External Fraud > First party fraud | External > Malice | Direct Financial Losses > Internal costs (excl. Legal) |
 | Banking platform outage due to cyberattack on third-party, resulting in disruption to clients | Third-party > Control failure | External > Malice | Indirect Financial Losses > Disruption (customers)
 | Software failure caused by inadequate testing of planned changes, causing failure of internal system | Information Technology Risks > Software failure | Process failure > Change/project mismanagement | Indirect financial losses > Disruption (employees)
 | Large-scale infrastructure outage caused by compromise of administrative accounts (_eg_ ransomware) | Information Security (including Cyber) > Cyber risk events | External > Malice | Disruption (employees)
@@ -65,7 +65,7 @@ How many risk statements are enough? In my experience, you can capture almost an
 
 You might not be able to unearth fifteen to twenty chestnuts as meaty as the August 2013 Incident. But you can almost certainly boil down the most common events, anecdotes, and concerns into a list of risks that will fit on a single page. That should be your target.
 
-## Visualizing risks
+# Visualizing risks
 
 But wait, there&rsquo;s more! With a bit of work, we can graphically depict the relationships between causes, events, and impacts. The [Sankey diagram](https://en.wikipedia.org/wiki/Sankey_diagram) is a powerful way to show these relationships. Fans of [Edward Tufte](https://www.edwardtufte.com) will recognize the exhibit format immediately: it shows flows between nodes, where the thickness of each edge relates to the strength of the connection, such as correlations or number of occurrences. Excel tools can&rsquo;t create Sankey diagrams, but open source toolkits like [D3](https://github.com/d3/d3-sankey), [Plotly](https://plotly.com/python/sankey-diagram/), and [networkD3](https://cran.r-project.org/web/packages/networkD3/index.html) can draw them for you using a few lines of code.
 
@@ -81,13 +81,13 @@ The leftmost two nodes show the Level 2 and Level 1 causes (_eg_ &ldquo;Malice&r
 
 And indeed, if I were making the case to senior managers about which risks in this hypothetical example are most salient, I would show the diagram and tell the story exactly that way.
 
-## Wrapping up
+# Wrapping up
 
 This post was meant to give you a vocabulary and grammar for talking about risk using a standard risk taxonomy, the ORX Reference Taxonomy for Operational and Non-Financial Risk. By using a well-accepted taxonomy for risk, you can express complex technology and cyber scenarios in a simple way, without getting bogged down in the minutiae of control-speak.
 
 In a future post, I will describe the next step: how to derive key risk indicators (KRIs) from risk statements by focusing on controllable causes and external environmental indicators.
 
-[^1]: Yes, even the godforsaken RSCAs. If you don&rsquo;t know what an RCSA is, consider yourself lucky.  
+[^1]: Yes, even the godforsaken RSCAs. If you don&rsquo;t know what an RCSA is, consider yourself lucky.
 
 [^2]: The ~~holy trinity~~ traditional triad of information security (Confidentiality, Integrity, and Availability) are not risks. They are _desired properties_ of high-assurance information security control environments. My friend John McCumber has [expressed other desirable properties and information states in his famous Cube](https://en.wikipedia.org/wiki/McCumber_cube). Many practitioners are tempted to express risks as the lack of a desired property, _eg_ &ldquo;Loss of Confidentiality&rdquo; or &ldquo;Loss of Availability,&rdquo; but this is rather thin gruel. The real risk in this type of thinking is, ahem, a &ldquo;Loss of Nerve&rdquo; by the practitioner. Naming a risk plainly is far better than inverting a property. And yes, in this context the term &ldquo;InfoSec&rdquo; was meant ironically.
 

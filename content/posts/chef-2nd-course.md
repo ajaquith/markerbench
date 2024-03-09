@@ -1,6 +1,8 @@
 ---
 title: "The DevOps Security Handbook: Building Security In With Chef, Part II"
-author: arj
+authors:
+ - arj
+summary: This second post in a series about security and DevOps describes how to build hardened server images with Chef.
 date: 2013-10-03 13:30:00 -0500
 tags:
   - security
@@ -11,12 +13,12 @@ aliases:
 ---
 {{< figure src="/images/512px-Devops-toolchain.png" title="Image copyright 2016 by Kharnagy, licensed under the Creative Commons Attribution-Share Alike 4.0 International license." >}}
 
-## Introduction
+# Introduction
 _This is the second in a series of occasional posts about security and DevOps. The ultimate goal of this series is to show how to build a reasonably secure Apache web server using the popular DevOps automation tool [Chef](http://www.opscode.com/chef/). The server I am describing how to build will be suitable for serving static content. Readers of this blog know that I am a fan of static blogging tools like [Octopress](http://octopress.org), which I use to generate this website._
 
 If you read the [first post in this series](/images/blog/2013/10/01/chef-starter/), you learned how to set up the Chef workstation and server account. You created an Apache server role and a test environment; set up a virtual machine; and built your first node. In this post, I will show you how to create a new role called `base` that includes security enhancements to OpenSSH. You will also fine-tune Apache to remove non-essential modules.
- 
-## Tightening the Apache configuration
+
+# Tightening the Apache configuration
 To recap, in the last post I described how to create a sample virtual machine called `tester.local`, onto which Chef installed the Apache 2 web server. If you were (as they say in the game-show world) “playing along at home,” you created a sample role called `webserver` that caused the `apache2` and `apt` packages to be installed on the node `tester.local`. You also bootstrapped the node so that it converged into the desired state.
 
 As a refresher, let’s review a few details from last time. In your `chef-repo` directory, at the command line type:
@@ -149,12 +151,12 @@ You should see a dizzying rush of console messages, including many indicating th
     Recipe: apache2::default
       * service[apache2] action restart
         - restart service service[apache2]
-    
+
     Chef Client finished, 31 resources updated
 
 Congratulations; your Apache server is now just a little bit faster, and a little bit tighter. You did it solely by twiddling a few attributes, without having to write any code. Nice, huh?
 
-## Creating a new role for server hardening
+# Creating a new role for server hardening
 Let’s do some more attribute-twiddling. This time, your objective is to tighten the configuration of several common server components that reside on most servers: the SSH configuration, and the Chef client itself.
 
 Download the cookbooks for SSH and the Chef client:
@@ -202,13 +204,13 @@ Create a second role. This role, called `base`, will be used by all servers and 
       }
     }
 
-The `openssh` recipe configures SSH on the machine. The override attributes above it configure the OpenSSH server daemon so that it uses sensible settings. Root logins are disabled, password authentication is disallowed; only public-key authentication is allowed. Session-forwarding is disabled, making the server unsuitable for use a “jump box.” (For more information on hardening SSHD, see the many [fine](http://www.faqs.org/docs/securing/chap15sec122.html) [articles](http://www.thegeekstuff.com/2011/05/openssh-options/) on the subject.) 
+The `openssh` recipe configures SSH on the machine. The override attributes above it configure the OpenSSH server daemon so that it uses sensible settings. Root logins are disabled, password authentication is disallowed; only public-key authentication is allowed. Session-forwarding is disabled, making the server unsuitable for use a “jump box.” (For more information on hardening SSHD, see the many [fine](http://www.faqs.org/docs/securing/chap15sec122.html) [articles](http://www.thegeekstuff.com/2011/05/openssh-options/) on the subject.)
 
 In addition to the SSH settings, notice the addition of the `chef-client::delete_validation` recipe. This recipe does something rather important from a security prospective. As discussed previously, Chef server communicates with its nodes and clients using public/private key pairs. When a new node is added, a shared “validation key” is copied to the new node. This is a standard 2048-bit RSA private key with a name similar to `organization-validator.pem`; it is stored in your Chef repository’s `.chef` directory. It is _not_ versioned by Git because `.chef/*.pem` is added to `.gitignore`, and it is obviously very sensitive. Anyone who obtained the validation key could conceivably join your Chef node set and gain access to the configuration data, recipes and more. Despite the sensitivity of this key, however, after the bootstrap operation completes, Chef inexplicably leaves it on the new node! It would be much nicer to remove it after the bootstrap.
 
 For security reasons, you should remove the validation key after the initial bootstrap because it is not needed any more. The `chef-client::delete_validation` recipe does that. That is why it is in the run-list for the `base` role.
 
-## Adding the `base` role to the server
+# Adding the `base` role to the server
 After you define the `base` role, you need to apply it to the test VM `tester.local` by adding it to the node’s run list. At present, `tester.local` is only running recipes that are part of the `webserver` role. As you might expect, you can add to a node’s run-list by using `knife`. Type:
 
     knife node run_list add tester.local "role[base]"
@@ -223,13 +225,13 @@ You will see output similar to the following that confirms that the `base` role 
 SSH back into the test box (type `vagrant ssh` followed by `sudo su`). Run `chef-client` again.
 
 You will see many messages scroll by indicating that the `/etc/ssh/sshd_config` and `/etc/ssh/ssh_config` files have been updated. By default, the Chef `openssh` cookbook configures these files with the default settings that ship with OpenSSH. Console output should look similar to the following:
-    
+
     Recipe: openssh::default
       * package[openssh-client] action install (up to date)
       * package[openssh-server] action install (up to date)
       * service[ssh] action enable
         - enable service service[ssh]
-    
+
       * service[ssh] action start (up to date)
       * template[/etc/ssh/ssh_config] action create
         - update content in file /etc/ssh/ssh_config from 265a26 to 74365c
@@ -245,7 +247,7 @@ You will see many messages scroll by indicating that the `/etc/ssh/sshd_config` 
             -# Package generated configuration file
             -# See the sshd_config(5) manpage for details
             +# Generated by Chef for tester.local
-    
+
     Recipe: openssh::default
       * service[ssh] action restart
         - restart service service[ssh]
@@ -254,7 +256,7 @@ You can verify that SSH has been reconfigured correctly by trying to SSH into `t
 
 > Note: running the `openssh` recipe with the attributes as shown above can have adverse consequences on production nodes if you aren’t prepared. The recipe with the attributes as shown removes SSH `root` access. Unless you have another way of becoming `root` on the box, you might find yourself locked out! If your machine is a Vagrant machine, you can use the `vagrant ssh` command to become root. For non-Vagrant machines, you will need a non-root account that allows public-key logins and can `su` to `root`. You have been warned.
 
-## Next: Managing SSL certificates and keys
+# Next: Managing SSL certificates and keys
 This post introduced the concept of using Chef to partially harden a web server. You reduced the number of loadable Apache modules to a minimum set, disabled unnecessary services and reduced the amount of useful information an attacker could obtain. You created a second role called `base` and assigned two recipes, `openssh` and `chef-client::delete_validation`. These recipes configure OpenSSH in a more restrictive manner by disabling password authentication, disabling root logins and preventing session forwarding. The `delete_validation` recipe removes the Chef validation key from the node after it is created, which removes a potential security risk.
 
 In the [next post](/images/blog/2013/10/06/chef-3rd-course/), you will switch back to Apache. You will use Chef to perform one of the most challenging aspects of any server configuration: copying SSL keying materials to server nodes.

@@ -1,8 +1,9 @@
 ---
 title: Introducing Security Metrics, the Cartoon
-author: arj
+authors:
+ - arj
 date: 2007-04-01 22:39:12 -0400
-tags: 
+tags:
   - security
   - metrics
   - humor

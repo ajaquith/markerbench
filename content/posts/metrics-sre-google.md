@@ -1,7 +1,8 @@
 ---
 title: SRE Metrics and Security Measurement
-description: Google’s approach to measuring site reliability has much to recommend it. CISOs can steal a leaf from their book.
-author: arj
+summary: Google’s approach to measuring site reliability has much to recommend it. CISOs can steal a leaf from their book.
+authors:
+ - arj
 date: 2019-06-05 16:00:01 -0400
 tags:
   - metrics
@@ -13,7 +14,7 @@ aliases:
 
 Why can&rsquo;t IT and security get along better? Disciplined technology teams use data and metrics strategically. But security and risk teams think about metrics differently than the rest of IT. In this post, I&rsquo;ll describe how the discipline of Site Reliably Engineering (SRE) stresses the importance of service levels, discuss the slightly different terminology used by security and risk teams, and then suggest how using the language of SRE is can help security and risk teams to build bridges to technologists and across the business.
 
-Some background. For various reasons, I&rsquo;ve been lately &ldquo;sharpening the saw,&rdquo; one of the seven habits Steven Covey described in his [famous book](https://www.amazon.com/gp/product/1451639619/ref=dbs_a_def_rwt_bibl_vppi_i0). The saw that I am sharpening is The Cloud; more specifically, deepening my understanding of some of the core architectural patters that underpin modern cloud stacks such as Google and Amazon. One of Google&rsquo;s well-known patterns is something called [Site Reliability Engineering](https://landing.google.com/sre/), or SRE for short. I had a pretty good idea of what SRE was about, but wanted a more formal indoctrination. 
+Some background. For various reasons, I&rsquo;ve been lately &ldquo;sharpening the saw,&rdquo; one of the seven habits Steven Covey described in his [famous book](https://www.amazon.com/gp/product/1451639619/ref=dbs_a_def_rwt_bibl_vppi_i0). The saw that I am sharpening is The Cloud; more specifically, deepening my understanding of some of the core architectural patters that underpin modern cloud stacks such as Google and Amazon. One of Google&rsquo;s well-known patterns is something called [Site Reliability Engineering](https://landing.google.com/sre/), or SRE for short. I had a pretty good idea of what SRE was about, but wanted a more formal indoctrination.
 
 Google folk have written a book on SRE. The [chapter on Service Level Objectives](https://landing.google.com/sre/sre-book/chapters/service-level-objectives/) is invigorating because it delivers an opinionated jolt about metrics, and their importance to reliability:
 
@@ -23,7 +24,7 @@ Google folk have written a book on SRE. The [chapter on Service Level Objectives
 
 Preaching to the converted! With a simple find-and-replace operation one could easily substitute _security_ for _service_, and the result would closely capture the spirit of what I have been doing for the last five years inside several large financial institutions: namely, building measurement systems for security.
 
-In order to explain the parallels between security measurement and SRE metrics, I&rsquo;ll first explain what I mean by &ldquo;security measurement.&rdquo; Security measurement tend to measure two things: _risks_, using Key Risk Indicators, and _controls_, using Key Performance Indicators. 
+In order to explain the parallels between security measurement and SRE metrics, I&rsquo;ll first explain what I mean by &ldquo;security measurement.&rdquo; Security measurement tend to measure two things: _risks_, using Key Risk Indicators, and _controls_, using Key Performance Indicators.
 
 __Key Risk Indicators__ attempt to quantify risk. They are often produced by estimation, using a defined methodology such as [FAIR](https://www.fairinstitute.org), which produces dollars and cents. They can also be based on objective measurements that we know are good proxies for risk. For example, many compromises are the result of attackers using software exploits to gain access to unpatched systems. So, the &ldquo;percentage of Internet-facing systems that are missing high-severity security patches&rdquo; is a pretty good proxy for risk. &ldquo;High severity,&rdquo; in this case, means that the patch fixes a vulnerability that is remotely exploitable without needing the target to take any active steps, and is being actively exploited by bad guys _right now._ There is healthy debate in the security community about whether economic estimates or &ldquo;proxy&rdquo; performance indicators is a better KRI strategy. I have always preferred the latter approach (using selected KPIs as proxies) because they are simpler, and scale well.
 
@@ -31,7 +32,7 @@ __Key Performance Indicators__, by contrast, measure the effectiveness of activi
 
 KPIs and KRIs can have _thresholds_ &mdash; upper and lower bounds &mdash; that separate goodness from not-so-goodness, and not-so-goodness from badness. They are essentially the numeric boundaries between green, red, and yellow. The collective set of KRIs, considered together with their thresholds, can form the basis of an oganization&rsquo;s _risk appetite._ One institution I am familiar with expresses its cyber-security risk appetite with a small set of well-defined, compact &ldquo;proxy&rdquo; indicators as KRIs. The institution has two thresholds for each KRI: an &ldquo;internal limit&rdquo; (yellow!) that triggers immediate remedial action, and a &ldquo;board limit&rdquo; (red!) that absolutely nobody wants to get outside of, because it requires a command performance in front of the board.
 
-With that background, let&rsquo;s compare and contrast these security measurement concepts with Google&rsquo;s SRE service level objectives. As [quoted](https://landing.google.com/sre/sre-book/chapters/service-level-objectives/) from _Site Reliability Engineering_: 
+With that background, let&rsquo;s compare and contrast these security measurement concepts with Google&rsquo;s SRE service level objectives. As [quoted](https://landing.google.com/sre/sre-book/chapters/service-level-objectives/) from _Site Reliability Engineering_:
 
 > __Indicators__. An SLI is a service level indicator &mdash; a carefully defined quantitative measure of some aspect of the level of service that is provided. Most services consider _request latency_ &mdash; how long it takes to return a response to a request &mdash; as a key SLI. Other common SLIs include the _error rate_, often expressed as a fraction of all requests received, and _system throughput_, typically measured in requests per second. The measurements are often aggregated: i.e., raw data is collected over a measurement window and then turned into a rate, average, or percentile&hellip; Ideally, the SLI directly measures a service level of interest, but sometimes only a proxy is available because the desired measure may be hard to obtain or interpret. For example, client-side latency is often the more user-relevant metric, but it might only be possible to measure latency at the server.
 >
@@ -47,9 +48,9 @@ As you can see, one can easily draw an analogy from security measurement to SRE 
 | Service level objectives (SLOs) | Indicator thresholds, SLAs                      |
 | Service level agreements (SLAs) | Escalation thresholds, board limits              |
 
-The concepts are close enough that many organizations may wish to adopt SRE terminology across the board, instead of clinging to special jargon that [only the security and risk teams, and (regrettably) the regulators, speak](https://www.bis.org/publ/bcbs195.pdf). Why? I know this verges on heresy, but the advantages are plain enough. 
+The concepts are close enough that many organizations may wish to adopt SRE terminology across the board, instead of clinging to special jargon that [only the security and risk teams, and (regrettably) the regulators, speak](https://www.bis.org/publ/bcbs195.pdf). Why? I know this verges on heresy, but the advantages are plain enough.
 
-  - Although &ldquo;SRE&rdquo; [originated at Google](https://en.wikipedia.org/wiki/Site_Reliability_Engineering), having explicit service level indicators, objectives and agreements is a modern twist on a classic IT operations discipline. It is well-understood by the business. 
+  - Although &ldquo;SRE&rdquo; [originated at Google](https://en.wikipedia.org/wiki/Site_Reliability_Engineering), having explicit service level indicators, objectives and agreements is a modern twist on a classic IT operations discipline. It is well-understood by the business.
   - Because most technology organizations are several orders of magnitude larger than their corresponding security and risk teams, having common language increases the understanding each team has of the other&rsquo;s mission.
   - Last: embracing SRE-aligned definitions of measurement helps clarify what security teams mean when they say &ldquo;measurement.&rdquo; If you prefer that it refer explicitly to empiricial observations of &ldquo;ground truth,&rdquo; and not to other kinds of numbers &mdash; such as ordinal 1&ndash;5 scales or risk indices made using mystery math &mdash;  the SRE philosophy should suit you just fine.
 

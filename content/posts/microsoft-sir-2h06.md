@@ -1,8 +1,9 @@
 ---
 title: Microsoft Security Intelligence Report 2H06
-author: arj
+authors:
+ - arj
 date: 2007-05-02 21:36:08 -0400
-tags: 
+tags:
   - security
   - metrics
   - Windows

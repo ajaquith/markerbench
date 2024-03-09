@@ -1,8 +1,9 @@
 ---
 title: Meta-Conclusions from the Chinese Honeynet Project
-author: arj
+authors:
+ - arj
 date: 2007-12-04 23:43:42 -0500
-tags: 
+tags:
   - security
   - bots
 aliases:
@@ -27,7 +28,7 @@ If you don't want to read the whole thing, I've put together the Cliff's Notes, 
 * Very few bot commands (low hundreds) were executed for visiting websites (which you'd expect to see for creating fraudulent search result clicks). _That shoots my pet theory that bots are ideal "for distributed click fraud"... damn._
 * Within the botnets, 2,000-4,000 samples of malware were collected every day, with peaks at 7,000 per day
 * 90,000 unique samples collected overall (average 250 new/day)
-* For unique samples seen for the first time (within 1 hour of collection) by an AV engine, the malware detection rate was 70% or higher for only 4 of the 9 AV engines used. The four were Kaspersky (92%), BitDefender (86%), Rising (79%) and Trend Micro (78%). The report did not disclose what the other five engines were, but they all came in at between 50.2% and 70% detection for new malware. 
+* For unique samples seen for the first time (within 1 hour of collection) by an AV engine, the malware detection rate was 70% or higher for only 4 of the 9 AV engines used. The four were Kaspersky (92%), BitDefender (86%), Rising (79%) and Trend Micro (78%). The report did not disclose what the other five engines were, but they all came in at between 50.2% and 70% detection for new malware.
 * Even when samples were 30 days old, none of the top four AV engines topped 94% detection. _It's unclear how many engines would need to have been used together in order to catch "everything."_
 
 The report offers plenty of conclusions. My own meta-conclusions are these:

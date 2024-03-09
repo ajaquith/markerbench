@@ -1,8 +1,9 @@
 ---
 title: The 0wnership Society
-author: arj
+authors:
+ - arj
 date: 2005-09-01 15:54:10 -0400
-tags: 
+tags:
   - security
   - Windows
   - malware

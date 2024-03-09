@@ -1,8 +1,9 @@
 ---
 title: The Futility of Geographic Security Metrics
-author: arj
+authors:
+ - arj
 date: 2007-07-19 11:47:49 -0400
-tags: 
+tags:
   - security
   - metrics
   - vendor-bashing
@@ -18,18 +19,18 @@ While I would not call this a trend, I have noticed that lots of security compan
 
 Now, I don't want to get off on a rant here, but I have three problems with these sorts of country metrics: accuracy, lack of throats to choke, and general pretentiousness of the whole exercise.
 
-### Accuracy 
+# Accuracy
 Nearly every report that calculates country metrics relies on the same technique for determining geography: doing a WHOIS netblock search for the IP address in question, and using the record's registration address as the source for the country. This is essentially how gambling sites, for example, figure out that Johnny is really from Queens and not from Bermuda, and therefore not able to gamble in virtual offshore casinos. Needless to say, this particular method of inferring the country of origin is not exactly reliable. What if the user or domain is using a foreign ISP? (Example: securitymetrics.org was originally hosted in Ireland. It is now hosted in Atlanta, even though I live in Boston.) What about multinational corporations who centralize operations in a particular locality, but have distributed operations? And most important, what about persons who use relay machines (such as bots) as launching points for spam or attacks?
 
-### Lack of throats to choke
+# Lack of throats to choke
 In my book, [Security Metrics: Replacing Fear, Uncertainty, and Doubt](http://www.amazon.com/Security-Metrics-Replacing-Uncertainty-Doubt/dp/0321349989), I note that good security metrics need to have five properties:
 
-* __Consistently measured__,without subjective criteria 
-* __Cheap to gather__, preferably in an automated way 
-* __Expressed as a cardinal number or percentage__,not with qualitative labels like “high,” “medium,”and “low” 
-* __Expressed using at least one unit of measure,__ such as “defects,”“hours,”or “dollars” 
-* __Contextually specific__: relevant enough to decision-makers so that they can take action 
-Without question, metrics on which countries are attacking with the most gusto, or spamming the most frequently, aren't _totally_ horrible because they satisfy the first four properties. But they fail the last test miserably. 
+* __Consistently measured__,without subjective criteria
+* __Cheap to gather__, preferably in an automated way
+* __Expressed as a cardinal number or percentage__,not with qualitative labels like “high,” “medium,”and “low”
+* __Expressed using at least one unit of measure,__ such as “defects,”“hours,”or “dollars”
+* __Contextually specific__: relevant enough to decision-makers so that they can take action
+Without question, metrics on which countries are attacking with the most gusto, or spamming the most frequently, aren't _totally_ horrible because they satisfy the first four properties. But they fail the last test miserably.
 
 Exactly who is going to benefit from the knowledge that, say, "the US" (note the scare-quotes) is the most aggressive spammer? Who will take action? Will it be...
 
@@ -40,14 +41,14 @@ Exactly who is going to benefit from the knowledge that, say, "the US" (note the
 
 These are admittedly silly examples, but the point I am making is more serious. Namely, it is that _no single decision-maker gains anything useful_ from country-by-country metrics. There is nothing here that a CISO, security director or individual consumer could use to make smarter decisions, allocate their dollars more wisely, or change behaviors for the better. Which brings me to objection three, which is...
 
-### The pretentiousness of the whole exercise 
+# The pretentiousness of the whole exercise
 Although I have been in the security business for a few years now, it seems like I missed a memo somewhere. Exactly where does it say that in order to be taken seriously as a Security Authority, one must produce country-by-country graphs? Did marketeers watch War Games too many times? Do they have unrequited desires to work at NORAD? And where does the fixation from blaming countries come from? Does Carole Theriault wish to petition the UN so that she can be appointed High Commissioner for Internet Security? (She'd probably be good at it, but that's a different story.)
 
 The more I think about it, the more irritated I get. Creating geographic charts with impressive numbers on them, knowing full well that nobody can use the information on them to make better decisions, is a really nice, neat way to have one's cake and eat it too. Symantec, Sophos and the like can marshal impressive statistics about particular countries, but they can't be used by anybody for any purpose. Because nobody can gain any benefit from them, nobody can possibly be offended, either. Thus: country-by-country metrics are a safe way to display apparent expertise without rocking the boat.
 
 These reports might make for good PR. But where's the courage in them?
 
-### J'accuse!
+# J'accuse!
 Here's a better alternative: _actually naming names_. Rather than "shaming countries," why not use cross-sectional analysis to shame corporations, ISPs, and government agencies? These organizations have actual budgets, information security staffs, and public relations problems to worry about. When named publicly as nasty spammers, data leakers or clueless configurers, they will generally take action to fix the problems.
 
 In other words, security metrics produced by parties who are willing to stand up and say, "J'accuse!" would be useful to those responsible parties _who can actually do something with the information_.

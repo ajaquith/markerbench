@@ -1,15 +1,16 @@
 ---
 title: Web Services Confusion
-author: arj
+authors:
+ - arj
 date: 2005-04-21 00:47:59 -0400
-tags: 
+tags:
   - security
   - humor
   - applications
 aliases:
   - /blog/2005/04/21/Web-Services-Confusion/
 ---
-[Scobleizer](http://radio.weblogs.com/0001011/) points out that the WS ReliableMessaging specification has been submitted to OASIS. 
+[Scobleizer](http://radio.weblogs.com/0001011/) points out that the WS ReliableMessaging specification has been submitted to OASIS.
 
 With all due respect to the incredibly bright folks at the WS-I, I find the world of web services standards to be rather confusing. In addition to this new spec, we also have the WS-I Basic Profile (the initial version 1.0, plus the New and Improved!!! version that features "security"), WS-Federation (apparently a substitute for a perfectly good, and elegant, solution called the Liberty Alliance), WS-Transfer, WS-Conversation, WS-Security, and about a dozen others that I can't remember. About the only thing that's missing is the WS-LittleLessConversation specification, which (as I understand it) will feature hashed messages using secret, random salts that will ensure that nobody can talk to anybody else.
 

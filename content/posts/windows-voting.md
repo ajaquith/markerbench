@@ -1,8 +1,9 @@
 ---
 title: Voting With Your Feet
-author: arj
+authors:
+ - arj
 date: 2004-12-02 21:55:31 -0500
-tags: 
+tags:
   - security
   - Windows
   - Mac
@@ -26,7 +27,7 @@ What to make of all this?
 
 First of all, companies should __stop what they&rsquo;re doing and run the numbers__. Add up what the total cost of desktop platform insecurity is costing you. Third-party desktop firewalls, anti-virus, anti-spyware and patch management software all count towards the total. Then, make a conservative estimate of what the monthly patch-and-pray ambulance drill is costing you in labor soft dollars. It&rsquo;s a safe bet that the costs of coping with insecurity are &ldquo;crowding out&rdquo; expenditures in other areas. One person I spoke with at a large bank indicated that ASN.1 SSL encoding vulnerability, for example, cost the firm more than $1.5 million in hard and soft dollars to handle, including considerable expenses for temporary labor. That money was almost certainly carved out of the operational budget.
 
-Second, companies with survival instincts should __seriously consider an alternative platform strategy__. A small pilot program of alternative desktop operating systems could be a useful way of determining whether a less costly, albeit different, platform would make sense. My personal experience with Mac OS X and various Linux distributions has led me to conclude that OS X offers a larger variety of compatible desktop software and better user experience than Linux, but your mileage may vary. 
+Second, companies with survival instincts should __seriously consider an alternative platform strategy__. A small pilot program of alternative desktop operating systems could be a useful way of determining whether a less costly, albeit different, platform would make sense. My personal experience with Mac OS X and various Linux distributions has led me to conclude that OS X offers a larger variety of compatible desktop software and better user experience than Linux, but your mileage may vary.
 
 There is evidence that some forward-looking companies have reached similar conclusions. According to a [story originally published in NewsFactor](http://enterprise-linux-it.newsfactor.com/story.xhtml?story_title=AT-T-Considering-Mac-OS-X--Linux&story_id=27406), AT&T is currently evaluating both Linux and OS X to determine whether &ldquo;hedging their bets&rdquo; makes sense. In addition, IBM has previously stated that it will [migrate to a Linux-based desktop](http://www.theinquirer.net/?article=13485) by the end of 2005.
 

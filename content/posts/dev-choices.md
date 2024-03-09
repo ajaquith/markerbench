@@ -1,8 +1,9 @@
 ---
 title: Making the Wrong Development Choices
-author: arj
+authors:
+ - arj
 date: 2005-11-09 23:24:55 -0500
-tags: 
+tags:
   - applications
   - security
   - web security

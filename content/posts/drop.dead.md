@@ -1,11 +1,11 @@
 ---
 title: "Microsoft to CIOs: Drop Dead"
-description: Microsoft’s new advice for securing Active Directory does customers a disservice by focusing on the wrong things. Tomorrow’s “Zero Trust” and Azure roadmaps won’t stop today’s ransomware epidemic. Enterprises need to protect the Active Directory they’ve already got.
-author: arj
+summary: Microsoft’s new advice for securing Active Directory does customers a disservice by focusing on the wrong things. Tomorrow’s “Zero Trust” and Azure roadmaps won’t stop today’s ransomware epidemic. Enterprises need to protect the Active Directory they’ve already got.
+authors:
+ - arj
 date: 2020-12-22 12:00:00 -0400
 image: /images/drop-dead.png
 featured: true
-comments: true
 tags:
   - security
   - vendor-bashing

@@ -1,8 +1,9 @@
 ---
 title: Passwords-O-Plenty
-author: arj
+authors:
+ - arj
 date: 2008-02-05 17:06:13 -0500
-tags: 
+tags:
   - security
   - metrics
   - passwords
@@ -13,9 +14,9 @@ Before the holidays I ran a quick, three-question, survey of the securitymetrics
 
 <!--more-->
 
-## Securitymetrics.org Quickie Survey: Online Credentials
+# Securitymetrics.org Quickie Survey: Online Credentials
 
-### 1. How many online accounts do you manage, in total? How many "sensitive" accounts do you maintain?
+## 1. How many online accounts do you manage, in total? How many "sensitive" accounts do you maintain?
 
 By "account" I mean a public or private website, server or network that you log in to, for which you maintain a password or other credential. For example, a password or application entry in an OS X Keychain could be considered an account.
 
@@ -43,7 +44,7 @@ _Comments:_ I draw 3 conclusions from these figures.
 I'd also note that the survey base is self-selected &mdash; in the sense that it's the members of this list. Most of us are professional paranoids, right? Not sure if that means that the average user is worse off than the respondent base (more passwords to keep track of) or better off. Regardless, I'd say it does confirm what I already knew: we're drowning in passwords. Further insights or armchair-psychology comments welcome.
 
 
-### 2. What is your primary coping strategy for managing your online accounts?
+## 2. What is your primary coping strategy for managing your online accounts?
 
 * I keep all of my passwords the same: 10%
 * I write everything down on paper: 12%
@@ -53,7 +54,7 @@ I'd also note that the survey base is self-selected &mdash; in the sense that it
 
 _Comments:_ I can't draw too many conclusions from the responses to this question, because I asked it badly. Considering that my day job is as an analyst, you'd think I would've asked this question in a way that got better answers. :)
 
-### 3. Do you like the idea of surveying securitymetrics.org members about security practices?
+## 3. Do you like the idea of surveying securitymetrics.org members about security practices?
 
 * Yes: This is a good idea: 92%
 * No: I've got enough spam as it is: 8%

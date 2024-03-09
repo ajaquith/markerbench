@@ -1,6 +1,7 @@
 ---
 title: "Security Metrics: Scorecard Design"
-author: arj
+authors:
+ - arj
 date: 2005-10-19 12:54:50 -0400
 tags:
   - book

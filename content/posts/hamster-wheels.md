@@ -1,8 +1,9 @@
 ---
 title: Hamster Wheels of Pain
-author: arj
+authors:
+ - arj
 date: 2005-10-13 14:12:03 -0400
-tags: 
+tags:
   - security
   - humor
   - hamsters

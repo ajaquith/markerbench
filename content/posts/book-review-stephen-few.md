@@ -1,15 +1,16 @@
 ---
 title: "Review of Stephen Few’s “Information Dashboard Design, Second Edition”"
-author: arj
-description: Stephen Few’s new book offers sage advice about how to communicate data and insights efficiently.
+authors:
+ - arj
+summary: Stephen Few’s new book offers sage advice about how to communicate data and insights efficiently.
 date: 2013-08-13 23:01:00 -0500
-tags: 
+tags:
   - visualization
 image: /images/few.jpg
 aliases:
-  - /blog/2013/08/13/my-kind-of-cranky/ 
+  - /blog/2013/08/13/my-kind-of-cranky/
 ---
-Twenty years ago, a polymath prophet named [Edward Tufte](http://www.edwardtufte.com) self-published an incendiary book, _[The Visual Display of Quantitative Information](http://www.amazon.com/Visual-Display-Quantitative-Information/dp/096139210X)_. It forever changed how a certain species of white-collar professional viewed the world. As a DNA-tested, confirmed member of the species _homo visualis_, I can tell you that his book, and successors such as _[Envisioning Information](http://www.amazon.com/Envisioning-Information-Edward-R-Tufte/dp/0961392118)_, taught me how to create strong, effective statistical graphics. Tufte introduced the concepts of _chart junk,_ the _data-to-ink ratio,_ _small multiples_ and _sparklines_. He argued forcefully and persuasively that designers of statistical graphics need not condescend to their audiences. And perhaps most important, he inspired a generation of authors, professionals and scientists — call them "Tuftees" — to strive for simplicity, clarity and honesty in their representations of data. 
+Twenty years ago, a polymath prophet named [Edward Tufte](http://www.edwardtufte.com) self-published an incendiary book, _[The Visual Display of Quantitative Information](http://www.amazon.com/Visual-Display-Quantitative-Information/dp/096139210X)_. It forever changed how a certain species of white-collar professional viewed the world. As a DNA-tested, confirmed member of the species _homo visualis_, I can tell you that his book, and successors such as _[Envisioning Information](http://www.amazon.com/Envisioning-Information-Edward-R-Tufte/dp/0961392118)_, taught me how to create strong, effective statistical graphics. Tufte introduced the concepts of _chart junk,_ the _data-to-ink ratio,_ _small multiples_ and _sparklines_. He argued forcefully and persuasively that designers of statistical graphics need not condescend to their audiences. And perhaps most important, he inspired a generation of authors, professionals and scientists — call them "Tuftees" — to strive for simplicity, clarity and honesty in their representations of data.
 
 Indeed, in my book _[Security Metrics: Replacing Fear, Uncertainty, and Doubt](http://www.amazon.com/Security-Metrics-Replacing-Uncertainty-Doubt/dp/0321349989),_ I wrote an entire [40-page chapter](http://my.safaribooksonline.com/book/networking/security/9780321349989/visualization/ch06) on how to graphically present security data. That chapter owes everything to Tufte. I mention my own book not out of a desire to gratuitously promote it (not that there's anything wrong with that), but because in the 2nd edition of Stephen Few's _[Information Dashboard Design: Displaying Data for At-A-Glance Monitoring](http://www.amazon.com/Information-Dashboard-Design-At---Glance/dp/1938377001/)_ I can sense exactly why and how Mr Few was driven to write his own book about visualization.
 
@@ -37,7 +38,7 @@ The remainder of the book covers putting theory into practice. I have not read t
 
 If you are a Tuftee, you won't find much in the first half of Mr Few's book that breaks new ground. At least, not as of 2013. But then again, in 2006, this book was a big deal. It was well-received, sold well enough to merit a second edition, and has been widely cited since.
 
-I admire Mr Few very much for writing this book. I don't get the impression that he was a graphic designer by training. Nor does he appear to have an economics or statistics degree — indeed, I can't find a résumé or LinkedIn profile anywhere. And he's not a programmer. Not that any of that matters. Few is clearly a fanatic; he won't change his mind, and won't change the subject.  
+I admire Mr Few very much for writing this book. I don't get the impression that he was a graphic designer by training. Nor does he appear to have an economics or statistics degree — indeed, I can't find a résumé or LinkedIn profile anywhere. And he's not a programmer. Not that any of that matters. Few is clearly a fanatic; he won't change his mind, and won't change the subject.
 
 The principles in this book don't apply just to dashboards, however. Every business professional who creates _any_ kind of chart or exhibit can benefit from this book. I can say that with a high level of confidence — and I haven't even gotten to the really good bits yet.
 

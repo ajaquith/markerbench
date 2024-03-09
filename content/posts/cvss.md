@@ -1,8 +1,9 @@
 ---
 title: Excuses Not To Use CVSS
-author: arj
+authors:
+ - arj
 date: 2007-07-25 09:47:56 -0400
-tags: 
+tags:
   - security
   - metrics
 aliases:

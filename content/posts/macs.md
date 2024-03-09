@@ -1,8 +1,9 @@
 ---
 title: What do Security-Conscious People Choose?
-author: arj
+authors:
+ - arj
 date: 2007-05-22 16:56:11 -0400
-tags: 
+tags:
   - security
   - Windows
   - Mac
@@ -10,7 +11,7 @@ tags:
 aliases:
   - /blog/2007/05/22/What-do-Security-Conscious-People-Choose/
 ---
-At security conferences and events, I have noticed that the distribution of operating systems seems to differ somewhat from what I read in the papers. As my last post showed, the Internet Identity Workshop skewed decidedly in the Mac direction. 
+At security conferences and events, I have noticed that the distribution of operating systems seems to differ somewhat from what I read in the papers. As my last post showed, the Internet Identity Workshop skewed decidedly in the Mac direction.
 
 I thought it would be fun to put together a quick poll asking the members of the securitymetrics.org mailing what operating systems they used. I sent out a note asking the membership to respond to two simple questions:
 
@@ -21,7 +22,7 @@ I thought it would be fun to put together a quick poll asking the members of the
 
 I've compiled some preliminary statistics for your reading pleasure. Thanks to the 27 people who responded out of a total membership of about 300. That's nearly a 10% response rate in less than a day — not bad at all!
 
-### Objectives and Methodology
+# Objectives and Methodology
 
 The goal of this little survey was to try and figure out if self-selected, security conscious people had a preference for operating systems or e-mail clients that differed markedly from the  mainstream.
 
@@ -35,7 +36,7 @@ In total, I identified 170 people who have contributed to this mailing list or s
 
 In total, I was able to identify a "preferred" operating system (either the one specified as the 'home' OS in a direct e-mail to me, or the one identified in the header) for 93 people. I identified e-mail programs for 131 people.
 
-### Operating Systems
+# Operating Systems
 
 For respondents who contacted me directly, and specified their work OS (_n_=27), Windows was the majority OS.
 
@@ -61,9 +62,9 @@ Of the 27 respondents, 14 (55%) reported using a different OS at home compared t
 | Linux | 15 | 16% |
 | OS X | 39 | 42% |
 
-Amazingly enough, this suggests that Windows is a minority operating system, at least on this list. 
+Amazingly enough, this suggests that Windows is a minority operating system, at least on this list.
 
-### E-Mail Clients
+# E-Mail Clients
 
 For respondents who specified their work e-mail client (_n_=27), Microsoft Outlook was the majority client.
 | Name | # | % |

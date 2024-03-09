@@ -1,8 +1,9 @@
 ---
 title: Retired Comedians and Missed Opportunities
-author: arj
+authors:
+ - arj
 date: 2008-01-31 19:07:16 -0500
-tags: 
+tags:
   - security
   - Windows
   - humor

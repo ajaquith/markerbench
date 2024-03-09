@@ -1,8 +1,9 @@
 ---
 title: "Web 2.0 Means “Security the Max Power Way”"
-author: arj
+authors:
+ - arj
 date: 2007-10-17 16:38:18 -0400
-tags: 
+tags:
   - research
   - security
   - humor
@@ -14,7 +15,7 @@ Last week my Yankee Group research report ["The Web 2.0 Security Train Wreck"](h
 
 <!--more-->
 
-However, he also states that I got some things wrong. If you read his critique, he faults me for not pointing out that there's not much more broken in Web 2.0 that wasn't already broken. He is right in the sense that the problems are rooted in well-known anti-patterns — notably, ignorance of good security design. That's true of "1.0" apps too (and, I point this out). 
+However, he also states that I got some things wrong. If you read his critique, he faults me for not pointing out that there's not much more broken in Web 2.0 that wasn't already broken. He is right in the sense that the problems are rooted in well-known anti-patterns — notably, ignorance of good security design. That's true of "1.0" apps too (and, I point this out).
 
 What is different is that the Web 2.0 architectural style makes it easier and faster to hose yourself than ever before due to the fact that JavaScript is pretty much essential for any significant application.
 

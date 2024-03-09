@@ -1,12 +1,12 @@
 ---
 title: Who Killed the Perimeter? Some Clues.
-author: arj
+authors:
+ - arj
 date: 2023-11-14 12:00:00 -0400
-description: "Enterprise network perimeters have been disappearing: at first slowly, and then suddenly, all at once and at knifepoint. If this were a game of Clue, I’d accuse the Ransomware Actor, on the Edge Device, with the Zero-Day."
+summary: "Enterprise network perimeters have been disappearing: at first slowly, and then suddenly, all at once and at knifepoint. If this were a game of Clue, I’d accuse the Ransomware Actor, on the Edge Device, with the Zero-Day."
 image: /images/clue.png
 featured: true
-comments: true
-tags: 
+tags:
   - security
 ---
 {{< figure src="/images/clue.png" title="Image: “Clue” by Parker Brothers. Photo is from the author’s personal set, reproduced here under Fair Use guidelines and without intent to infringe.">}}
@@ -27,7 +27,7 @@ In short, it is clear that the bad guys are going after the perimeter like never
 
 A skeptic might scoff: well, attacks on the perimeter are not new. True. But do you think the answer is simply to patch faster? How fast is _fast enough_? Insurers and clients expect that IT teams have expedited processes for patching and emergency fixes. Disciplined IT teams in large organizations with strong change management practices can push emergency patches in twenty-four (24) hours or less. I’ve been privileged to work in firms that could do it in less time than that. But what if the attacks start coming within _two_ hours, as they did with the recent Citrix zero-day? What if your firm is unlucky enough to be targeted by a state actor using an exploit for which no patch exists? Worse, what if the exploit targets edge devices that are end-of life and _cannot_ be patched?
 
-I'd argue that the speed and frequency of attacks on edge devices have reached a tipping point. Very few IT teams will _ever_ be fast enough to get ahead of vulnerabilities targeting their edge devices—I’d peg the number at less than 25 organizations globally that stand a fighting chance. Your company is not one of them. It is plainly a matter of physics: attackers can marshal and exploit weaknesses far faster than the defenders can fix them. Their [OODA loops](https://en.wikipedia.org/wiki/OODA_loop) (observe-orient-decide-act) turn faster than those of the defenders. 
+I'd argue that the speed and frequency of attacks on edge devices have reached a tipping point. Very few IT teams will _ever_ be fast enough to get ahead of vulnerabilities targeting their edge devices—I’d peg the number at less than 25 organizations globally that stand a fighting chance. Your company is not one of them. It is plainly a matter of physics: attackers can marshal and exploit weaknesses far faster than the defenders can fix them. Their [OODA loops](https://en.wikipedia.org/wiki/OODA_loop) (observe-orient-decide-act) turn faster than those of the defenders.
 
 What this all means is that the on-premises edge is done. Stick a fork in it. Your commodity edge networking and application devices and servers—Exchange, ADFS single sign-on (SSO), VPN, remote desktop, load balancing—will invariably be compromised unless you can get rid of them. It won’t matter whether you’ve got a superstar CISO or a heroic IT ops team. _That_ is why the perimeter won’t fade away slowly, but will die all at once. CIOs are now on a forced march to move their edge infrastructure to the cloud, because if they don’t, they’re gonna get popped.
 
@@ -41,7 +41,7 @@ None of these solutions are panaceas by themselves, and they introduce additiona
 
 - Third, by removing your on-premises edge devices, __CFOs save money on their cyber-insurance premiums__. In 2022, [cyber-insurance costs rose by 62%](https://www.cybersecuritydive.com/news/cyber-premiums-spike-slower-pace-2022-fitch/647942/), fueled by the ransomware epidemic and coming on the heels of a 90% increase the year before. At least one analysis of cyber claims data has shown that enterprises with on-premises Exchange servers were [three times more likely to file a claim](https://www.businesswire.com/news/home/20230920444160/en/Cyber-Insurance-Claims-Frequency-and-Severity-Both-Increased-For-Businesses-in-1H-2023-Coalition-Report-Finds) than those using a cloud-based email provider such as Google Workspace. Carriers know their claims data and are not stupid. Within 18 months, you can expect that _any_ use of edge devices on your network perimeter—regardless of how well you say you patch them on your insurance questionnaires—will escalate your cyber coverage costs.  As a bonus, as cloud vendors increasingly [automate reporting of adherence to recommended practices](https://aws.amazon.com/partners/cyber-insurance-partner-solutions/), the cost of applying for and maintaining cyber insurance insurance will decrease. Carriers will have finer-grained visibility into your actual posture on an ongoing basis, allowing them to tailor premiums far more precisely.
 
-- Last: by dissolving what’s left of the perimeter, __employees will be happier and CIOs and CISOs will make their teams more valuable__. Instead of having to continue to maintain specialty expertise in technologies that aren’t valued in today’s market, their teams get to focus on much cooler tech (AI! Software defined networking! Zero trust! Passwordless authentication!), which in turn makes them more marketable. Ask your staff whether they'd rather renew their Cisco CCNA credentials for yet another year, or get a new CCKS cloud security certification. The question answers itself. 
+- Last: by dissolving what’s left of the perimeter, __employees will be happier and CIOs and CISOs will make their teams more valuable__. Instead of having to continue to maintain specialty expertise in technologies that aren’t valued in today’s market, their teams get to focus on much cooler tech (AI! Software defined networking! Zero trust! Passwordless authentication!), which in turn makes them more marketable. Ask your staff whether they'd rather renew their Cisco CCNA credentials for yet another year, or get a new CCKS cloud security certification. The question answers itself.
 
 These four wins—removing the perimeter from your attack surface, transferring responsibility for infrastructure maintenance to cloud vendors, and upskilling your team—are compelling all on their own.
 

@@ -1,8 +1,9 @@
 ---
 title: Blended Threats == Hemlock Smoothies
-author: arj
+authors:
+ - arj
 date: 2006-02-11 18:20:53 -0500
-tags: 
+tags:
   - security
   - humor
   - vendor-bashing

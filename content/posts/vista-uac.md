@@ -1,8 +1,9 @@
 ---
 title: "Ryan, Joe, Joanna, and the “Serious Hole” in Vista’s UAC"
-author: arj
+authors:
+ - arj
 date: 2007-02-14 11:21:22 -0500
-tags: 
+tags:
   - security
   - Windows
   - Mac

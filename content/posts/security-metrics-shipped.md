@@ -1,8 +1,9 @@
 ---
 title: Security Metrics Has Shipped
-author: arj
+authors:
+ - arj
 date: 2007-03-30 11:05:30 -0400
-tags: 
+tags:
   - security
   - metrics
   - books

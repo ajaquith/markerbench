@@ -1,8 +1,9 @@
 ---
 title: Fun with Spam
-author: arj
+authors:
+ - arj
 date: 2005-11-01 23:13:22 -0500
-tags: 
+tags:
   - security
   - spam
   - metrics
@@ -31,6 +32,6 @@ Collecting [Hamster Wheels of Pain](https://securitymetrics.org/content/Wiki.jsp
 
 Yeeeeargh.
 
-There aren't any obvious patterns here, other than to note that we've got plenty of evasion methods on display: random dictionary constructions, website impersonation, old-fashioned come-ons and white-page-concatenation. 
+There aren't any obvious patterns here, other than to note that we've got plenty of evasion methods on display: random dictionary constructions, website impersonation, old-fashioned come-ons and white-page-concatenation.
 
-From a metrics standpoint, over the one-week span I've received 305 spams in my e-mail inbox, plus another 512 blocked by my ISP (since October 28; which equates to about 1000 weekly), for a total of about 1300 spams per week. I have perhaps received (max) 100 legitimate e-mails in the same period, and probably closer to 50. That means my e-mail inbox is over 96% spam. Swell. 
+From a metrics standpoint, over the one-week span I've received 305 spams in my e-mail inbox, plus another 512 blocked by my ISP (since October 28; which equates to about 1000 weekly), for a total of about 1300 spams per week. I have perhaps received (max) 100 legitimate e-mails in the same period, and probably closer to 50. That means my e-mail inbox is over 96% spam. Swell.

@@ -1,6 +1,7 @@
 ---
 title: "All Andy’s Posts Now on Markerbench"
-author: arj
+authors:
+ - arj
 date: 2013-01-29 07:00:00 -0500
 tags:
   - blog
@@ -39,6 +40,6 @@ Apart from the syntax itself, one difference between Octopress and JSPWiki is th
 
 Pretty simple stuff; you need to remember a few basic rules. Beyond the syntax, though, I like the simplicity of the system as a whole. By turning the blog into something that I "publish" with simple command-line invocations, I get rid of a lot of headaches. Instead of worrying about a web application that I need to maintain, upgrade, and secure, I only need to worry about my writing. (And the occasional GitHub update.)
 
-Being the industrious-lazy sort, to move the blog posts, I created a little Ruby script that munged the wiki markup and produced decent Markdown. All of the posts needed a little work done to them, mostly to fix a few bullet issues my script didn't account for, and to assign categories to each post. At some point I will post the script to GitHub, as soon as I get the hang of _that_. I'll also, for the sake of completeness, I will likely cross-post a few notable essays from my [work blog](http://blog.perimeterusa.com). 
+Being the industrious-lazy sort, to move the blog posts, I created a little Ruby script that munged the wiki markup and produced decent Markdown. All of the posts needed a little work done to them, mostly to fix a few bullet issues my script didn't account for, and to assign categories to each post. At some point I will post the script to GitHub, as soon as I get the hang of _that_. I'll also, for the sake of completeness, I will likely cross-post a few notable essays from my [work blog](http://blog.perimeterusa.com).
 
 After I have tinkered a bit more with the Markerbench site, I'll go ahead and move [http://securitymetrics.org](http://securitymetrics.org) to Octopress as well, right in time for Metricon 8! I may, or may not, put the site contents on GitHub pages, as I have with this blog. Regardless, making it a totally static website makes it simple to host and scale. In addition, moving the rest of the securitymetrics.org site will allow me to use a much less expensive hosting plan. The only thing I'll need a hosting subscription for, at that point, is to host the securitymetrics.org mailing list.

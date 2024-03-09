@@ -1,8 +1,9 @@
 ---
 title: And So It Begins, With Small Saturated Spots
-author: arj
+authors:
+ - arj
 date: 2007-01-10 15:40:59 -0500
-tags: 
+tags:
   - security
   - metrics
   - books
@@ -22,6 +23,6 @@ The great [Edward Tufte](http://www.edwardtufte.com), arguably the most influent
 
 Which brings me back to my book's cover. In the book itself, I have exercised fairly tight control over the presentation format of the exhibits, of which there are about 75. But the cover is something else again. My publisher wanted, for obvious reasons, to apply a common style to the cover that aligns it in with its other professional books. And of course I was happy to work with them on this. So when it came time to consider designs, AW described the overall aesthetic, and asked me for some general guidelines about cover art.
 
-AW's professional books generally have a wildlife motif. I suggested that we look for an animal who camouflages itself or blends in with the natural surroundings, _but also_ has some kind of small, dense, saturated marking or plumage. Alan sent me a dozen samples, which included tropical forests with wildly colored birds, an Arctic wolf in a snowstorm with shining yellow eyes, a tree owl with red eyes, a snake with unique markings, and several others. But the frog that you see above was far and away the most appealing. It was Alan's favorite, too. 
+AW's professional books generally have a wildlife motif. I suggested that we look for an animal who camouflages itself or blends in with the natural surroundings, _but also_ has some kind of small, dense, saturated marking or plumage. Alan sent me a dozen samples, which included tropical forests with wildly colored birds, an Arctic wolf in a snowstorm with shining yellow eyes, a tree owl with red eyes, a snake with unique markings, and several others. But the frog that you see above was far and away the most appealing. It was Alan's favorite, too.
 
 Colors, security, metrics, outlier analysis, and book design — who knew they were all so related?

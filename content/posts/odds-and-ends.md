@@ -1,8 +1,9 @@
 ---
 title: Odds and Ends
-author: arj
+authors:
+ - arj
 date: 2005-09-22 09:52:01 -0400
-tags: 
+tags:
   - security
   - big data
 aliases:

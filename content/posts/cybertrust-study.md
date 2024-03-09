@@ -1,8 +1,9 @@
 ---
 title: "The Cybertrust Zotob Study: Read Between the Lines"
-author: arj
+authors:
+ - arj
 date: 2005-11-01 22:39:57 -0500
-tags: 
+tags:
   - security
   - Windows
   - research
@@ -27,7 +28,7 @@ Then there's this quote at the bottom:
 
 > Cybertrust customers experienced about 50 percent less time to recover from Zotob, 55 percent less costs of recovery, 66 percent less network performance degradation, and 76 percent less desktop impact. In addition, Cybertrust customers had zero impact to critical business partner, email, Internet connectivity, remote user connectivity or other critical business functions.
 
-I won't get into a detailed discussion of this one, other than offer a six word critique of what's missing here: numerators, denominators, and units of measure. 
+I won't get into a detailed discussion of this one, other than offer a six word critique of what's missing here: numerators, denominators, and units of measure.
 
 I take that back; two more words are needed: _secret sauce,_ or rather lack thereof. Even if Cybertrust customers _did_ experience fewer issues than other companies, surely the reason wasn't merely because of the fact that they had a commercial relationship with Cybertrust. They must have, you know, _done something_ to make themselves more secure---changed their processes, taken advantage of some marvelous Cybertrust technology, or availed themselves of their big brains. What might these things be?
 

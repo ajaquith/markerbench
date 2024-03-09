@@ -1,8 +1,9 @@
 ---
 title: "Alex Hutton Likes “Security Metrics”"
-author: arj
+authors:
+ - arj
 date: 2007-04-03 11:26:57 -0400
-tags: 
+tags:
   - security
   - metrics
   - books

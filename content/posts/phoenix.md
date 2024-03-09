@@ -1,8 +1,9 @@
 ---
 title: "Review of Gene Kim’s novel, “The Phoenix Project”"
-author: arj
+authors:
+ - arj
 date: 2013-01-17 00:00:00 +0000
-tags: 
+tags:
   - books
   - DevOps
 aliases:

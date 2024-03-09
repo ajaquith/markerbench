@@ -1,8 +1,9 @@
 ---
 title: The Natives are Restless
-author: arj
+authors:
+ - arj
 date: 2005-11-29 15:18:16 -0500
-tags: 
+tags:
   - security
   - Windows
   - research
@@ -23,8 +24,8 @@ Now, you might think that companies would be jazzed up about the security improv
 
 But wait, there's more!
 
-When we look only at what we call  security "leaders"---those companies that spend the highest percentage of their IT budgets on security---the differences are even more pronounced. Fully 40% of Leaders felt that backporting was _extremely desirable_; after adding in the "desirable" percentage, the total favoring backporting is a sky-high 65%. That is a stunning number. 
+When we look only at what we call  security "leaders"---those companies that spend the highest percentage of their IT budgets on security---the differences are even more pronounced. Fully 40% of Leaders felt that backporting was _extremely desirable_; after adding in the "desirable" percentage, the total favoring backporting is a sky-high 65%. That is a stunning number.
 
-Now consider the additional fact that Vista won't run acceptably on hardware older than about a year. Consider also  Joe Wilcox' observation that Microsoft has [missed as hardware upgrade cycle](http://www.microsoftmonitor.com/archives/009446.html). When you put all of those things together, it tells me that customers don't want a forklift upgrade to a more secure operating system forced on them. 
+Now consider the additional fact that Vista won't run acceptably on hardware older than about a year. Consider also  Joe Wilcox' observation that Microsoft has [missed as hardware upgrade cycle](http://www.microsoftmonitor.com/archives/009446.html). When you put all of those things together, it tells me that customers don't want a forklift upgrade to a more secure operating system forced on them.
 
 Does this just reflect common sense? Probably. I just didn't expect the numbers to work out quite this unequivocally.

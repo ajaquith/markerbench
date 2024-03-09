@@ -1,8 +1,9 @@
 ---
 title: IE7 Anti-Phishing is Land-Grab in Disguise?
-author: arj
+authors:
+ - arj
 date: 2005-09-02 10:03:51 -0400
-tags: 
+tags:
   - security
   - Windows
 aliases:

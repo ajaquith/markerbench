@@ -1,8 +1,9 @@
 ---
 title: Good Patch Management Metrics
-author: arj
+authors:
+ - arj
 date: 2006-03-03 23:12:13 -0500
-tags: 
+tags:
   - security
   - metrics
 aliases:
@@ -16,17 +17,17 @@ There's lots of goodness in this document. What I like best are the recommended 
 
 | Metric Name | Units | Maturity Level |
 |---|:-:|:-:|
-| Vulnerability ratio |  Vulnerabilities/Host |  3 | 
-| Unapplied patch ratio |  Patches/Host |  3 | 
-| Network services ratio |  Network Services/Host |  3 | 
-| Response time for vulnerability and patch identification (triage processes) |  Time |  4 | 
-| Patch response time (critical)* |  Time |  4 | 
-| Patch response time (noncritical)* |  Time |  4 | 
-| Emergency configuration response time (for zero-days) |  Time |  4 | 
-| Cost of patch vulnerability group |  Money (labor) |  5 | 
-| Cost of system administration support |  Money (labor) |  5 | 
-| Cost of software |  Money |  5 | 
-| Cost of program failures |  Money |  5 | 
+| Vulnerability ratio |  Vulnerabilities/Host |  3 |
+| Unapplied patch ratio |  Patches/Host |  3 |
+| Network services ratio |  Network Services/Host |  3 |
+| Response time for vulnerability and patch identification (triage processes) |  Time |  4 |
+| Patch response time (critical)* |  Time |  4 |
+| Patch response time (noncritical)* |  Time |  4 |
+| Emergency configuration response time (for zero-days) |  Time |  4 |
+| Cost of patch vulnerability group |  Money (labor) |  5 |
+| Cost of system administration support |  Money (labor) |  5 |
+| Cost of software |  Money |  5 |
+| Cost of program failures |  Money |  5 |
 
 *In my own work, I've referred to these metrics as "patch latency".
 

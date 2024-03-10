@@ -122,13 +122,9 @@ offset it, so that we can align the menu highlight line with the line at the
 bottom of the navbar. Bump up the size of navbar items. The selected navbar
 item is a crimson line (which we break through). */
 
-.mediumnavigation .nav-item {
-    font-size: 14px;
-}
-
 li.nav-item.active {
     border-bottom: 2px solid crimson;
-    padding-bottom: 23px;
+    padding-bottom: 23px !important;
 }
 
 /* Section titles also get a crimson line. */

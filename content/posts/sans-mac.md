@@ -6,8 +6,8 @@ date: 2006-05-02 20:31:13 -0400
 tags:
   - security
   - Windows
-  - Mac
-  - vendor-bashing
+  - Macs
+  - vendor bashing
 aliases:
   - /blog/2006/05/02/SANS-Schadenfreude-and-the-Mac/
 ---

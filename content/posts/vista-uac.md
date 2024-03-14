@@ -6,7 +6,7 @@ date: 2007-02-14 11:21:22 -0500
 tags:
   - security
   - Windows
-  - Mac
+  - Macs
 aliases:
   - /blog/2007/02/14/Ryan-Joe-Joanna-and-the-Serious-Hole-in-Vistas-UAC/
 ---

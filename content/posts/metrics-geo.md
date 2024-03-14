@@ -6,7 +6,7 @@ date: 2007-07-19 11:47:49 -0400
 tags:
   - security
   - metrics
-  - vendor-bashing
+  - vendor bashing
 aliases:
   - /blog/2007/07/19/The-Futility-of-Geographic-Security-Metrics/
 ---

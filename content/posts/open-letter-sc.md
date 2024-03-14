@@ -6,7 +6,7 @@ date: 2006-04-24 22:03:09 -0400
 tags:
   - security
   - Windows
-  - Mac
+  - Macs
 aliases:
   - /blog/2006/04/24/Open-Letter-to-SC-Magazine/
 ---

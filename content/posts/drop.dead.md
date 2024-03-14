@@ -8,7 +8,7 @@ image: /images/drop-dead.png
 featured: true
 tags:
   - security
-  - vendor-bashing
+  - vendor bashing
   - microsoft
 ---
 _Note: This article originally appeared on the QOMPLX, Inc blog._

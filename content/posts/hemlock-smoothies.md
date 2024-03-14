@@ -6,7 +6,7 @@ date: 2006-02-11 18:20:53 -0500
 tags:
   - security
   - humor
-  - vendor-bashing
+  - vendor bashing
 aliases:
   - /blog/2006/02/11/Blended-Threats-Hemlock-Smoothies/
 ---

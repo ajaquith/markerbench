@@ -6,7 +6,7 @@ date: 2004-12-02 21:55:31 -0500
 tags:
   - security
   - Windows
-  - Mac
+  - Macs
 aliases:
   - /blog/2004/12/02/Voting-With-Your-Feet/
 ---

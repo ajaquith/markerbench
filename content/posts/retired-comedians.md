@@ -7,7 +7,7 @@ tags:
   - security
   - Windows
   - humor
-  - vendor-bashing
+  - vendor bashing
 aliases:
   - /blog/2008/01/31/Retired-Comedians-and-Missed-Opportunities/
 ---

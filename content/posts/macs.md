@@ -6,7 +6,7 @@ date: 2007-05-22 16:56:11 -0400
 tags:
   - security
   - Windows
-  - Mac
+  - Macs
   - metrics
 aliases:
   - /blog/2007/05/22/What-do-Security-Conscious-People-Choose/

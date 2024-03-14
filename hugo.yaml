@@ -3,6 +3,7 @@ languageCode: en-us
 title: Markerbench
 summaryLength: 25
 copyright: Markerbench LLC
+titleCaseStyle: ap
 module:
   imports:
     - path: github.com/ajaquith/mediumish-gohugo-theme
@@ -49,6 +50,7 @@ taxonomies:
   author: authors
   category: categories
   tag: tags
+  featured: featured
 
 menu:
   main:

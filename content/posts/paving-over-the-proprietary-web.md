@@ -4,10 +4,7 @@ authors:
  - arj
 date: 2013-01-21 12:00:00 +0000
 tags:
-  - Java
-  - Flash
-  - ActiveX
-  - Oracle
+  - vendors
   - web security
 aliases:
   - /blog/2013/01/21/paving-over-the-proprietary-web/

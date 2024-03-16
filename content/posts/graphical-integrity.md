@@ -4,8 +4,8 @@ authors:
  - arj
 date: 2005-11-07 10:38:12 -0500
 tags:
-  - security
-  - visualization
+  - cybersecurity
+  - metrics
 aliases:
   - /blog/2005/11/07/Graphical-Integrity-Part-I/
 ---

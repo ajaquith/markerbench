@@ -4,10 +4,9 @@ authors:
  - arj
 date: 2005-09-30 07:45:57 -0400
 tags:
-  - security
+  - cybersecurity
   - metrics
   - books
-  - visualization
 aliases:
   - /blog/2005/09/30/A-Picture-is-Worth-1000-Words/
 ---

@@ -4,9 +4,10 @@ authors:
  - arj
 date: 2013-01-08 00:00:00 +0000
 tags:
-  - security
+  - cybersecurity
   - web security
-  - applications
+  - risk
+  - blog
 aliases:
   - /blog/2013/01/08/static-blogging/
 ---

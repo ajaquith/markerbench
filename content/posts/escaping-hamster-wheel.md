@@ -5,8 +5,8 @@ authors:
  - arj
 date: 2005-05-04 11:56:33 -0400
 tags:
-  - security
-  - hamsters
+  - cybersecurity
+  - risk
   - books
 featured: true
 image: /images/hamster.png

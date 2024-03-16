@@ -4,7 +4,8 @@ authors:
  - arj
 date: 2005-10-19 12:54:50 -0400
 tags:
-  - book
+  - books
+  - risk
 aliases:
   - /blog/2005/10/19/security-metrics-scorecards/
 ---

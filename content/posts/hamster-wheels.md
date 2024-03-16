@@ -4,9 +4,8 @@ authors:
  - arj
 date: 2005-10-13 14:12:03 -0400
 tags:
-  - security
+  - cybersecurity
   - humor
-  - hamsters
 aliases:
   - /blog/2005/10/13/Hamster-Wheels-of-Pain/
 ---

@@ -4,7 +4,7 @@ authors:
  - arj
 date: 2007-07-25 09:47:56 -0400
 tags:
-  - security
+  - cybersecurity
   - metrics
 aliases:
   - /blog/2007/07/25/Excuses-Not-To-Use-CVSS/

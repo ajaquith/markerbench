@@ -4,9 +4,9 @@ authors:
  - arj
 date: 2006-04-24 22:03:09 -0400
 tags:
-  - security
-  - Windows
-  - Macs
+  - cybersecurity
+  - operating systems
+  - operating systems
 aliases:
   - /blog/2006/04/24/Open-Letter-to-SC-Magazine/
 ---

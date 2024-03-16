@@ -5,7 +5,7 @@ authors:
 summary: This second post in a series about security and DevOps describes how to build hardened server images with Chef.
 date: 2013-10-03 13:30:00 -0500
 tags:
-  - security
+  - cybersecurity
   - DevOps
 image: /images/512px-Devops-toolchain.png
 aliases:

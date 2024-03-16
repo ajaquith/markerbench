@@ -4,9 +4,9 @@ authors:
  - arj
 date: 2005-09-01 15:54:10 -0400
 tags:
-  - security
-  - Windows
-  - malware
+  - cybersecurity
+  - operating systems
+  - vendors
 aliases:
   - /blog/2005/09/01/The-0wnership-Society/
 ---

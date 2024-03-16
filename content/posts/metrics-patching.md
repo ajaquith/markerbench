@@ -4,7 +4,7 @@ authors:
  - arj
 date: 2006-03-03 23:12:13 -0500
 tags:
-  - security
+  - cybersecurity
   - metrics
 aliases:
   - /blog/2006/03/03/Good-Patch-Management-Metrics/

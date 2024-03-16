@@ -4,9 +4,9 @@ authors:
  - arj
 date: 2007-01-01 23:31:14 -0500
 tags:
-  - security
+  - cybersecurity
   - web security
-  - identity
+  - blog
 aliases:
   - /blog/2007/01/01/Coding-in-Anger/
 ---

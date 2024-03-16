@@ -4,7 +4,7 @@ authors:
  - arj
 date: 2005-09-25 19:14:41 -0400
 tags:
-  - security
+  - cybersecurity
   - humor
 aliases:
   - /blog/2005/09/25/Information-Security-OCD/

@@ -5,9 +5,9 @@ authors:
  - arj
 date: 2019-09-25 12:00:00 -0500
 tags:
-  - security
+  - cybersecurity
   - DevOps
-  - applications
+  - cloud
   - metrics
 image: /images/aws.jpg
 math: true

@@ -4,7 +4,7 @@ authors:
  - arj
 date: 2005-11-14 11:14:38 -0500
 tags:
-  - security
+  - cybersecurity
   - humor
 aliases:
   - /blog/2005/11/14/The-Devils-Information-Security-Dictionary/

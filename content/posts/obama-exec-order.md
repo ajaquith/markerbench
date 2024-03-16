@@ -4,7 +4,7 @@ authors:
  - arj
 date: 2013-02-14 12:00:00 +0000
 tags:
-  - security
+  - cybersecurity
 aliases:
   - /blog/2013/02/14/SOTU/
 ---

@@ -5,7 +5,7 @@ authors:
 date: 2007-11-13 13:46:38 -0500
 tags:
   - metrics
-  - security
+  - cybersecurity
 aliases:
   - /blog/2007/11/13/Run-Do-Not-Walk-To-Your-Browser-and-Read-Dan-Geers-Analysis/
 ---

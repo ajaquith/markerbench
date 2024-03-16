@@ -4,9 +4,9 @@ authors:
  - arj
 date: 2004-12-02 21:55:31 -0500
 tags:
-  - security
-  - Windows
-  - Macs
+  - cybersecurity
+  - operating systems
+  - operating systems
 aliases:
   - /blog/2004/12/02/Voting-With-Your-Feet/
 ---

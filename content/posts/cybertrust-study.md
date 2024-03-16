@@ -4,9 +4,9 @@ authors:
  - arj
 date: 2005-11-01 22:39:57 -0500
 tags:
-  - security
-  - Windows
-  - research
+  - cybersecurity
+  - operating systems
+  - vendors
 aliases:
   - /blog/2005/11/01/The-Cybertrust-Zotob-Study-Read-Between-the-Lines/
 ---

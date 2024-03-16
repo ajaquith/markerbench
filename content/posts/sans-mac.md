@@ -4,10 +4,10 @@ authors:
  - arj
 date: 2006-05-02 20:31:13 -0400
 tags:
-  - security
-  - Windows
-  - Macs
-  - vendor bashing
+  - cybersecurity
+  - operating systems
+  - operating systems
+  - vendors
 aliases:
   - /blog/2006/05/02/SANS-Schadenfreude-and-the-Mac/
 ---

@@ -6,8 +6,7 @@ authors:
   - arj
 tags:
   - risk
-  - cyber
-  - operational risk
+  - cybersecurity
 image: /images/cyber_risk_events.png
 featured: true
 ---

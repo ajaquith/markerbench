@@ -4,8 +4,7 @@ authors:
  - arj
 date: 2007-10-17 16:38:18 -0400
 tags:
-  - research
-  - security
+  - cybersecurity
   - humor
   - web security
 aliases:

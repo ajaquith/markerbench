@@ -5,7 +5,7 @@ authors:
 summary: This third post in a series about security and DevOps describes how to configure web servers with TLS.
 date: 2013-10-06 20:15:00 -0500
 tags:
-  - security
+  - cybersecurity
   - DevOps
 image: /images/512px-Devops-toolchain.png
 aliases:

@@ -4,7 +4,7 @@ authors:
  - arj
 date: 2006-11-18 10:27:51 -0500
 tags:
-  - security
+  - cybersecurity
   - metrics
 aliases:
   - /blog/2006/11/18/Metrics-Rothman-and-Gaming-the-System/

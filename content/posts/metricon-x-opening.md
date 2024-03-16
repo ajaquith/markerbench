@@ -5,7 +5,7 @@ authors:
  - arj
 date: 2019-03-21 09:00:01 -0400
 tags:
-  - metricon
+  - metrics
 image: /images/metricon-x-pano.jpg
 featured: true
 aliases:

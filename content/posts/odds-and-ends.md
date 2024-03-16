@@ -4,8 +4,7 @@ authors:
  - arj
 date: 2005-09-22 09:52:01 -0400
 tags:
-  - security
-  - big data
+  - cybersecurity
 aliases:
   - /blog/2005/09/22/Odds-and-Ends/
 ---

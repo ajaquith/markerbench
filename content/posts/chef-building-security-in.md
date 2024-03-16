@@ -4,7 +4,7 @@ authors:
  - arj
 date: 2013-09-23 00:02:00 -0500
 tags:
-  - security
+  - cybersecurity
   - devops
 image: /images/512px-Devops-toolchain.png
 aliases:

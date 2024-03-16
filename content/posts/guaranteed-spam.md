@@ -4,8 +4,8 @@ authors:
  - arj
 date: 2006-02-12 22:34:51 -0500
 tags:
-  - security
-  - spam
+  - cybersecurity
+  - vendors
 aliases:
   - /blog/2006/02/12/Charging-for-Guaranteed-Spam-Better-Than-It-Sounds/
 ---

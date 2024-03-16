@@ -4,8 +4,7 @@ authors:
  - arj
 date: 2007-12-31 12:00:41 -0500
 tags:
-  - security
-  - research
+  - cybersecurity
   - web security
 aliases:
   - /blog/2007/12/31/One-Prediction-for-2008-Site-Specific-Browsers/

@@ -4,10 +4,10 @@ authors:
  - arj
 date: 2008-01-31 19:07:16 -0500
 tags:
-  - security
-  - Windows
+  - cybersecurity
+  - operating systems
   - humor
-  - vendor bashing
+  - vendors
 aliases:
   - /blog/2008/01/31/Retired-Comedians-and-Missed-Opportunities/
 ---

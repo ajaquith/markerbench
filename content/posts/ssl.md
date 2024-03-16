@@ -4,7 +4,7 @@ authors:
  - arj
 date: 2007-01-03 14:16:50 -0500
 tags:
-  - security
+  - cybersecurity
 aliases:
   - /blog/2007/01/03/SSL-is-a-Concrete-Sewer-Pipe/
 ---

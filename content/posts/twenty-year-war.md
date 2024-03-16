@@ -5,9 +5,8 @@ authors:
 summary: Digital crime is on the rise. To defeat it, defenders need to scale up, gain the full picture of risk, and heed the lessons of John Boyd.
 date: 2015-06-06 12:00:01 -0400
 tags:
-  - security
+  - cybersecurity
   - risk
-  - big data
 image: /images/johnboyd.jpg
 featured: true
 aliases:

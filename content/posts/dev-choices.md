@@ -4,8 +4,7 @@ authors:
  - arj
 date: 2005-11-09 23:24:55 -0500
 tags:
-  - applications
-  - security
+  - cybersecurity
   - web security
 aliases:
   - /blog/2005/11/09/Making-the-wrong-development-choices/

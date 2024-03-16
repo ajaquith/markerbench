@@ -7,7 +7,8 @@ summary: "Enterprise network perimeters have been disappearing: at first slowly,
 image: /images/clue.png
 featured: true
 tags:
-  - security
+  - cybersecurity
+  - risk
 ---
 {{< figure src="/images/clue.png" title="Image: “Clue” by Parker Brothers. Photo is from the author’s personal set, reproduced here under Fair Use guidelines and without intent to infringe.">}}
 

@@ -4,8 +4,8 @@ authors:
  - arj
 date: 2005-09-02 10:03:51 -0400
 tags:
-  - security
-  - Windows
+  - cybersecurity
+  - operating systems
 aliases:
   - /blog/2005/09/02/IE7-Anti-Phishing-is-Land-Grab-in-Disguise/
 ---

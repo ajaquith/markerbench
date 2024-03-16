@@ -5,7 +5,8 @@ authors:
 summary: Stephen Few’s new book offers sage advice about how to communicate data and insights efficiently.
 date: 2013-08-13 23:01:00 -0500
 tags:
-  - visualization
+  - metrics
+  - books
 image: /images/few.jpg
 aliases:
   - /blog/2013/08/13/my-kind-of-cranky/

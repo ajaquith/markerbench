@@ -4,7 +4,6 @@ authors:
  - arj
 date: 2013-08-26 08:55:00 -0500
 tags:
- - applications
  - devops
 image: /images/512px-Devops-toolchain.png
 aliases:

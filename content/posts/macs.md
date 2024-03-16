@@ -4,9 +4,9 @@ authors:
  - arj
 date: 2007-05-22 16:56:11 -0400
 tags:
-  - security
-  - Windows
-  - Macs
+  - cybersecurity
+  - risk
+  - operating systems
   - metrics
 aliases:
   - /blog/2007/05/22/What-do-Security-Conscious-People-Choose/

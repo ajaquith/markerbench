@@ -4,7 +4,7 @@ authors:
  - arj
 date: 2006-12-14 13:54:33 -0500
 tags:
-  - security
+  - cybersecurity
   - metrics
 aliases:
   - /blog/2006/12/14/Fortifys-Java-Open-Review-Project-a-Nascent-Security-Benchmarking-Effort/

@@ -4,9 +4,8 @@ authors:
  - arj
 date: 2008-02-05 17:06:13 -0500
 tags:
-  - security
+  - cybersecurity
   - metrics
-  - passwords
 aliases:
   - /blog/2008/02/05/Passwords-O-Plenty/
 ---

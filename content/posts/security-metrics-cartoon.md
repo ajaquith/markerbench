@@ -4,7 +4,7 @@ authors:
  - arj
 date: 2007-04-01 22:39:12 -0400
 tags:
-  - security
+  - cybersecurity
   - metrics
   - humor
 aliases:

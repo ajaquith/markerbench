@@ -6,7 +6,7 @@ date: 2008-02-19 15:12:40 -0500
 tags:
   - humor
   - metrics
-  - security
+  - cybersecurity
 aliases:
   - /blog/2008/02/19/Every-time-you-perform-arithmetic-operations-on-ordinal-numbers-God-kills-a-kitten/
 ---

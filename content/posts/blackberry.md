@@ -4,7 +4,7 @@ authors:
  - arj
 date: 2013-02-15 10:00:00 -0500
 tags:
-  - mobile
+  - strategy
 aliases:
   - /blog/2013/02/15/Bully-for-BlackBerry/
 ---

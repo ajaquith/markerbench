@@ -5,7 +5,6 @@ authors:
 date: 2013-01-29 07:00:00 -0500
 tags:
   - blog
-  - applications
 aliases:
   - /blog/2013/01/29/All-Posts-On-Markerbench/
 ---

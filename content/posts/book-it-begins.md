@@ -4,10 +4,9 @@ authors:
  - arj
 date: 2007-01-10 15:40:59 -0500
 tags:
-  - security
+  - cybersecurity
   - metrics
   - books
-  - visualization
 aliases:
   - /blog/2007/01/10/And-So-It-Begins-With-Small-Saturated-Spots/
 ---

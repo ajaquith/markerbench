@@ -4,8 +4,8 @@ authors:
  - arj
 date: 2005-09-22 09:51:39 -0400
 tags:
-  - security
-  - vendor bashing
+  - cybersecurity
+  - vendors
 aliases:
   - /blog/2005/09/22/The-Symantec-Threat-Report-Read-Between-the-Lines/
 ---

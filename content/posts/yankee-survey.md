@@ -4,9 +4,9 @@ authors:
  - arj
 date: 2005-11-29 15:18:16 -0500
 tags:
-  - security
-  - Windows
-  - research
+  - cybersecurity
+  - operating systems
+  - vendors
 aliases:
   - /blog/2005/11/29/The-Natives-are-Restless/
 ---

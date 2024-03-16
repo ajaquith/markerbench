@@ -5,7 +5,7 @@ authors:
 summary: This first post in a series about security and DevOps describes how to bootstrap development of a virtual test server.
 date: 2013-10-01 16:18:00 -0500
 tags:
-  - security
+  - cybersecurity
   - DevOps
 image: /images/512px-Devops-toolchain.png
 aliases:

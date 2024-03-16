@@ -7,9 +7,8 @@ date: 2020-12-22 12:00:00 -0400
 image: /images/drop-dead.png
 featured: true
 tags:
-  - security
-  - vendor bashing
-  - microsoft
+  - cybersecurity
+  - vendors
 ---
 _Note: This article originally appeared on the QOMPLX, Inc blog._
 
@@ -23,7 +22,7 @@ Red Forest was Microsoft’s recommended architecture for securing Active Direct
 
 Many of these concepts contradict each other. For example, there is Microsoft’s emphasis on [“Zero Trust” networking](https://go.forrester.com/blogs/category/zero-trust-security-framework-ztx). My good friend John Kindervag coined that term while we were both analysts at Forrester—thereby ensuring he could die a happy man with “Zero Trust” chiseled on his headstone. It describes a strategy for staying secure despite not being able to trust endpoints or networks. The result of which is you spend extra effort authenticating the operator, and the devices they use. But what Microsoft calls “Privilege Access Workstations” are really heavily-armored  PCs that are highly trusted for administrative functions. And being a domain-joined Windows Workstation (“binding to Active Directory”) means you are trusted in a way that an ordinary Macbook Air on the network, for example, is not. In short: Windows networks are _highly trusted_ networks, not Zero Trust.
 
-Moreover, Microsoft’s advice to deprecate on-premises Active Directory and move things to Azure comes just one week after it admitted that, like many of its customers, it was a victim of the [SolarWinds attack](https://www.theverge.com/2020/12/17/22188060/microsoft-president-solarwinds-orion-hack-breach-brad-smith), part of a state-sponsored cyber campaign. Microsoft’s Brad Smith did not say whether Azure was compromised, saying only that its “environment” contained the tainted SolarWins binaries, and indicating that as yet they had “found absolutely no indications that our systems were used to attack others”—hardly definitive and not comforting to CIOs.
+Moreover, Microsoft’s advice to deprecate on-premises Active Directory and move things to Azure comes just one week after it admitted that, like many of its customers, it was a victim of the [SolarWinds attack](https://www.theverge.com/2020/12/17/22188060/microsoft-president-solarwinds-orion-hack-breach-brad-smith), part of a state-sponsored cyber campaign. Microsoft’s Brad Smith did not say whether Azure was compromised, saying only that its “environment” contained the tainted SolarWinds binaries, and indicating that as yet they had “found absolutely no indications that our systems were used to attack others”—hardly definitive and not comforting to CIOs.
 
 Let’s back up to understand why Red Forest exists at all. There is no doubt that in developing the concept in 2016, Microsoft understood the _symptoms_ of today’s Active Directory issues excruciatingly well. In a 2017 RSA Conference presentation called [“Critical Hygiene for Preventing Major Breaches”](https://published-prd.lanyonevents.com/published/rsaus17/sessionsFiles/3774/CXO-F02-Critical-Hygiene-for-Preventing-Major-Breaches.pdf) two Microsoft presenters, plus another co-presenter from the Center for Internet Security, accurately described what attackers do in a critical breach: they go after privileged access. That includes:
 

@@ -4,8 +4,7 @@ authors:
  - arj
 date: 2007-12-04 23:43:42 -0500
 tags:
-  - security
-  - bots
+  - cybersecurity
 aliases:
   - /blog/2007/12/04/Meta-Conclusions-from-the-Chinese-Honeynet-Project/
 ---

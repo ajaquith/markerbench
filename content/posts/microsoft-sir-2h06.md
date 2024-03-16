@@ -4,9 +4,9 @@ authors:
  - arj
 date: 2007-05-02 21:36:08 -0400
 tags:
-  - security
+  - cybersecurity
   - metrics
-  - Windows
+  - operating systems
 aliases:
   - /blog/2007/05/02/Microsoft-Security-Intelligence-Report-2H06/
 ---

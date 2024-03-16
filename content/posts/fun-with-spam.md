@@ -4,8 +4,7 @@ authors:
  - arj
 date: 2005-11-01 23:13:22 -0500
 tags:
-  - security
-  - spam
+  - cybersecurity
   - metrics
 aliases:
   - /blog/2005/11/01/Fun-with-Spam/

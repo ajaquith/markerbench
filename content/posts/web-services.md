@@ -4,9 +4,9 @@ authors:
  - arj
 date: 2005-04-21 00:47:59 -0400
 tags:
-  - security
+  - cybersecurity
   - humor
-  - applications
+  - web security
 aliases:
   - /blog/2005/04/21/Web-Services-Confusion/
 ---

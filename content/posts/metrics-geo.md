@@ -4,9 +4,9 @@ authors:
  - arj
 date: 2007-07-19 11:47:49 -0400
 tags:
-  - security
+  - cybersecurity
   - metrics
-  - vendor bashing
+  - vendors
 aliases:
   - /blog/2007/07/19/The-Futility-of-Geographic-Security-Metrics/
 ---

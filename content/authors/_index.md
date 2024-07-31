@@ -1,4 +1,4 @@
 ---
 title: Who We Are
 ---
-Markerbench specializes in high-consequence cybersecurity projects. The principals include:
+Markerbench writes about high-consequence cybersecurity topics. The principals include:

@@ -54,9 +54,6 @@ taxonomies:
 
 menu:
   main:
-    - name: Advisory
-      weight: 100
-      pageRef: /advisory
     - name: Who We Are
       weight: 200
       pageRef: /authors

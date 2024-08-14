@@ -8,7 +8,6 @@ image: /images/writer.jpg
 tags:
   - cybersecurity
   - writing
-featured: true
 ---
 {{< figure src="/images/writer.jpg" title="Writer at work." >}}
 
